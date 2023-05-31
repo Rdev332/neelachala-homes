@@ -16,15 +16,15 @@ class MyDocument extends Document {
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta
             name="keywords"
-            content="React Nextjs Template Archo onepage themeforest"
+            content="real estate"
           />
           <meta
             name="description"
-            content="Archo - Onepage Multi-Purpose React nextjs Template"
+            content="Neelachala Homes"
           />
           <meta name="author" content="" />
 
-          <link rel="shortcut icon" href="/assets/img/favicon.ico" />
+          <link rel="shortcut icon" href="/assets/img/logo.png" />
 
           <link
             href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"

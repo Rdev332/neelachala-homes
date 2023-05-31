@@ -19,28 +19,98 @@
   "portfolio": [
     {
       "id": 1,
-      "image": "/assets/img/portfolio/mas/01.jpg",
+      "image": "/assets/img/portfolio/mas/HN_Paradise.jpg",
       "title": "Fantastic interior",
       "tag": "Interior Design",
       "filterClass": "theaters"
     },
     {
       "id": 2,
-      "image": "/assets/img/portfolio/mas/02.jpg",
+      "image": "/assets/img/portfolio/mas/HN_Paradise_interior.jpeg",
       "title": "Choose Your Dream",
       "tag": "Architecture",
       "filterClass": "interior"
     },
     {
       "id": 3,
-      "image": "/assets/img/portfolio/mas/03.jpg",
+      "image": "/assets/img/portfolio/mas/Jagannath_Enclave.jpg",
       "title": "Luxury Villa",
       "tag": "Architecture",
       "filterClass": "residential"
     },
     {
       "id": 4,
-      "image": "/assets/img/portfolio/mas/04.jpg",
+      "image": "/assets/img/portfolio/mas/Mahalaxmi_Niwas_temple.jpg",
+      "title": "Creative Spaces",
+      "tag": "Interior Design",
+      "filterClass": "interior theaters"
+    },
+    {
+      "id": 1,
+      "image": "/assets/img/portfolio/mas/Mahalaxmi_Niwas.jpg",
+      "title": "Fantastic interior",
+      "tag": "Interior Design",
+      "filterClass": "theaters"
+    },
+    {
+      "id": 2,
+      "image": "/assets/img/portfolio/mas/Narayan_Enclave.jpg",
+      "title": "Choose Your Dream",
+      "tag": "Architecture",
+      "filterClass": "interior"
+    },
+    {
+      "id": 3,
+      "image": "/assets/img/portfolio/mas/Neelachala_Lagoon.jpg",
+      "title": "Luxury Villa",
+      "tag": "Architecture",
+      "filterClass": "residential"
+    },
+    {
+      "id": 4,
+      "image": "/assets/img/portfolio/mas/Neelachala_LAgoon2.jpg",
+      "title": "Creative Spaces",
+      "tag": "Interior Design",
+      "filterClass": "interior theaters"
+    },
+    {
+      "id": 1,
+      "image": "/assets/img/portfolio/mas/Nspacetown.jpg",
+      "title": "Fantastic interior",
+      "tag": "Interior Design",
+      "filterClass": "theaters"
+    },
+    {
+      "id": 2,
+      "image": "/assets/img/portfolio/mas/Spacetown_2.jpg",
+      "title": "Choose Your Dream",
+      "tag": "Architecture",
+      "filterClass": "interior"
+    },
+    {
+      "id": 3,
+      "image": "/assets/img/portfolio/mas/Spacetown.jpg",
+      "title": "Luxury Villa",
+      "tag": "Architecture",
+      "filterClass": "residential"
+    },
+    {
+      "id": 4,
+      "image": "/assets/img/portfolio/mas/Subadhra_Residency.jpg",
+      "title": "Creative Spaces",
+      "tag": "Interior Design",
+      "filterClass": "interior theaters"
+    },
+    {
+      "id": 3,
+      "image": "/assets/img/portfolio/mas/Subhadra_residency_converted_2.jpg",
+      "title": "Luxury Villa",
+      "tag": "Architecture",
+      "filterClass": "residential"
+    },
+    {
+      "id": 4,
+      "image": "/assets/img/portfolio/mas/Subhadra_residency_converted_3.jpg",
       "title": "Creative Spaces",
       "tag": "Interior Design",
       "filterClass": "interior theaters"

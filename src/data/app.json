@@ -1,6 +1,6 @@
 {
-  "lightLogo": "/assets/img/logo-light.png",
-  "darkLogo": "/assets/img/logo-dark.png",
-  "mapIframe": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29695.671230259337!2d2.3558151621751584!3d48.86295242559001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671d877937b0f%3A0xb975fcfa192f84d4!2z2YXYqtit2YEg2KfZhNmE2YjZgdix!5e0!3m2!1sar!2seg!4v1642786626975!5m2!1sar!2seg",
+  "lightLogo": "/assets/img/logo_white_write.png",
+  "darkLogo": "/assets/img/logo.png",
+  "mapIframe": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29938.998196809585!2d85.80668182788853!3d20.2847488299757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1909d7bfffff99%3A0x1f5c8123db186ed!2sNeelachala%20Homes%20and%20Commercials%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1685520868728!5m2!1sen!2sin",
   "showLoading": true
 }
