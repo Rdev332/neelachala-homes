@@ -3,6 +3,7 @@ import React from "react";
 import AboutUs1 from "../../components/About-Us1";
 import Services1 from "../../components/Services1";
 import IntroWithHorizontal from "../../components/Intro-with-horizontal";
+import VideoHero from "../../components/Video-Hero";
 import LightLayout from "../../layouts/light";
 import Portfolio1 from "../../components/Portfolio1";
 import SkillsCircle from "../../components/Skills-circle";
@@ -17,7 +18,7 @@ const Home1 = () => {
   }, []);
   return (
     <LightLayout footerClass={"mt-30"}>
-      <IntroWithHorizontal />
+      <VideoHero />
       <AboutUs1 />
       {/* <Services1 /> */}
       <Portfolio1 />
