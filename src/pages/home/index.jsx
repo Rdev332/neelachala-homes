@@ -1,16 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import AboutUs1 from "../../components/About-Us1";
-import Services1 from "../../components/Services1";
-import IntroWithHorizontal from "../../components/Intro-with-horizontal";
 import VideoHero from "../../components/Video-Hero";
 import LightLayout from "../../layouts/light";
-import Portfolio1 from "../../components/Portfolio1";
-import SkillsCircle from "../../components/Skills-circle";
 import Testimonials from "../../components/Testimonials1";
-import Team1 from "../../components/Team1";
-import Blogs1 from "../../components/Blogs1";
 import Contact from "../../components/Contact";
+import {WorkTwoColumn} from "../../components/Work-Two-Column";
 
 const Home1 = () => {
   React.useEffect(() => {
@@ -21,7 +16,7 @@ const Home1 = () => {
       <VideoHero />
       <AboutUs1 />
       {/* <Services1 /> */}
-      <Portfolio1 />
+      <WorkTwoColumn />
       {/* <SkillsCircle /> */}
       <Testimonials />
       {/* <Team1 /> */}

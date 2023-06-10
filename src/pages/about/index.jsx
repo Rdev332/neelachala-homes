@@ -14,16 +14,16 @@ const About = () => {
 
   return (
     <MainLayout>
-      <PageHeader
+      {/* <PageHeader
         title="About Us"
         fullPath={[
           { id: 1, name: "home", url: "/" },
           { id: 2, name: "about us", url: "/about" },
         ]}
-      />
+      /> */}
       <AboutUs4 />
       <Services3 bigTitle grid />
-      <Testimonials1 bigTitle />
+      {/* <Testimonials1 bigTitle /> */}
       <Team2 />
       <Skills2 />
     </MainLayout>

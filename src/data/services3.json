@@ -3,21 +3,48 @@
     "id": 1,
     "image": "/assets/img/01.jpg",
     "icon": "icon flaticon-home-1",
-    "title": "Architecture",
-    "content": "Cras mollis turpis a ipsum ultes, nec cond imentum ipsum consequat."
+    "video":"/assets/video/design_and_architecture.mp4",
+    "title": "Design and Architecture",
+    "content": "For us, it is always quality first! We employ the top professionals in the field to ensure that the product we deliver to you is the home of your dreams. We never compromise on quality. Right from getting plans designed by the best of architects to clearing all the requisite documentation, including the recently obligated RERA approval, we pay utmost attention to each little detail."
   },
   {
     "id": 2,
     "image": "/assets/img/02.jpg",
     "icon": "icon flaticon-living-room",
-    "title": "Interior Design",
-    "content": "Cras mollis turpis a ipsum ultes, nec cond imentum ipsum consequat."
+    "video":"/assets/video/mep.mp4",
+    "title": "MEP- Mechanical, Electrical & Plumbing",
+    "content": "We, at Neelachal Homes, believe in giving our customers the best of both worlds- safe and sturdy houses that are posh and beautiful homes. We use premium quality fittings to accentuate the aesthetic feel of the space. Lately, in our more recent projects, we are providing a designer factory finish Modular Kitchen as a complementary gift with the flats."
   },
   {
     "id": 3,
     "image": "/assets/img/03.jpg",
     "icon": "icon flaticon-interior-design",
-    "title": "3D Modeling",
-    "content": "Cras mollis turpis a ipsum ultes, nec cond imentum ipsum consequat."
+    "video":"/assets/video/civil_structural.mp4",
+    "title": "Civil- Structural and Finishes",
+    "content": "We may be building houses but we believe in providing safe and beautiful 'homes' to our customers.We aim to provide lasting value right from the foundation to the finishing. With robust and efficient building structures and superlative design that meet very stringent quality standards we aim to create lasting value keeping in line with the global trends."
+  },
+  {
+    "id": 4,
+    "image": "/assets/img/01.jpg",
+    "icon": "icon flaticon-home-1",
+    "video":"/assets/video/interior_design.mp4",
+    "title": "Interior Design",
+    "content": "At Neelachala Homes, we understand that homes are made up of more than brick and mortar structures. Hence, we go an extra mile to hire the best designers to plan the interiors and give our customers interiors that they desire for their homes. We design customized interior fit-out solutions for homes and commercial properties alike as per your requirements."
+  },
+  {
+    "id": 5,
+    "image": "/assets/img/02.jpg",
+    "icon": "icon flaticon-living-room",
+    "video":"/assets/video/landscaping.mp4",
+    "title": "Landscaping",
+    "content": "A team of professionals adept at the art of landscaping, strive to create breathtaking outdoor spaces. We, Neelachala Homes, take into account the intricacies of color matching, water effects and floral setting that complement the customer’s ideas and highlight the natural beauty of the space. With meticulous design and flawless implementation, we create landscapes that inspires the awe of beholders."
+  },
+  {
+    "id": 6,
+    "image": "/assets/img/03.jpg",
+    "icon": "icon flaticon-interior-design",
+    "video":"/assets/video/home_loan_approvals.mp4",
+    "title": "Home Loan Approvals",
+    "content": "No more do you have to go to a bank and get slumped under piles of paperwork to avail the necessary home loans. We, at Neelachal Homes, have collaborated with the major nationalized banks to not only assist you in filing for the loans but also get them at attractive rates of interest."
   }
 ]

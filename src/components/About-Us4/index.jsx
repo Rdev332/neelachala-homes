@@ -47,17 +47,10 @@ const AboutUs4 = () => {
           <div className="col-lg-6">
             <div className="txt-cont">
               <p className="mb-20">
-                Maecenas imperdiet ante eget hendrerit posuere. Nunc urna
-                libero, congue porta nibh a, semper feugiat sem. Sed auctor dui
-                eleifend, scelerisque eros ut.
+              Established in 2008, Neelachal Homes is born out of the vision of providing people with a comfortable and fully equipped modern living space that they can call their homes.
               </p>
               <p>
-                Curabitur sed iaculis dolor, non congue ligula. Maecenas
-                imperdiet ante eget hendrerit posuere. Nunc urna libero, congue
-                porta nibh a, semper feugiat sem. Sed auctor dui eleifend,
-                scelerisque eros ut, pellentesque nibh. Nam lacinia suscipit
-                accumsan. Donec sodales, neque vitae rutrum convallis, nulla
-                tortor pharetra odio, in varius ante ante sed nisi.
+              We take pride in our ingenious and robust designs that assure safety without compromising the overall aesthetics of the space. At Neelachal Homes, we value your time and money. We make it a point to ensure that the process of delivering the homes to you, is carried out efficiently with zero hassle and timely execution. Additionally, we strive for creating spaces that give you the best value for your investment.
               </p>
             </div>
           </div>

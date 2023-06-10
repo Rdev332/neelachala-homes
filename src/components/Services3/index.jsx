@@ -32,22 +32,26 @@ const Services3 = ({ bigTitle, grid }) => {
 
         <div className="row">
           {services3Data.map((item, index) => (
-            <div className="col-lg-4" key={item.id}>
+            <div className="col-lg-4 mt-4" key={item.id}>
               <div
                 className="item-bx bg-img wow fadeInUp"
                 data-wow-delay={index == 0 ? ".3s" : index == 1 ? ".5s" : ".7s"}
-                style={{ backgroundImage: `url(${item.image})` }}
+                style={{ backgroundImage: `url(${item.video})` }}
               >
-                <span className={item.icon}></span>
+                {/* <span className={item.icon}></span> */}
+                <video width="100%" autoplay="autoPlay" loop muted>
+                  <source src={item.video} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
                 <h6 className="mb-20">{item.title}</h6>
                 <p>{item.content}</p>
                 <Link href="/about">
                   <a className={`more ${!grid ? "custom-font" : ""} mt-30`}>
-                    Read More
+                    Request Quotation
                   </a>
                 </Link>
               </div>
-            </div>
+             </div>
           ))}
         </div>
       </div>

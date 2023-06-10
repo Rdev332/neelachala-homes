@@ -41,7 +41,9 @@ const Footer = ({ classText }) => {
           <div className="col-lg-6">
             <div className="item">
               <div className="logo">
-                <img src="/assets/img/logo.png" alt="" />
+                <img src="/assets/img/logo.png" alt="logo" 
+                width="100rem" height="100rem"
+                />
               </div>
               <div className="social">
                 <Link href="https://www.facebook.com/neelachalahomes?mibextid=ZbWKwL">
