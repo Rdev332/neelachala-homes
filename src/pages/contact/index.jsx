@@ -10,14 +10,10 @@ const Contact = () => {
    }, []);
   return (
     <MainLayout>
-      {/* <PageHeader
+      <PageHeader
         title="Contact Us"
-        fullPath={[
-          { id: 1, name: "home", url: "/" },
-          { id: 2, name: "contact us", url: "/contact" },
-        ]}
-        image="/assets/img/pg2.jpg"
-      /> */}
+        image="/assets/img/portfolio/mas/Nspacetown.jpg"
+      />
       <section className="contact">
         <ContactInfo />
         <ContactWithMap />
