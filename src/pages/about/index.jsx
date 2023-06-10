@@ -14,13 +14,11 @@ const About = () => {
 
   return (
     <MainLayout>
-      {/* <PageHeader
+      <PageHeader
         title="About Us"
-        fullPath={[
-          { id: 1, name: "home", url: "/" },
-          { id: 2, name: "about us", url: "/about" },
-        ]}
-      /> */}
+      
+        image="/assets/img/portfolio/mas/Mahalaxmi_Niwas.jpg"
+      />
       <AboutUs4 />
       <Services3 bigTitle grid />
       {/* <Testimonials1 bigTitle /> */}

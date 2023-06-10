@@ -18,7 +18,7 @@ const PageHeader = ({ title, fullPath, image }) => {
             <div className="cont text-center">
               <h1>{title}</h1>
               <div className="path">
-                {fullPath.map((item, index) => (
+                {fullPath?.length && fullPath?.map((item, index) => (
                   <React.Fragment key={item.id}>
                     <Link href={item.url}>
                       <a
