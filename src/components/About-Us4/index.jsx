@@ -47,10 +47,10 @@ const AboutUs4 = () => {
           <div className="col-lg-6">
             <div className="txt-cont">
               <p className="mb-20">
-              Established in 2008, Neelachal Homes is born out of the vision of providing people with a comfortable and fully equipped modern living space that they can call their homes.
+              Established in 2008, Neelachal Homes is born out of the vision of providing people with a comfortable and fully equipped modern living space that they can call their homes. We take pride in our ingenious and robust designs that assure safety without compromising the overall aesthetics of the space. At Neelachal Homes, we value your time and money. We make it a point to ensure that the process of delivering the homes to you, is carried out efficiently with zero hassle and timely execution. Additionally, we strive for creating spaces that give you the best value for your investment.
               </p>
               <p>
-              We take pride in our ingenious and robust designs that assure safety without compromising the overall aesthetics of the space. At Neelachal Homes, we value your time and money. We make it a point to ensure that the process of delivering the homes to you, is carried out efficiently with zero hassle and timely execution. Additionally, we strive for creating spaces that give you the best value for your investment.
+              With every project, Neelachal Homes has broadened the horizon of luxurious living in Bhubaneswar. We are members of CREDAI (Confederation of Real Estate Developers’ Associations of India) and MSME (Ministry of Micro, Small and Medium Enterprises) and we execute all business deals abiding by necessary statutory obligations. Since its inception, Neelachal Homes has had no disputes or litigations against it. We believe, it is our honest work ethic, where we prioritize superior quality, transparency, and long-term customer service that has made us a popular choice in the real estate ecosystem of Bhubaneswar. With our consistent hard work, we aim to make Neelachal Homes a household name, both within the city of Bhubaneswar and beyond. 
               </p>
             </div>
           </div>

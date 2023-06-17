@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-const ProjectIntro = () => {
+const ProjectIntro = ({project}) => {
   return (
     <section className="intro-section section-padding">
       <div className="container">
@@ -14,10 +14,7 @@ const ProjectIntro = () => {
           <div className="col-lg-8 offset-lg-1 col-md-8 mb-30">
             <div className="text">
               <p>
-                We are a Creative Agency &amp; Startup Studio that provides
-                Digital Products and Services turns to focus on client success.
-                We specialize in user interface design, including front-end
-                development which we consider to be an integral part.
+                {project?.description}
               </p>
             </div>
           </div>

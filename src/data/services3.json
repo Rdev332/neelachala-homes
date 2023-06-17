@@ -4,16 +4,16 @@
     "image": "/assets/img/01.jpg",
     "icon": "icon flaticon-home-1",
     "video":"/assets/video/design_and_architecture.mp4",
-    "title": "Design and Architecture",
-    "content": "For us, it is always quality first! We employ the top professionals in the field to ensure that the product we deliver to you is the home of your dreams. We never compromise on quality. Right from getting plans designed by the best of architects to clearing all the requisite documentation, including the recently obligated RERA approval, we pay utmost attention to each little detail."
+    "title": "Design, Construction, and Finishing",
+    "content": "For us, it is always quality first! We employ the top professionals in the field to ensure that the product we deliver to you is the home of your dreams. We may be building houses but we believe in providing safe and beautiful ‘homes’ to our customers. We never compromise on quality. Right from getting plans designed by the best of architects to clearing all the requisite documentation, including the recently obligated RERA approval, we pay utmost attention to each little detail."
   },
   {
     "id": 2,
     "image": "/assets/img/02.jpg",
     "icon": "icon flaticon-living-room",
     "video":"/assets/video/mep.mp4",
-    "title": "MEP- Mechanical, Electrical & Plumbing",
-    "content": "We, at Neelachal Homes, believe in giving our customers the best of both worlds- safe and sturdy houses that are posh and beautiful homes. We use premium quality fittings to accentuate the aesthetic feel of the space. Lately, in our more recent projects, we are providing a designer factory finish Modular Kitchen as a complementary gift with the flats."
+    "title": "MEP (mechanical, electrical, and plumbing), and Interior Design",
+    "content": "We, at Neelachal Homes, believe in giving our customers the best of both worlds- safe and sturdy houses that are posh and beautiful homes. We hire the best designers to plan the interiors and use premium quality fittings to accentuate the aesthetic feel of the space. Lately, in our more recent projects, we are providing a designer factory finish Modular Kitchen as a complementary gift with the flats. "
   },
   {
     "id": 3,
@@ -44,7 +44,7 @@
     "image": "/assets/img/03.jpg",
     "icon": "icon flaticon-interior-design",
     "video":"/assets/video/home_loan_approvals.mp4",
-    "title": "Home Loan Approvals",
+    "title": "Home loans",
     "content": "No more do you have to go to a bank and get slumped under piles of paperwork to avail the necessary home loans. We, at Neelachal Homes, have collaborated with the major nationalized banks to not only assist you in filing for the loans but also get them at attractive rates of interest."
   }
 ]

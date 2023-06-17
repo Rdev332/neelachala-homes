@@ -48,9 +48,9 @@ const VideoHero = () => {
                     margin: "auto"
                 }}
             >
-                <div className="row">
+                <div className="row align-items-center h-100">
                     <div className="col-lg-8 col-md-10">
-                        <div className="caption hmone mt-100">
+                        <div className="caption hmone my-auto">
                             <h5 className="thin text-white"
                             >{heroContent.title.first}</h5>
                             <Split>

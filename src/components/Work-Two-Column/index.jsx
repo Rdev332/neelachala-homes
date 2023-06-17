@@ -14,91 +14,103 @@ export const WorkTwoColumn = () => {
       <section className="works filter-img section-padding">
         <div className="container">
           <div className="row gallery">
-            <div className="col-lg-6 items mt-0 interior theaters residential">
-              <div className="section-head mb-0">
-                <h3>Works</h3>
-
-                <div className="filtering mt-30">
-                  <div className="filter">
-                    <span data-filter="*" className="active">
-                      All
-                    </span>
-                    <span data-filter=".interior">Interior</span>
-                    <span data-filter=".theaters">Theaters</span>
-                    <span data-filter=".residential">Residential</span>
-                  </div>
-                </div>
-              </div>
-            </div>
             <div className="col-lg-6 items theaters">
+            <Link href="/project-details?name=HN_Paradise">
               <div className="item">
                 <div className="img">
-                  <img src="/assets/img/works/2.jpg" alt="" />
+                  <img src="/assets/img/portfolio/mas/HN_Paradise.jpg" alt="" />
                 </div>
                 <div className="cont vis">
                   <h5>
-                    <Link href="/project-details">Modern Townhouse</Link>
+                    HN Paradise
                   </h5>
-                  <span>Architecture</span>
-                  <span>Modern</span>
                 </div>
               </div>
+              </Link>
             </div>
             <div className="col-lg-6 items residential interior">
+              <Link href="/project-details?name=Jagannath_Enclave">
               <div className="item">
                 <div className="img">
-                  <img src="/assets/img/works/1.jpg" alt="" />
+                  <img src="/assets/img/portfolio/mas/Jagannath_Enclave.jpg" alt="" />
                 </div>
                 <div className="cont vis">
                   <h5>
-                    <Link href="/project-details">Modern Townhouse</Link>
+                    Jagannath Enclave
                   </h5>
-                  <span>Architecture</span>
-                  <span>Modern</span>
                 </div>
               </div>
+              </Link>
             </div>
             <div className="col-lg-6 items interior">
+              <Link href="/project-details?name=Mahalaxmi_Niwas">
               <div className="item">
                 <div className="img">
-                  <img src="/assets/img/works/5.jpg" alt="" />
+                  <img src="/assets/img/portfolio/mas/Mahalaxmi_Niwas.jpg" alt="" />
                 </div>
                 <div className="cont vis">
                   <h5>
-                    <Link href="/project-details">Modern Townhouse</Link>
+                    Mahalaxmi Niwas
                   </h5>
-                  <span>Architecture</span>
-                  <span>Modern</span>
                 </div>
               </div>
+              </Link>
             </div>
             <div className="col-lg-6 items residential">
+              <Link href="/project-details?name=Narayan_Enclave">
               <div className="item">
                 <div className="img">
-                  <img src="/assets/img/works/3.jpg" alt="" />
+                  <img src="/assets/img/portfolio/mas/Narayan_Enclave.jpg" alt="" />
                 </div>
                 <div className="cont vis">
                   <h5>
-                    <Link href="/project-details">Modern Townhouse</Link>
+                    Narayan Enclave
                   </h5>
-                  <span>Architecture</span>
-                  <span>Modern</span>
                 </div>
               </div>
+              </Link>
             </div>
             <div className="col-lg-6 items theaters">
+              <Link href="/project-details?name=Neelachala_Lagoon">
               <div className="item">
                 <div className="img">
-                  <img src="/assets/img/works/4.jpg" alt="" />
+                  <img src="/assets/img/portfolio/mas/Neelachala_LAgoon2.jpg" alt="" />
                 </div>
                 <div className="cont vis">
                   <h5>
-                    <Link href="/project-details">Modern Townhouse</Link>
+                    Neelachala Lagoon
                   </h5>
-                  <span>Architecture</span>
-                  <span>Modern</span>
                 </div>
               </div>
+              </Link>
+            </div>
+            <div className="col-lg-6 items residential">
+              <Link href="/project-details?name=Spacetown">
+              <div className="item">
+                <div className="img">
+                  <img src="/assets/img/portfolio/mas/Spacetown.jpg" alt="" />
+                </div>
+                <div className="cont vis">
+                  <h5>
+                    Spacetown
+                  </h5>
+                </div>
+              </div>
+              </Link>
+            </div>
+            <div className="col-lg-6 items theaters">
+              <Link href="/project-details?name=Subhadra_Residency">
+              <div className="item">
+                <div className="img">
+                  <img src="/assets/img/portfolio/mas/Subadhra_Residency.jpg" alt="" />
+                </div>
+                <div className="cont vis">
+                  <h5>
+                    Subhadra Residency
+                  </h5>
+                </div>
+              </div>
+              </Link>
             </div>
           </div>
         </div>
