@@ -6,9 +6,19 @@
     "build": "next build",
     "export": "next build && next export",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "migrate:dev": "npx dotenv -e .env.local -- prisma migrate dev",
+    "db:push": "npx dotenv -e .env.local -- prisma db push",
+    "db:pull": "npx dotenv -e .env.local -- prisma db pull",
+    "migrate:reset": "npx dotenv -e .env.local -- prisma migrate reset",
+    "db:seed": "npx dotenv -e .env.local -- prisma db seed",
+    "prisma:generate": "npx dotenv -e .env.local -- prisma generate",
+    "prisma:studio": "npx dotenv -e .env.local -- prisma studio",
+    "production:build": "npx prisma generate && npx prisma migrate deploy && next build"
   },
   "dependencies": {
+    "@prisma/client": "^4.15.0",
+    "dotenv-cli": "^7.2.1",
     "next": "12.0.7",
     "react": "17.0.2",
     "react-circular-progressbar": "^2.0.4",
@@ -22,6 +32,7 @@
   },
   "devDependencies": {
     "eslint": "8.4.1",
-    "eslint-config-next": "12.0.7"
+    "eslint-config-next": "12.0.7",
+    "prisma": "^4.15.0"
   }
 }
