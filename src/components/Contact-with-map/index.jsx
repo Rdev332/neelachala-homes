@@ -8,6 +8,7 @@ const ContactWithMap = () => {
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [showMessage, setShowMessage] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -24,6 +25,7 @@ const ContactWithMap = () => {
       if (response.ok) {
         const data = await response.json();
         console.log(data.message);
+        setShowMessage(true);
         setName('');
         setPhone('');
         setEmail('');
@@ -35,6 +37,14 @@ const ContactWithMap = () => {
       console.error('An error occurred', error);
     }
   };
+
+  useEffect(() => {
+    if (showMessage) {
+      setTimeout(() => {
+        setShowMessage(false);
+      }, 5000);
+    }
+  }, [showMessage]);
 
   return (
     <div className="container-fluid">
@@ -91,8 +101,11 @@ const ContactWithMap = () => {
                 ></textarea>
               </div>
 
-              <button type="submit" className="btn-curve btn-color">
-                <span>Send Message</span>
+              <button type="submit" className="btn-curve btn-color" onClick={handleSubmit}
+                disabled={!name || !phone || !email || !message}
+              >
+                <span>
+                  {showMessage ? 'Message Sent' : 'Send Message'}</span>
               </button>
             </div>
           </form>
