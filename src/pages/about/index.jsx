@@ -13,7 +13,6 @@ const About = () => {
     <MainLayout>
       <PageHeader
         title="About Us"
-
         image="/assets/img/portfolio/mas/Mahalaxmi_Niwas.jpg"
       />
       <AboutUs4 />
