@@ -1,6 +1,6 @@
 import React from "react";
 import appData from '../../data/app.json'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const ContactWithMap = () => {
 
