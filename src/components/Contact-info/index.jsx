@@ -31,13 +31,7 @@ const ContactInfo = () => {
               <div className="cont">
                 <h6 className="custom-font">Address</h6>
                 <p>
-                N-5/237
-
-I.R.C. Village, Nayapalli
-
-Bhubaneswar-751015
-
-Odisha
+                  N-5/237 I.R.C. Village, Nayapalli Bhubaneswar-751015 Odisha
                 </p>
               </div>
             </div>

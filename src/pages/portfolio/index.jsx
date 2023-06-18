@@ -2,9 +2,9 @@
 import React from "react";
 import MainLayout from "../../layouts/main";
 import WorkHeader from "../../components/Work-header";
-import WorkThreeColumn from "../../components/Work-Three-Column";
+import WorkFourColumn from "../../components/Work-Four-Column";
 
-const Work2 = () => {
+const Portfolio = () => {
   React.useEffect(() => {
     document.querySelector("body").classList.add("index3");
   }, []);
@@ -19,9 +19,9 @@ const Work2 = () => {
         // title = "text",
         content="Architecture bibendum pharetra eleifend. Suspendisse vel volutpat purus, sit amet bibendum nisl. Cras mollis turpis a ipsum ultes, nec condimentum ipsum consequat. Mauris vitae consequat nibh, vitae interdum mi."
       />
-      <WorkThreeColumn />
+      <WorkFourColumn />
     </MainLayout>
   );
 };
 
-export default Work2;
+export default Portfolio;

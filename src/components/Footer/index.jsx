@@ -17,21 +17,27 @@ const Footer = ({ classText }) => {
                   <span className="icon pe-7s-map-marker"></span>
                   <div className="cont">
                     <h6>Officeal Address</h6>
-                    <p>504 Jaydev Vihar, Bhubaneswar</p>
+                    <p>
+                      N-5/237 I.R.C. Village, Nayapalli Bhubaneswar-751015
+                      Odisha
+                    </p>
+                    
                   </div>
                 </li>
                 <li>
                   <span className="icon pe-7s-mail"></span>
                   <div className="cont">
                     <h6>Email Us</h6>
-                    <p>support@neelachalahomes.com</p>
+                    <p>info@neelachalahomes.com</p>
+                    <p>businessenquiry@neelachalahomes.com</p>
                   </div>
                 </li>
                 <li>
                   <span className="icon pe-7s-call"></span>
                   <div className="cont">
                     <h6>Call Us</h6>
-                    <p>+87986451666</p>
+                    <p>+91-674-2362297</p>
+                    <p>+91-8249434141</p>
                   </div>
                 </li>
               </ul>
@@ -41,8 +47,9 @@ const Footer = ({ classText }) => {
           <div className="col-lg-6">
             <div className="item">
               <div className="logo">
-                <img src="/assets/img/logo.png" alt="logo" 
-                width="100rem" height="100rem"
+                <img
+                  src="/assets/img/logo-horizontal.png"
+                  alt="logo"
                 />
               </div>
               <div className="social">
@@ -69,9 +76,8 @@ const Footer = ({ classText }) => {
               </div>
               <div className="copy-right">
                 <p>
-                  © 
-                  <span>{new Date().getFullYear()}</span> All Rights Reserved by
-                  Neelachala Homes
+                  ©<span>{new Date().getFullYear()}</span> All Rights Reserved
+                  by Neelachala Homes
                 </p>
               </div>
             </div>
