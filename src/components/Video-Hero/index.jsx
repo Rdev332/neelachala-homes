@@ -27,10 +27,8 @@ const VideoHero = () => {
 
     // scroll to section
     function scrollBottom() {
-        window.scrollTo({
-            top: document.body.scrollHeight - 100,
-            behavior: "smooth",
-        });
+        // scroll to section with id as #contactForm 
+        document.getElementById("contactForm").scrollIntoView({ behavior: "smooth" }) 
     }
 
     return (
@@ -78,8 +76,8 @@ const VideoHero = () => {
                                     fontWeight: 'bold',
                                     fontFamily: 'Playfair Display',
                                     color: '#b93f3f',
-                                    backdropFilter: 'blur(10px)',
-                                    background: 'rgba(0,0,0,0.2)',
+                                    // backdropFilter: 'blur(10px)',
+                                    // background: 'rgba(0,0,0,0.2)',
                                 }}
                                 repeat={Infinity}
                             />

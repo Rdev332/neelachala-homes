@@ -47,7 +47,7 @@ const Contact = () => {
 
   return (
     <>
-      <section className="contact cont-map">
+      <section className="contact cont-map" id="contactForm">
         <div className="container">
           <div className="row">
             <div
