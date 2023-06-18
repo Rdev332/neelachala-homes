@@ -24,6 +24,7 @@ const Contact = () => {
 
       if (response.ok) {
         const data = await response.json();
+        setShowMessage(true);
         console.log(data.message);
         setName('');
         setPhone('');

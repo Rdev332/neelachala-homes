@@ -46,6 +46,8 @@ const ContactWithMap = () => {
     }
   }, [showMessage]);
 
+  console.log(showMessage, 'showMessage')
+
   return (
     <div className="container-fluid">
       <div className="row">
