@@ -27,9 +27,8 @@ class Testimonials1 extends React.Component {
     return (
       <>
         <section
-          className={`testimonials grid section-padding ${
-            this.props.withBg ? "bg-img parallaxie" : ""
-          }`}
+          className={`testimonials grid section-padding ${this.props.withBg ? "bg-img parallaxie" : ""
+            }`}
           style={{
             backgroundImage: this.props.withBg
               ? `url(/assets/img/001.jpg)`
@@ -103,9 +102,9 @@ class Testimonials1 extends React.Component {
                         <p className="">&quot;{item.content}&quot;</p>
                       </div>
                       <div className="info">
-                        <div className="author">
+                        {/* <div className="author">
                           <img src={item.image} alt="" />
-                        </div>
+                        </div> */}
                         <h6>
                           {item.username} <span>{item.usertitle}</span>
                         </h6>

@@ -16,14 +16,14 @@ const About = () => {
     <MainLayout>
       <PageHeader
         title="About Us"
-      
+
         image="/assets/img/portfolio/mas/Mahalaxmi_Niwas.jpg"
       />
       <AboutUs4 />
       <Services3 bigTitle grid />
       {/* <Testimonials1 bigTitle /> */}
-      <Team2 />
-      <Skills2 />
+      {/* <Team2 />
+      <Skills2 /> */}
     </MainLayout>
   );
 };

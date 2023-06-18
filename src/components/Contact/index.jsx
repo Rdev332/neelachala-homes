@@ -111,7 +111,7 @@ const Contact = () => {
         </div>
         <div
           className="bg-img"
-          style={{ backgroundImage: "url(/assets/img/2.jpg)" }}
+          style={{ backgroundImage: "url(/assets/img/portfolio/mas/Subadhra_Residency.jpg)" }}
         ></div>
       </section>
     </>

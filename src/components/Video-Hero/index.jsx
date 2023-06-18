@@ -51,12 +51,12 @@ const VideoHero = () => {
                 <div className="row align-items-center h-100">
                     <div className="col-lg-8 col-md-10">
                         <div className="caption hmone my-auto">
-                            <h5 className="thin text-white"
+                            <h5 className="thin text-white playfont"
                             >{heroContent.title.first}</h5>
                             <Split>
                                 <h1
                                     data-splitting
-                                    className="words chars splitting text-white"
+                                    className="words chars splitting text-white playfont"
                                 >
                                     {heroContent.title.second}
                                 </h1>

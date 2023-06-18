@@ -3,7 +3,7 @@ import React from "react";
 import Link from "next/link";
 import initIsotope from "../../common/initIsotope";
 
-const WorkThreeColumn = () => {
+export const WorkThreeColumn = () => {
   React.useEffect(() => {
     setTimeout(() => {
       if (window.Isotope) initIsotope();
@@ -157,4 +157,3 @@ const WorkThreeColumn = () => {
   );
 };
 
-export default WorkThreeColumn;

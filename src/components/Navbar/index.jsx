@@ -34,9 +34,10 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
         <div className="container">
           <Link href="/">
             <a className={`logo ${logoClass && logoClass}`}>
-              <img src={appData.lightLogo} alt="logo" ref={logoRef} 
-                style={{width: 
-                  "160px"
+              <img src={appData.lightLogo} alt="logo" ref={logoRef}
+                style={{
+                  width:
+                    "160px"
                 }}
               />
             </a>
@@ -65,7 +66,7 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link href="/about">
+                <Link href="/portfolio">
                   <a className="nav-link">Portfolio</a>
                 </Link>
               </li>

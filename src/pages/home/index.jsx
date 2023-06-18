@@ -5,7 +5,7 @@ import VideoHero from "../../components/Video-Hero";
 import LightLayout from "../../layouts/light";
 import Testimonials from "../../components/Testimonials1";
 import Contact from "../../components/Contact";
-import {WorkTwoColumn} from "../../components/Work-Two-Column";
+import WorkTwoColumn from "../../components/Work-Two-Column";
 
 const Home1 = () => {
   React.useEffect(() => {

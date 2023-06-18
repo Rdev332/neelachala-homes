@@ -5,9 +5,8 @@ import Link from "next/link";
 const Services3 = ({ bigTitle, grid }) => {
   return (
     <section
-      className={`${!grid ? "services" : "services-grid"} section-padding ${
-        !grid ? "bg-gray" : "pt-0"
-      } `}
+      className={`${!grid ? "services" : "services-grid"} section-padding ${!grid ? "bg-gray" : "pt-0"
+        } `}
     >
       <div className="container">
         {!bigTitle ? (
@@ -39,10 +38,10 @@ const Services3 = ({ bigTitle, grid }) => {
                 style={{ backgroundImage: `url(${item.video})` }}
               >
                 {/* <span className={item.icon}></span> */}
-                <video width="100%" autoplay="autoPlay" loop muted>
+                {/* <video width="100%" autoplay="autoPlay" loop muted>
                   <source src={item.video} type="video/mp4" />
                   Your browser does not support the video tag.
-                </video>
+                </video> */}
                 <h6 className="mb-20">{item.title}</h6>
                 <p>{item.content}</p>
                 <Link href="/about">
@@ -51,7 +50,7 @@ const Services3 = ({ bigTitle, grid }) => {
                   </a>
                 </Link>
               </div>
-             </div>
+            </div>
           ))}
         </div>
       </div>
