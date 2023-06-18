@@ -8,6 +8,7 @@ const Contact = () => {
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [showMessage, setShowMessage] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -35,6 +36,14 @@ const Contact = () => {
       console.error('An error occurred', error);
     }
   };
+
+  useEffect(() => {
+    if (showMessage) {
+      setTimeout(() => {
+        setShowMessage(false);
+      }, 5000);
+    }
+  }, [showMessage]);
 
   return (
     <>
@@ -98,8 +107,12 @@ const Contact = () => {
                     ></textarea>
                   </div>
 
-                  <button type="submit" className="btn-curve btn-color">
-                    <span>Send Message</span>
+                  <button type="submit" className="btn-curve btn-color"
+                    disabled={!name || !phone || !email || !message}
+                  >
+                    <span>
+                      {showMessage ? "Message Sent" : "Send Message"}
+                    </span>
                   </button>
                 </div>
               </form>
