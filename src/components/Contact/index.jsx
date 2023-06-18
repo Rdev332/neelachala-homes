@@ -43,7 +43,7 @@ const Contact = () => {
           <div className="row">
             <div
               className="col-lg-5 col-md-6 contact-form wow fadeInDown"
-              data-wow-delay=".3s"
+              data-wow-delay=".1s"
             >
               <form id="contact-form" onSubmit={handleSubmit}>
                 <div className="section-head">

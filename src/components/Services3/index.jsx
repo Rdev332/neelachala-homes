@@ -37,14 +37,9 @@ const Services3 = ({ bigTitle, grid }) => {
                 data-wow-delay={index == 0 ? ".3s" : index == 1 ? ".5s" : ".7s"}
                 style={{ backgroundImage: `url(${item.video})` }}
               >
-                {/* <span className={item.icon}></span> */}
-                {/* <video width="100%" autoplay="autoPlay" loop muted>
-                  <source src={item.video} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video> */}
-                <h6 className="mb-20">{item.title}</h6>
+                <h6 className="mb-20 mt-20">{item.title}</h6>
                 <p>{item.content}</p>
-                <Link href="/about">
+                <Link legacyBehavior href="/about">
                   <a className={`more ${!grid ? "custom-font" : ""} mt-30`}>
                     Request Quotation
                   </a>

@@ -20,9 +20,9 @@ const PostDetails = () => {
                   <h2>Build a Beautiful Blog With Ease</h2>
                   <div className="info">
                     <p>
-                      <Link href="#">Alex Smith</Link>/
-                      <Link href="#">August 6 , 2022</Link>/
-                      <Link href="#">Web Design</Link>
+                      <Link legacyBehavior href="#">Alex Smith</Link>/
+                      <Link legacyBehavior href="#">August 6 , 2022</Link>/
+                      <Link legacyBehavior href="#">Web Design</Link>
                     </p>
                   </div>
                 </div>
@@ -121,26 +121,26 @@ const PostDetails = () => {
                         </p>
                         <div className="share-info">
                           <div className="social">
-                            <Link href="#">
+                            <Link legacyBehavior href="#">
                               <a>
                                 <i className="fab fa-facebook-f"></i>
                               </a>
                             </Link>
-                            <Link href="#">
+                            <Link legacyBehavior href="#">
                               <a>
                                 <i className="fab fa-twitter"></i>
                               </a>
                             </Link>
-                            <Link href="#">
+                            <Link legacyBehavior href="#">
                               <a>
                                 <i className="fab fa-behance"></i>
                               </a>
                             </Link>
                           </div>
                           <div className="tags">
-                            <Link href="#">Web</Link>,
-                            <Link href="#">Themeforest</Link>,
-                            <Link href="#">ThemesCamp</Link>
+                            <Link legacyBehavior href="#">Web</Link>,
+                            <Link legacyBehavior href="#">Themeforest</Link>,
+                            <Link legacyBehavior href="#">ThemesCamp</Link>
                           </div>
                         </div>
                       </div>
@@ -176,17 +176,17 @@ const PostDetails = () => {
 
                 <div className="pagination">
                   <span>
-                    <Link href="#">Prev Post</Link>
+                    <Link legacyBehavior href="#">Prev Post</Link>
                   </span>
                   <span className="icon">
-                    <Link href="#">
+                    <Link legacyBehavior href="#">
                       <a>
                         <i className="fas fa-th-large"></i>
                       </a>
                     </Link>
                   </span>
                   <span className="text-right">
-                    <Link href="#">Next Post</Link>
+                    <Link legacyBehavior href="#">Next Post</Link>
                   </span>
                 </div>
 
@@ -201,7 +201,7 @@ const PostDetails = () => {
                         Jorden Griffin<span> 6 Aug 2022</span>
                       </h6>
                       <span className="replay">
-                        <Link href="#">
+                        <Link legacyBehavior href="#">
                           <a>
                             Replay <i className="fas fa-reply"></i>
                           </a>
@@ -223,7 +223,7 @@ const PostDetails = () => {
                         Jorden Griffin<span> 6 Aug 2022</span>
                       </h6>
                       <span className="replay">
-                        <Link href="#">
+                        <Link legacyBehavior href="#">
                           <a>
                             Replay <i className="fas fa-reply"></i>
                           </a>
@@ -245,7 +245,7 @@ const PostDetails = () => {
                         Jorden Griffin<span> 6 Aug 2022</span>
                       </h6>
                       <span className="replay">
-                        <Link href="#">
+                        <Link legacyBehavior href="#">
                           <a>
                             Replay <i className="fas fa-reply"></i>
                           </a>

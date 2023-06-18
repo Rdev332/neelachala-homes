@@ -46,7 +46,7 @@ const AboutUs4 = () => {
           </div>
           <div className="col-lg-6">
             <div className="txt-cont">
-              <p className="mb-20">
+              <p className="mb-20 mt-40">
                 Established in 2008, Neelachal Homes is born out of the vision of providing people with a comfortable and fully equipped modern living space that they can call their homes. We take pride in our ingenious and robust designs that assure safety without compromising the overall aesthetics of the space. At Neelachal Homes, we value your time and money. We make it a point to ensure that the process of delivering the homes to you, is carried out efficiently with zero hassle and timely execution. Additionally, we strive for creating spaces that give you the best value for your investment.
               </p>
               <p>

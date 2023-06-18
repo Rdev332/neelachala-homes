@@ -1,14 +1,14 @@
 import React from "react";
 import Link from "next/link";
 
-const ProjectIntro = ({project}) => {
+const ProjectIntro = ({ project }) => {
   return (
     <section className="intro-section section-padding">
       <div className="container">
         <div className="row">
           <div className="col-lg-3 col-md-4">
             <div className="htit">
-              <h4>introduction</h4>
+              <h4>Introduction</h4>
             </div>
           </div>
           <div className="col-lg-8 offset-lg-1 col-md-8 mb-30">
@@ -23,7 +23,7 @@ const ProjectIntro = ({project}) => {
             <div className="item mt-30">
               <h6>Client</h6>
               <p>
-                <Link href="#">Envato.com</Link>
+                <Link legacyBehavior href="#">Envato.com</Link>
               </p>
             </div>
           </div>
@@ -37,8 +37,8 @@ const ProjectIntro = ({project}) => {
             <div className="item mt-30">
               <h6>Categories</h6>
               <p>
-                <Link href="#">Web Design </Link>,
-                <Link href="#">WordPress</Link>
+                <Link legacyBehavior href="#">Web Design </Link>,
+                <Link legacyBehavior href="#">WordPress</Link>
               </p>
             </div>
           </div>
@@ -46,8 +46,8 @@ const ProjectIntro = ({project}) => {
             <div className="item mt-30">
               <h6>Tags</h6>
               <p>
-                <Link href="#">Minimal</Link> , <Link href="#">Modern</Link> ,
-                <Link href="#">Design</Link>
+                <Link legacyBehavior href="#">Minimal</Link> , <Link legacyBehavior href="#">Modern</Link> ,
+                <Link legacyBehavior href="#">Design</Link>
               </p>
             </div>
           </div>

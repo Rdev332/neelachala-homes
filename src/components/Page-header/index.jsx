@@ -20,7 +20,7 @@ const PageHeader = ({ title, fullPath, image }) => {
               <div className="path">
                 {fullPath?.length && fullPath?.map((item, index) => (
                   <React.Fragment key={item.id}>
-                    <Link href={item.url}>
+                    <Link legacyBehavior href={item.url}>
                       <a
                         className={router.pathname == item.url ? "active" : ""}
                       >

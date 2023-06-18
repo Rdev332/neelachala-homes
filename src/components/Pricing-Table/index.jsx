@@ -31,7 +31,7 @@ const PricingTable = () => {
                 </p>
               </div>
               <div className="order">
-                <Link href="#" className="btn-curve btn-lit">
+                <Link legacyBehavior href="#" className="btn-curve btn-lit">
                   <a><span>Purchase Now</span></a>
                 </Link>
               </div>
@@ -57,7 +57,7 @@ const PricingTable = () => {
                 </p>
               </div>
               <div className="order">
-                <Link href="#" className="btn-curve btn-wit">
+                <Link legacyBehavior href="#" className="btn-curve btn-wit">
                   <a><span>Purchase Now</span></a>
                 </Link>
               </div>
@@ -80,7 +80,7 @@ const PricingTable = () => {
                 </p>
               </div>
               <div className="order">
-                <Link href="#" className="btn-curve btn-lit">
+                <Link legacyBehavior href="#" className="btn-curve btn-lit">
                   <a><span>Purchase Now</span></a>
                 </Link>
               </div>

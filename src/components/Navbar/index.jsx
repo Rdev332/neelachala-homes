@@ -32,7 +32,7 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
     <>
       <nav className="navbar change navbar-expand-lg" ref={navbarRef}>
         <div className="container">
-          <Link href="/">
+          <Link legacyBehavior href="/">
             <a className={`logo ${logoClass && logoClass}`}>
               <img src={appData.lightLogo} alt="logo" ref={logoRef}
                 style={{
@@ -61,17 +61,17 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
-                <Link href="/about">
+                <Link legacyBehavior href="/about">
                   <a className="nav-link">About Us</a>
                 </Link>
               </li>
               <li className="nav-item">
-                <Link href="/portfolio">
+                <Link legacyBehavior href="/portfolio">
                   <a className="nav-link">Portfolio</a>
                 </Link>
               </li>
               <li className="nav-item">
-                <Link href="/contact">
+                <Link legacyBehavior href="/contact">
                   <a className="nav-link">Contact</a>
                 </Link>
               </li>

@@ -21,7 +21,7 @@ const WorkFourColumn = () => {
 
               return (
                 <div className="col-lg-4 col-md-6 items theaters" key={index}>
-                  <Link href={`/project-details?name=${key}`}>
+                  <Link legacyBehavior href={`/project-details?name=${key}`}>
                     <div className="item">
                       <div className="img">
                         <img src={project.hero_image} alt={project.name} />

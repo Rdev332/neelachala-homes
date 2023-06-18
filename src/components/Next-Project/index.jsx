@@ -9,7 +9,7 @@ const NextProject = () => {
         <div className="row">
           <div className="col-md-12">
             <div className="content text-center">
-              <Link href="/project-details">
+              <Link legacyBehavior href="/project-details">
                 <a>
                   <Split>
                     <h6

@@ -4,8 +4,6 @@ import { useRouter } from "next/router";
 import MainLayout from "../../layouts/main";
 import PageHeader from "../../components/Page-header";
 import ProjectIntro from "../../components/Project-Intro";
-import NextProject from "../../components/Next-Project";
-import ProjectVideo from "../../components/Project-Video";
 
 import { projects } from "../../data/projects";
 
@@ -27,8 +25,8 @@ const ProjectDetails = () => {
         title={project?.name}
         image={project?.hero_image}
       />
-      <ProjectIntro project={project}/>
-     {project?.others?.length && <section className="projdtal">
+      <ProjectIntro project={project} />
+      {project?.others?.length && <section className="projdtal">
         <div className="justified-gallery">
           <div className="row">
             {
@@ -38,8 +36,8 @@ const ProjectDetails = () => {
                     project.others.length === 2 ? "col-lg-6 col-xl-6 col-md-6" :
                       project.others.length === 3 ? "col-lg-4 col-xl-4 col-md-6" :
                         project.others.length === 4 ? "col-lg-3 col-xl-3 col-md-6" :
-                          project.others.length === 5 ? "col-lg-3 col-xl-3 col-md-6" 
-                          : "col-lg-2 col-xl-2 col-md-6"
+                          project.others.length === 5 ? "col-lg-3 col-xl-3 col-md-6"
+                            : "col-lg-2 col-xl-2 col-md-6"
                 } key={index}>
                   <img alt="" src={other} />
                 </div>
@@ -49,21 +47,6 @@ const ProjectDetails = () => {
           </div>
         </div>
       </section>}
-
-      {/* <ProjectVideo /> */}
-
-      {/* <section className="projdtal">
-        <div className="justified-gallery">
-          <a href="#" className="col-lg-4 col-xl-3 col-md-6">
-            <img alt="" src="/assets/img/portfolio/project1/8.jpg" />
-          </a>
-          <a href="#" className="col-lg-4 col-xl-3 col-md-6">
-            <img alt="" src="/assets/img/portfolio/project1/9.jpg" />
-          </a>
-        </div>
-      </section> */}
-
-      {/* <NextProject /> */}
     </MainLayout>
   );
 };

@@ -1,12 +1,11 @@
 // video hero image
 //
 import Split from "../Split";
-import Link from "next/link";
+import { TypeAnimation } from 'react-type-animation';
 
 const heroContent = {
     title: {
-        first: "Welcome to",
-        second: "The Future of",
+        first: "Welcome to the future of",
     },
     content: {
         first: "We are a creative studio focusing on culture, luxury, editorial & art. Somewhere between sophistication and simplicity.",
@@ -15,7 +14,25 @@ const heroContent = {
     video: "/assets/video/hero-vid.mp4",
 };
 
+const secondTexts = [
+    "Luxury",
+    5000,
+    "Design",
+    5000,
+    "Architecture",
+    5000,
+];
+
 const VideoHero = () => {
+
+    // scroll to section
+    function scrollBottom() {
+        window.scrollTo({
+            top: document.body.scrollHeight - 100,
+            behavior: "smooth",
+        });
+    }
+
     return (
         <div
             className="bg-img valign"
@@ -53,22 +70,27 @@ const VideoHero = () => {
                         <div className="caption hmone my-auto">
                             <h5 className="thin text-white playfont"
                             >{heroContent.title.first}</h5>
-                            <Split>
-                                <h1
-                                    data-splitting
-                                    className="words chars splitting text-white playfont"
-                                >
-                                    {heroContent.title.second}
-                                </h1>
-                            </Split>
+                            <TypeAnimation
+                                sequence={secondTexts}
+                                style={{
+                                    height: '100%',
+                                    fontSize: '4em',
+                                    fontWeight: 'bold',
+                                    fontFamily: 'Playfair Display',
+                                    color: '#b93f3f',
+                                    backdropFilter: 'blur(10px)',
+                                    background: 'rgba(0,0,0,0.2)',
+                                }}
+                                repeat={Infinity}
+                            />
                             <p className="mt-10 text-white">
                                 {heroContent.content.first}
                             </p>
-                            <Link href="/about">
-                                <a className="btn-curve btn-bord btn-lit mt-30">
-                                    <span>Enquire Now</span>
-                                </a>
-                            </Link>
+                            <a
+                                onClick={scrollBottom}
+                                className="btn-curve btn-bord btn-lit mt-30">
+                                <span>Enquire Now</span>
+                            </a>
                         </div>
                     </div>
                 </div>

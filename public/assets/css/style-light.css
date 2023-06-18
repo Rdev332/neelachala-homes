@@ -1414,6 +1414,7 @@ body {
   -webkit-transition: all 0.8s;
   -o-transition: all 0.8s;
   transition: all 0.8s;
+  color: #fff;
 }
 
 .btn-curve.btn-lit {
@@ -4549,7 +4550,7 @@ footer .item .logo {
 }
 
 footer .item .logo img {
-  width: 100px;
+  width: 12rem;
 }
 
 footer .item .social a {
@@ -5306,13 +5307,13 @@ footer .item .copy-right p a {
 }
 
 .works .row {
-  margin-left: -50px;
-  margin-right: -50px;
+  /* margin-left: -50px; */
+  /* margin-right: -50px; */
 }
 
 .works .items {
   margin-top: 100px;
-  padding: 0 50px;
+  /* padding: 0 50px; */
 }
 
 .works .item {

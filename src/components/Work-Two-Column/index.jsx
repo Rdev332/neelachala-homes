@@ -11,7 +11,7 @@ const WorkTwoColumn = () => {
   }, []);
   return (
     <>
-      <section className="works filter-img section-padding pb-0">
+      <section className="works section-padding pb-0 pt-0">
         <div className="container">
           <div className="section-head text-center mb-0">
             <div className="row justify-content-center"
@@ -28,7 +28,7 @@ const WorkTwoColumn = () => {
           </div>
           <div className="row gallery">
             <div className="col-lg-6 items">
-              <Link href="/project-details?name=HN_Paradise">
+              <Link legacyBehavior href="/project-details?name=HN_Paradise">
                 <div className="item">
                   <div className="img">
                     <img src="/assets/img/portfolio/mas/HN_Paradise.jpg" alt="" />
@@ -42,7 +42,7 @@ const WorkTwoColumn = () => {
               </Link>
             </div>
             <div className="col-lg-6 items">
-              <Link href="/project-details?name=Jagannath_Enclave">
+              <Link legacyBehavior href="/project-details?name=Jagannath_Enclave">
                 <div className="item">
                   <div className="img">
                     <img src="/assets/img/portfolio/mas/Jagannath_Enclave.jpg" alt="" />
@@ -56,7 +56,7 @@ const WorkTwoColumn = () => {
               </Link>
             </div>
             <div className="col-lg-6 items">
-              <Link href="/project-details?name=Mahalaxmi_Niwas">
+              <Link legacyBehavior href="/project-details?name=Mahalaxmi_Niwas">
                 <div className="item">
                   <div className="img">
                     <img src="/assets/img/portfolio/mas/Mahalaxmi_Niwas.jpg" alt="" />
@@ -70,7 +70,7 @@ const WorkTwoColumn = () => {
               </Link>
             </div>
             <div className="col-lg-6 items">
-              <Link href="/project-details?name=Narayan_Enclave">
+              <Link legacyBehavior href="/project-details?name=Narayan_Enclave">
                 <div className="item">
                   <div className="img">
                     <img src="/assets/img/portfolio/mas/Narayan_Enclave.jpg" alt="" />
@@ -84,7 +84,7 @@ const WorkTwoColumn = () => {
               </Link>
             </div>
             <div className="col-lg-6 items">
-              <Link href="/project-details?name=Neelachala_Lagoon">
+              <Link legacyBehavior href="/project-details?name=Neelachala_Lagoon">
                 <div className="item">
                   <div className="img">
                     <img src="/assets/img/portfolio/mas/Neelachala_LAgoon2.jpg" alt="" />
@@ -98,7 +98,7 @@ const WorkTwoColumn = () => {
               </Link>
             </div>
             <div className="col-lg-6 items">
-              <Link href="/project-details?name=Spacetown">
+              <Link legacyBehavior href="/project-details?name=Spacetown">
                 <div className="item">
                   <div className="img">
                     <img src="/assets/img/portfolio/mas/Spacetown.jpg" alt="" />
@@ -112,7 +112,7 @@ const WorkTwoColumn = () => {
               </Link>
             </div>
             <div className="col-lg-6 items">
-              <Link href="/project-details?name=Subhadra_Residency">
+              <Link legacyBehavior href="/project-details?name=Subhadra_Residency">
                 <div className="item">
                   <div className="img">
                     <img src="/assets/img/portfolio/mas/Subadhra_Residency.jpg" alt="" />

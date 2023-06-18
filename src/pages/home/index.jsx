@@ -15,12 +15,8 @@ const Home1 = () => {
     <LightLayout footerClass={"mt-30"}>
       <VideoHero />
       <AboutUs1 />
-      {/* <Services1 /> */}
       <WorkTwoColumn />
-      {/* <SkillsCircle /> */}
       <Testimonials />
-      {/* <Team1 /> */}
-      {/* <Blogs1 /> */}
       <Contact />
     </LightLayout>
   );
