@@ -11,14 +11,22 @@ const WorkTwoColumn = () => {
   }, []);
   return (
     <>
-      <section className="works filter-img section-padding">
+      <section className="works filter-img section-padding pb-0">
         <div className="container">
-          <div className="row gallery">
-            <div className="col-lg-6 items mt-0">
-              <div className="section-head mb-0">
-                <h3>Works</h3>
+          <div className="section-head text-center mb-0">
+            <div className="row justify-content-center"
+            >
+              <div className="col-lg-6 col-md-8 col-sm-10">
+                <h6 className="wow fadeInDown" data-wow-delay=".3s">
+                  Best Works
+                </h6>
+                <h4 className="playfont wow flipInX" data-wow-delay=".5s">
+                  Our Portfolio
+                </h4>
               </div>
             </div>
+          </div>
+          <div className="row gallery">
             <div className="col-lg-6 items">
               <Link href="/project-details?name=HN_Paradise">
                 <div className="item">

@@ -107,7 +107,11 @@ const Contact = () => {
           </div>
         </div>
         <div className="contact-map">
-          <iframe src={appData.mapIframe}></iframe>
+          <iframe
+            style={{
+              filter: "grayscale(100%)",
+            }}
+            src={appData.mapIframe}></iframe>
         </div>
         <div
           className="bg-img"

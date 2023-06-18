@@ -2486,7 +2486,7 @@ body {
 }
 
 .about .img .feat .item h5 {
-  color: #item;
+  color: #c5a47e;
 }
 
 .about .img .feat .item h6 {
@@ -2946,6 +2946,7 @@ body {
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2px;
+  color: #AA5656
 }
 
 /* ====================== [ End Numbers & Counter  ] ====================== */
@@ -3289,6 +3290,7 @@ body {
 .work-header .cont h2 {
   letter-spacing: 2px;
   margin-bottom: 30px;
+  font-family: 'Playfair Display', serif;
 }
 
 /* ====================== [ End Work ] ====================== */

@@ -11,7 +11,7 @@ const AboutUs4 = () => {
                 <div className="col-sm-6">
                   <div className="item mb-50">
                     <h3>
-                      <span className="nbr custom-font">352</span>
+                      <span className="nbr playfont">352</span>
                     </h3>
                     <h6>Projects Completed</h6>
                   </div>
@@ -19,7 +19,7 @@ const AboutUs4 = () => {
                 <div className="col-sm-6">
                   <div className="item mb-50">
                     <h3>
-                      <span className="nbr custom-font">567</span>
+                      <span className="nbr playfont">567</span>
                     </h3>
                     <h6>Satisfied Clients</h6>
                   </div>
@@ -27,7 +27,7 @@ const AboutUs4 = () => {
                 {/* <div className="col-sm-6">
                   <div className="item">
                     <h3>
-                      <span className="nbr custom-font">656</span>
+                      <span className="nbr playfont">656</span>
                       <i>M</i>
                     </h3>
                     <h6>Monthly Revenue</h6>
@@ -36,7 +36,7 @@ const AboutUs4 = () => {
                 <div className="col-sm-6">
                   <div className="item">
                     <h3>
-                      <span className="nbr custom-font">17</span>
+                      <span className="nbr playfont">17</span>
                     </h3>
                     <h6>Awards Won</h6>
                   </div>

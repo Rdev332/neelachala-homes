@@ -13,11 +13,10 @@ const Portfolio = () => {
       <WorkHeader
         center
         title={{
-          first: "Architecture is a visual art,",
-          second: "and the building speak for themeselves",
+          first: "Our work",
+          second: "Portfolio",
         }}
-        // title = "text",
-        content="Architecture bibendum pharetra eleifend. Suspendisse vel volutpat purus, sit amet bibendum nisl. Cras mollis turpis a ipsum ultes, nec condimentum ipsum consequat. Mauris vitae consequat nibh, vitae interdum mi."
+        content="We are a team of professionals who are passionate about what we do. We are committed to excellence and timely delivery of projects. We are a team of professionals who are passionate about what we do. We are committed to excellence and timely delivery of projects."
       />
       <WorkFourColumn />
     </MainLayout>

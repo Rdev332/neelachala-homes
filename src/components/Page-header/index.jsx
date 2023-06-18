@@ -15,7 +15,7 @@ const PageHeader = ({ title, fullPath, image }) => {
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
-            <div className="cont text-center">
+            <div className="cont text-center playfont">
               <h1>{title}</h1>
               <div className="path">
                 {fullPath?.length && fullPath?.map((item, index) => (

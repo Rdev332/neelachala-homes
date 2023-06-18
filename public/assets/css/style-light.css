@@ -1422,7 +1422,7 @@ body {
 }
 
 .btn-curve.btn-lit:hover span {
-  color: #b19777;
+  color: #AA5656;
 }
 
 .btn-curve.btn-lit:after {
@@ -3765,6 +3765,7 @@ body {
   vertical-align: middle;
   padding-left: 20px;
   font-size: 16px;
+  color: #AA5656;
 }
 
 .testimonials.grid .item .info h6 span {
@@ -5606,3 +5607,7 @@ footer .item .copy-right p a {
 }
 
 /* ====================== [ End Work ] ====================== */
+
+maroon {
+  color: #AA5656;
+}
