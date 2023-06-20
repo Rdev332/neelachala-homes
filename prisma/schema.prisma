@@ -7,11 +7,11 @@ datasource db {
   url      = env("NEXT_PUBLIC_DATABASE_URL")
 }
 
-model Contact {
-  createdAt DateTime @default(now())
-  email     String
-  id        Int      @id @default(autoincrement())
-  message   String
-  name      String
-  phone     String
+model contact {
+  createdat DateTime? @default(now()) @db.Timestamp(6)
+  email     String?   @db.VarChar(255)
+  id        Int       @id @default(autoincrement())
+  message   String?
+  name      String?   @db.VarChar(255)
+  phone     String?   @db.VarChar(255)
 }
