@@ -19,7 +19,7 @@ const ProjectIntro = ({ project }) => {
             </div>
           </div>
 
-          <div className="col-lg-3">
+          {/* <div className="col-lg-3">
             <div className="item mt-30">
               <h6>Client</h6>
               <p>
@@ -50,7 +50,7 @@ const ProjectIntro = ({ project }) => {
                 <Link legacyBehavior href="#">Design</Link>
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
