@@ -4,15 +4,17 @@ import MainLayout from "../../layouts/main";
 import PageHeader from "../../components/Page-header";
 import ProjectIntro from "../../components/Project-Intro";
 import getAllProjects from "../api/getAllProjects";
+import { useRouter } from 'next/router'
 
-
-const ProjectDetails = ({project}) => {
-
-  const {name,main_photo,photos,description} = project?.[0].attributes
+const ProjectDetails = ({ projects }) => {
+  const router = useRouter()
+  const project = projects?.data?.filter((project) => project.attributes?.slug?.toLowerCase() === router?.query?.name?.toLowerCase())[0]
+  const { name, main_photo, photos, description } = project?.attributes ?? {}
 
   React.useEffect(() => {
     document.querySelector("body").classList.add("index3");
   }, []);
+
   return (
     <MainLayout>
       <PageHeader
@@ -48,15 +50,11 @@ const ProjectDetails = ({project}) => {
 export default ProjectDetails;
 
 
-
-// getServersideProps
-export const getStaticProps = async ({query}) => {
+export const getStaticProps = async () => {
   const projects = await getAllProjects();
-  // filter projects based on the name from router.query
-  const project = projects.data.filter(project => project.attributes?.name?.replace(/\s+/g, '_').toLowerCase() === query.name)
   return {
     props: {
-      project,
+      projects,
     },
   }
 }

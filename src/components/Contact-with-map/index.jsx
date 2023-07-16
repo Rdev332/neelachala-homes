@@ -24,7 +24,6 @@ const ContactWithMap = () => {
 
       if (response.ok) {
         const data = await response.json();
-        console.log(data.message);
         setShowMessage(true);
         setName('');
         setPhone('');
@@ -45,8 +44,6 @@ const ContactWithMap = () => {
       }, 5000);
     }
   }, [showMessage]);
-
-  console.log(showMessage, 'showMessage')
 
   return (
     <div className="container-fluid">
