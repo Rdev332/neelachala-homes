@@ -1,13 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import AboutUs1 from "../../components/About-Us1";
-import VideoHero from "../../components/Video-Hero";
+import AboutUs1 from "../About-Us1";
+import VideoHero from "../Video-Hero";
 import LightLayout from "../../layouts/light";
-import Testimonials from "../../components/Testimonials1";
-import Contact from "../../components/Contact";
-import WorkTwoColumn from "../../components/Work-Two-Column";
+import Testimonials from "../Testimonials1";
+import Contact from "../Contact";
+import WorkTwoColumn from "../Work-Two-Column";
 
-const Home1 = () => {
+const Home1 = ({projects}) => {
   React.useEffect(() => {
     document.querySelector("body").classList.add("homepage");
   }, []);
@@ -15,7 +15,7 @@ const Home1 = () => {
     <LightLayout footerClass={"mt-30"}>
       <VideoHero />
       <AboutUs1 />
-      <WorkTwoColumn />
+      <WorkTwoColumn projects={projects?.data}/>
       <Testimonials />
       <Contact />
     </LightLayout>
@@ -23,3 +23,5 @@ const Home1 = () => {
 };
 
 export default Home1;
+
+
