@@ -6,19 +6,10 @@
     "build": "next build",
     "export": "next build && next export",
     "start": "next start",
-    "lint": "next lint",
-    "migrate:dev": "npx dotenv -e .env.local -- prisma migrate dev",
-    "db:push": "npx dotenv -e .env.local -- prisma db push",
-    "db:pull": "npx dotenv -e .env.local -- prisma db pull",
-    "migrate:reset": "npx dotenv -e .env.local -- prisma migrate reset",
-    "db:seed": "npx dotenv -e .env.local -- prisma db seed",
-    "prisma:generate": "npx dotenv -e .env.local -- prisma generate",
-    "prisma:studio": "npx dotenv -e .env.local -- prisma studio",
-    "prisma:format": "npx dotenv -e .env.local -- prisma format",
-    "production:build": "npx prisma generate && npx prisma migrate deploy && next build"
+    "lint": "next lint"
   },
   "dependencies": {
-    "@prisma/client": "^4.15.0",
+    "@supabase/supabase-js": "^2.26.0",
     "dotenv-cli": "^7.2.1",
     "next": "13.4.6",
     "react": "18.2.0",
@@ -34,7 +25,6 @@
   },
   "devDependencies": {
     "eslint": "8.43.0",
-    "eslint-config-next": "13.4.6",
-    "prisma": "^4.15.0"
+    "eslint-config-next": "13.4.6"
   }
 }
