@@ -1,20 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import { useRouter } from "next/router";
 import MainLayout from "../../layouts/main";
 import PageHeader from "../../components/Page-header";
 import ProjectIntro from "../../components/Project-Intro";
+import getAllProjects from "../api/getAllProjects";
 
-import { projects } from "../../data/projects";
 
-const ProjectDetails = () => {
+const ProjectDetails = ({project}) => {
 
-  const router = useRouter();
-  const { name } = router.query;
-  console.log(name);
-
-  const project = projects[name]
-  console.log(project);
+  const {name,main_photo,photos,description} = project?.[0].attributes
 
   React.useEffect(() => {
     document.querySelector("body").classList.add("index3");
@@ -22,24 +16,24 @@ const ProjectDetails = () => {
   return (
     <MainLayout>
       <PageHeader
-        title={project?.name}
-        image={project?.hero_image}
+        title={name}
+        image={main_photo?.data?.attributes?.url}
       />
-      <ProjectIntro project={project} />
-      {project?.others?.length && <section className="projdtal">
+      <ProjectIntro description={description} />
+      {photos?.data?.length && <section className="projdtal">
         <div className="justified-gallery">
           <div className="row">
             {
-              project.others.map((other, index) => (
+              photos?.data.map((photo, index) => (
                 <div className={
-                  project.others.length === 1 ? "col-lg-12 col-xl-12 col-md-12" :
-                    project.others.length === 2 ? "col-lg-6 col-xl-6 col-md-6" :
-                      project.others.length === 3 ? "col-lg-4 col-xl-4 col-md-6" :
-                        project.others.length === 4 ? "col-lg-3 col-xl-3 col-md-6" :
-                          project.others.length === 5 ? "col-lg-3 col-xl-3 col-md-6"
+                  photos?.data?.length === 1 ? "col-lg-12 col-xl-12 col-md-12" :
+                    photos?.data?.length === 2 ? "col-lg-6 col-xl-6 col-md-6" :
+                      photos?.data?.length === 3 ? "col-lg-4 col-xl-4 col-md-6" :
+                        photos?.data?.length === 4 ? "col-lg-3 col-xl-3 col-md-6" :
+                          photos?.data?.length === 5 ? "col-lg-3 col-xl-3 col-md-6"
                             : "col-lg-2 col-xl-2 col-md-6"
                 } key={index}>
-                  <img alt="" src={other} />
+                  <img alt="" src={photo?.attributes?.url} />
                 </div>
               ))
 
@@ -52,3 +46,17 @@ const ProjectDetails = () => {
 };
 
 export default ProjectDetails;
+
+
+
+// getServersideProps
+export const getStaticProps = async ({query}) => {
+  const projects = await getAllProjects();
+  // filter projects based on the name from router.query
+  const project = projects.data.filter(project => project.attributes?.name?.replace(/\s+/g, '_').toLowerCase() === query.name)
+  return {
+    props: {
+      project,
+    },
+  }
+}

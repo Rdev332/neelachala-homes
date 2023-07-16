@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-const ProjectIntro = ({ project }) => {
+const ProjectIntro = ({ description }) => {
   return (
     <section className="intro-section section-padding">
       <div className="container">
@@ -14,7 +14,7 @@ const ProjectIntro = ({ project }) => {
           <div className="col-lg-8 offset-lg-1 col-md-8 mb-30">
             <div className="text">
               <p>
-                {project?.description}
+                {description}
               </p>
             </div>
           </div>
