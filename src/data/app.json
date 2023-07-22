@@ -1,6 +1,6 @@
 {
-  "lightLogo": "/assets/img/logo_white_write.png",
-  "darkLogo": "/assets/img/logo.png",
+  "lightLogo": "https://res.cloudinary.com/dagjy96pi/image/upload/v1689964975/logo_white_write_4597a9bd15.png",
+  "darkLogo": "https://res.cloudinary.com/dagjy96pi/image/upload/v1689964974/logo_437a2bd646.png",
   "mapIframe": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29938.998196809585!2d85.80668182788853!3d20.2847488299757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1909d7bfffff99%3A0x1f5c8123db186ed!2sNeelachala%20Homes%20and%20Commercials%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1685520868728!5m2!1sen!2sin",
   "showLoading": true
 }

@@ -2,7 +2,9 @@
 import React from "react";
 import Link from "next/link";
 
-const Footer = ({ classText }) => {
+const Footer = ({ classText,data }) => {
+  const {office_address,phone_number_1,phone_number_2,info_email,bussiness_enquire_email,google_maps_link} = data
+
   return (
     <footer className={`${classText ? classText : ""}`}>
       <div className="container">
@@ -17,10 +19,9 @@ const Footer = ({ classText }) => {
                   <span className="icon pe-7s-map-marker"></span>
                   <div className="cont">
                     <h6>Office Address</h6>
-                    <a href="https://goo.gl/maps/2ppN26uugn7D45WT8" target="_blank">
+                    <a href={google_maps_link} target="_blank">
                       <p>
-                        N-5/237 I.R.C. Village, Nayapalli Bhubaneswar-751015
-                        Odisha
+                        {office_address}
                       </p>
                     </a>
                   </div>
@@ -29,11 +30,11 @@ const Footer = ({ classText }) => {
                   <span className="icon pe-7s-mail"></span>
                   <div className="cont">
                     <h6>Email Us</h6>
-                    <a href="mailto:nfo@neelachalahomes.com">
-                      <p>info@neelachalahomes.com</p>
+                    <a href={`mailto:${info_email}`}>
+                      <p>{info_email}</p>
                     </a>
-                    <a href="mailto:businessenquiry@neelachalahomes.com">
-                      <p>businessenquiry@neelachalahomes.com</p>
+                    <a href={`mailto:${bussiness_enquire_email}`}>
+                      <p>{bussiness_enquire_email}</p>
                     </a>
                   </div>
                 </li>
@@ -41,11 +42,11 @@ const Footer = ({ classText }) => {
                   <span className="icon pe-7s-call"></span>
                   <div className="cont">
                     <h6>Call Us</h6>
-                    <a href="tel:+91-674-2362297">
-                      <p>+91-674-2362297</p>
+                    <a href={`tel:${phone_number_1}`}>
+                      <p>{phone_number_1}</p>
                     </a>
-                    <a href="tel:+91-8249434141">
-                      <p>+91-8249434141</p>
+                    <a href={`tel:${phone_number_2}`}>
+                      <p>{phone_number_2}</p>
                     </a>
                   </div>
                 </li>
@@ -57,7 +58,7 @@ const Footer = ({ classText }) => {
             <div className="item">
               <div className="logo">
                 <img
-                  src="/assets/img/logo-horizontal.png"
+                  src="https://res.cloudinary.com/dagjy96pi/image/upload/v1689964975/logo_horizontal_4ad3068563.png"
                   alt="logo"
                 />
               </div>

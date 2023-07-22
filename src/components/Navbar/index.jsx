@@ -34,7 +34,7 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
         <div className="container">
           <Link legacyBehavior href="/">
             <a className={`logo ${logoClass && logoClass}`}>
-              <img src={appData.lightLogo} alt="logo" ref={logoRef}
+              <img src="https://res.cloudinary.com/dagjy96pi/image/upload/v1689964975/logo_white_write_4597a9bd15.png" alt="logo" ref={logoRef}
                 style={{
                   width:
                     "160px"

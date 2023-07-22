@@ -1,8 +1,7 @@
 import React from "react";
-import services3Data from "../../data/services3.json";
 import Link from "next/link";
 
-const Services3 = ({ bigTitle, grid }) => {
+const Services3 = ({ bigTitle, grid,services }) => {
   return (
     <section
       className={`${!grid ? "services" : "services-grid"} section-padding ${!grid ? "bg-gray" : "pt-0"
@@ -30,19 +29,19 @@ const Services3 = ({ bigTitle, grid }) => {
         )}
 
         <div className="row">
-          {services3Data.map((item, index) => (
-            <div className="col-lg-4 mt-4" key={item.id}>
+          {services.map((service, index) => (
+            <div className="col-lg-4 mt-4" key={service.id}>
               <div
                 className="item-bx bg-img wow fadeInUp"
                 data-wow-delay={index == 0 ? ".3s" : index == 1 ? ".5s" : ".7s"}
               >
                 {/* video */}
                 <video width="100%" autoplay="autoPlay" loop muted>
-                  <source src={item.video} type="video/mp4" />
+                  <source src={service.creative.data.attributes.url} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
-                <h6 className="mb-20 mt-20">{item.title}</h6>
-                <p>{item.content}</p>
+                <h6 className="mb-20 mt-20">{service.title}</h6>
+                <p>{service.description}</p>
                 <Link legacyBehavior href="/contact">
                   <a className={`more ${!grid ? "custom-font" : ""} mt-30`}>
                     Request Quotation

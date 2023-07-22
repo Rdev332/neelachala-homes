@@ -1,29 +1,9 @@
 // video hero image
 //
-import Split from "../Split";
 import { TypeAnimation } from 'react-type-animation';
+const VideoHero = ({header_text,header_video,header}) => {
 
-const heroContent = {
-    title: {
-        first: "Welcome to the future of",
-    },
-    content: {
-        first: "We are a creative studio focusing on culture, luxury, editorial & art. Somewhere between sophistication and simplicity.",
-        second: "We are a creative studio focusing on culture, luxury, editorial & art. Somewhere between sophistication and simplicity.",
-    },
-    video: "/assets/video/hero-vid.mp4",
-};
-
-const secondTexts = [
-    "Luxury",
-    5000,
-    "Design",
-    5000,
-    "Architecture",
-    5000,
-];
-
-const VideoHero = () => {
+    const {header_title,header_content,typing_text} = header
 
     // scroll to section
     function scrollBottom() {
@@ -44,7 +24,7 @@ const VideoHero = () => {
                 muted
                 loop
                 playsInline
-                src={heroContent.video}
+                src={header_video.data.attributes.url}
                 style={{
                     position: "absolute",
                     zIndex: "-1",
@@ -67,9 +47,16 @@ const VideoHero = () => {
                     <div className="col-lg-8 col-md-10">
                         <div className="caption hmone my-auto">
                             <h5 className="thin text-white playfont"
-                            >{heroContent.title.first}</h5>
+                            >{header_title}</h5>
                             <TypeAnimation
-                                sequence={secondTexts}
+                                sequence={[
+                                    typing_text.content[0],
+                                    5000,
+                                    typing_text.content[1],
+                                    5000,
+                                    typing_text.content[2],
+                                    5000
+                                ]}
                                 style={{
                                     height: '100%',
                                     fontSize: '4em',
@@ -82,7 +69,7 @@ const VideoHero = () => {
                                 repeat={Infinity}
                             />
                             <p className="mt-10 text-white">
-                                {heroContent.content.first}
+                                {header_content}
                             </p>
                             <a
                                 onClick={scrollBottom}
