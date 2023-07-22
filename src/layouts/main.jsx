@@ -3,8 +3,9 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Head from "next/head";
+import FacebookPixel from "../components/FacebookPixel";
 
-const MainLayout = ({ children, logoClassText ,data}) => {
+const MainLayout = ({ children, logoClassText, data }) => {
   const navbarRef = React.useRef(null);
   const logoRef = React.useRef(null);
 
@@ -37,7 +38,8 @@ const MainLayout = ({ children, logoClassText ,data}) => {
         logoClass={logoClassText}
       />
       {children}
-      <Footer data={data}/>
+      <FacebookPixel />
+      <Footer data={data} />
     </>
   );
 };

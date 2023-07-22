@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
+import { FB_PIXEL_ID } from '../common/fpixel'
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -46,6 +47,14 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap"
             rel="stylesheet"
           />
+          <noscript>
+            <img
+              height="1"
+              width="1"
+              style={{ display: 'none' }}
+              src={`https://www.facebook.com/tr?id=${FB_PIXEL_ID}&ev=PageView&noscript=1`}
+            />
+          </noscript>
         </Head>
 
         <body>

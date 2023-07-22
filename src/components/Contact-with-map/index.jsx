@@ -1,6 +1,7 @@
 import React from "react";
 import appData from '../../data/app.json'
 import { useState, useEffect } from "react";
+import * as pixel from '../../common/fpixel'
 
 const ContactWithMap = () => {
 
@@ -16,6 +17,12 @@ const ContactWithMap = () => {
       return;
     }
     try {
+      pixel.event('Contact', {
+        name,
+        phone,
+        email,
+        message
+      })
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

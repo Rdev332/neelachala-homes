@@ -3,11 +3,12 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Head from "next/head";
+import FacebookPixel from "../components/FacebookPixel";
 
 const MainSkin = ({ children }) => {
   const navbarRef = React.useRef(null);
   const logoRef = React.useRef(null);
-  
+
   React.useEffect(() => {
     var navbar = navbarRef.current,
       logo = logoRef.current;
@@ -34,6 +35,7 @@ const MainSkin = ({ children }) => {
       </Head>
       <Navbar navbarRef={navbarRef} logoRef={logoRef} />
       {children}
+      <FacebookPixel />
       <Footer />
     </>
   );

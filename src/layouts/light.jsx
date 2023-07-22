@@ -4,8 +4,9 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Head from "next/head";
 import appData from "../data/app.json";
+import FacebookPixel from "../components/FacebookPixel";
 
-const LightLayout = ({ children, footerClass ,footerData}) => {
+const LightLayout = ({ children, footerClass, footerData }) => {
   const navbarRef = React.useRef(null);
   const logoRef = React.useRef(null);
 
@@ -34,7 +35,8 @@ const LightLayout = ({ children, footerClass ,footerData}) => {
       </Head>
       <Navbar navbarRef={navbarRef} logoRef={logoRef} />
       {children}
-      <Footer classText={footerClass} data={footerData.data.attributes}/>
+      <FacebookPixel />
+      <Footer classText={footerClass} data={footerData.data.attributes} />
     </>
   );
 };
