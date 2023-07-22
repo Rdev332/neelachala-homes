@@ -89,21 +89,21 @@ class Testimonials1 extends React.Component {
                     ],
                   }}
                 >
-                  {testimonials1Data.map((item) => (
+                  {this.props.testimonials.map((testimonial,index) => (
                     <div
                       className="item wow fadeInUp"
                       data-wow-delay=".3s"
-                      key={item.id}
+                      key={index}
                     >
                       <span className="quote-icon">
                         <img src="/assets/img/clients/quote.svg" alt="" />
                       </span>
                       <div className="cont">
-                        <p className="">&quot;{item.content}&quot;</p>
+                        <p className="">&quot;{testimonial.testimonial}&quot;</p>
                       </div>
                       <div className="info">
                         <h6 >
-                          {item.username} <span>{item.usertitle}</span>
+                          {testimonial.name} 
                         </h6>
                       </div>
                     </div>

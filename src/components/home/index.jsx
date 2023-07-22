@@ -7,16 +7,19 @@ import Testimonials from "../Testimonials1";
 import Contact from "../Contact";
 import WorkTwoColumn from "../Work-Two-Column";
 
-const Home1 = ({projects}) => {
+const Home1 = ({projects,data,footerData}) => {
   React.useEffect(() => {
     document.querySelector("body").classList.add("homepage");
   }, []);
+  console.log(data.data.attributes)
+  const {header_video,header} = data.data.attributes;
+
   return (
-    <LightLayout footerClass={"mt-30"}>
-      <VideoHero />
-      <AboutUs1 />
+    <LightLayout footerClass={"mt-30"} footerData={footerData}>
+      <VideoHero header_video={header_video} header={header}/>
+      <AboutUs1 data={data.data.attributes}/>
       <WorkTwoColumn projects={projects?.data}/>
-      <Testimonials />
+      <Testimonials testimonials={data.data.attributes.testimonials}/>
       <Contact />
     </LightLayout>
   );

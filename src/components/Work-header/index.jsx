@@ -1,10 +1,10 @@
 import React from "react";
 
-const WorkHeader = ({ title, content, center }) => {
+const WorkHeader = ({ title, content, center ,headerImage}) => {
   return (
     <header
       className="work-header bg-img valign"
-      style={{ backgroundImage: "url(/assets/img/patern.png)" }}
+      style={{ backgroundImage: `url(${headerImage.data.attributes.url})` }}
     >
       <div className="container">
         <div className={`row ${center ? "justify-content-center" : ""}`}>

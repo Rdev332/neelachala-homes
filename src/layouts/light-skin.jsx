@@ -20,10 +20,10 @@ const LightSkin = ({ children }) => {
     window.addEventListener("scroll", () => {
       if (window.pageYOffset > 300) {
         navbar.classList.add("nav-scroll");
-        logo.setAttribute("src", appData.darkLogo);
+        logo.setAttribute("src", "https://res.cloudinary.com/dagjy96pi/image/upload/v1689964974/logo_437a2bd646.png");
       } else {
         navbar.classList.remove("nav-scroll");
-        logo.setAttribute("src", appData.lightLogo);
+        logo.setAttribute("src", "https://res.cloudinary.com/dagjy96pi/image/upload/v1689964975/logo_white_write_4597a9bd15.png");
       }
     });
   }, [navbarRef]);

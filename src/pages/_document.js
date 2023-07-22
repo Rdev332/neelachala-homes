@@ -24,7 +24,7 @@ class MyDocument extends Document {
           />
           <meta name="author" content="" />
 
-          <link rel="shortcut icon" href="/assets/img/favicon.png" />
+          <link rel="shortcut icon" href="https://res.cloudinary.com/dagjy96pi/image/upload/v1689964974/favicon_589e3a78b2.png" />
 
           <link
             href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
