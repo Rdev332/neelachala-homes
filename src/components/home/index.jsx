@@ -6,21 +6,23 @@ import LightLayout from "../../layouts/light";
 import Testimonials from "../Testimonials1";
 import Contact from "../Contact";
 import WorkTwoColumn from "../Work-Two-Column";
+import PromotionPopup from "../Promotion-Popup";
 
-const Home1 = ({projects,data,footerData}) => {
+const Home1 = ({ projects, data, footerData }) => {
   React.useEffect(() => {
     document.querySelector("body").classList.add("homepage");
   }, []);
-  console.log(data.data.attributes)
-  const {header_video,header} = data.data.attributes;
+  const { header_video, header } = data.data?.attributes ?? {}
 
   return (
-    <LightLayout footerClass={"mt-30"} footerData={footerData}>
-      <VideoHero header_video={header_video} header={header}/>
-      <AboutUs1 data={data.data.attributes}/>
-      <WorkTwoColumn projects={projects?.data}/>
-      <Testimonials testimonials={data.data.attributes.testimonials}/>
+    <LightLayout
+      footerClass={"mt-30"} footerData={footerData}>
+      <VideoHero header_video={header_video} header={header} />
+      <AboutUs1 data={data.data?.attributes} />
+      <WorkTwoColumn projects={projects?.data} />
+      <Testimonials testimonials={data.data?.attributes.testimonials} />
       <Contact />
+      {/* <PromotionPopup data={data.data?.attributes.promotionPopup} /> */}
     </LightLayout>
   );
 };

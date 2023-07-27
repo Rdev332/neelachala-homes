@@ -2,11 +2,13 @@
 import React from "react";
 import Link from "next/link";
 
-const Footer = ({ classText,data }) => {
-  const {office_address,phone_number_1,phone_number_2,info_email,bussiness_enquire_email,google_maps_link} = data
+const Footer = ({ classText, data }) => {
+  const { office_address, phone_number_1, phone_number_2, info_email, bussiness_enquire_email, google_maps_link } = data
 
   return (
-    <footer className={`${classText ? classText : ""}`}>
+    <footer
+      id="home_footer"
+      className={`${classText ? classText : ""}`}>
       <div className="container">
         <div className="row">
           <div className="col-lg-6">

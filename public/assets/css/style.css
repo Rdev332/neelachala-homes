@@ -6144,3 +6144,56 @@ footer .item .copy-right p a {
 }
 
 /* ====================== [ End Responsive ] ====================== */
+
+
+/* ====================== [ Start Modals ] ====================== */
+
+.popup-content {
+  max-width: 800px;
+  margin: 30px auto;
+  border-radius: 12;
+  background: #151515;
+}
+
+.popup-content .modal-content {
+  background: transparent;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* image */
+.popup-content .modal-content .modal-body {
+  padding: 0;
+}
+
+.popup-content .modal-content .modal-body img {
+  width: 100%;
+}
+
+/* title */
+.popup-content .modal-content .modal-header {
+  border: none;
+  padding: 0;
+}
+
+.popup-content .modal-content .modal-header h5 {
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.popup-content .modal-content .modal-body p {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 0;
+}
+
+/* .modal-dialog .modal-content .modal-body .btn {
+  border: none;
+  padding: 0;
+} */
+
+/* ====================== [ End Modals ] ====================== */

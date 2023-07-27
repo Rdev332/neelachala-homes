@@ -36,7 +36,7 @@ const LightLayout = ({ children, footerClass, footerData }) => {
       <Navbar navbarRef={navbarRef} logoRef={logoRef} />
       {children}
       <FacebookPixel />
-      <Footer classText={footerClass} data={footerData.data.attributes} />
+      <Footer classText={footerClass} data={footerData.data?.attributes} />
     </>
   );
 };

@@ -3,7 +3,6 @@ import Script from "next/script";
 import Head from "next/head";
 import LoadingScreen from "../components/Loading-Screen/loading-screen";
 import "../styles/globals.css";
-import Cursor from "../components/Cursor";
 import ScrollToTop from "../components/scrollToTop";
 import * as fbq from '../common/fpixel'
 import { useRouter } from 'next/router'
@@ -12,7 +11,7 @@ function MyApp({ Component, pageProps }) {
 
   const router = useRouter()
 
-  useEffect(() => {
+  React.useEffect(() => {
     // This pageview only triggers the first time (it's important for Pixel to have real information)
     fbq.pageview()
 

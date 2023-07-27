@@ -16,22 +16,22 @@ const WorkTwoColumn = ({ projects }) => {
 
   const renderArrows = () => {
     return (
- 
-        <div className="navs mt-30">
-          <span className="prev" onClick={
-            () => this.slider.slickPrev()
-          }
-          >
-            <i className="fas fa-long-arrow-alt-left"></i>
-          </span>
-          <span className="next" onClick={
-            () => this.slider.slickNext()
-          }
-          >
-            <i className="fas fa-long-arrow-alt-right"></i>
-          </span>
-        </div>
-      
+
+      <div className="navs mt-30">
+        <span className="prev" onClick={
+          () => this.slider.slickPrev()
+        }
+        >
+          <i className="fas fa-long-arrow-alt-left"></i>
+        </span>
+        <span className="next" onClick={
+          () => this.slider.slickNext()
+        }
+        >
+          <i className="fas fa-long-arrow-alt-right"></i>
+        </span>
+      </div>
+
     );
   };
 
@@ -53,65 +53,66 @@ const WorkTwoColumn = ({ projects }) => {
           </div>
           {
             <div className="row mt-10 d-block d-sm-none">
-            <div className="col-lg-12">
-              <Slider
-                className="our-works"
-                {...{
-                  // ref: (c) => (this.slider = c),
-                  dots: false,
-                  arrows: true,
-                  autoplay: true,
-                  rows: 1,
-                  slidesToScroll: 1,
-                  slidesToShow: 2,
-                  responsive: [
-                    {
-                      breakpoint: 1024,
-                      settings: {
-                        slidesToShow: 2,
+              <div className="col-lg-12">
+                <Slider
+                  className="our-works"
+                  {...{
+                    // ref: (c) => (this.slider = c),
+                    dots: false,
+                    arrows: true,
+                    autoplay: true,
+                    rows: 1,
+                    slidesToScroll: 1,
+                    slidesToShow: 2,
+                    responsive: [
+                      {
+                        breakpoint: 1024,
+                        settings: {
+                          slidesToShow: 2,
+                        },
                       },
-                    },
-                    {
-                      breakpoint: 767,
-                      settings: {
-                        slidesToShow: 1,
+                      {
+                        breakpoint: 767,
+                        settings: {
+                          slidesToShow: 1,
+                        },
                       },
-                    },
-                    {
-                      breakpoint: 480,
-                      settings: {
-                        slidesToShow: 1,
+                      {
+                        breakpoint: 480,
+                        settings: {
+                          slidesToShow: 1,
+                        },
                       },
-                    },
-                  ],
-                }}
-              >
-                {projects.map((project,index) => (
-                   <Link
-                   legacyBehavior
-                   href={`/project-details?name=${project.attributes?.name
-                     ?.replace(/\s+/g, "_")
-                     .toLowerCase()}`}
-                 >
-                   <div className="item">
-                     <div className="img">
-                       <img
-                         src={
-                           project?.attributes?.main_photo?.data?.attributes?.url
-                         }
-                         alt={project?.attributes?.name}
-                       />
-                     </div>
-                     <div className="cont vis">
-                       <h5>{project?.attributes?.name}</h5>
-                     </div>
-                   </div>
-                 </Link>
-                ))}
-              </Slider>
-              {/* {renderArrows()} */}
+                    ],
+                  }}
+                >
+                  {projects.map((project, index) => (
+                    <Link
+                      key={index}
+                      legacyBehavior
+                      href={`/project-details?name=${project.attributes?.name
+                        ?.replace(/\s+/g, "_")
+                        .toLowerCase()}`}
+                    >
+                      <div className="item">
+                        <div className="img">
+                          <img
+                            src={
+                              project?.attributes?.main_photo?.data?.attributes?.url
+                            }
+                            alt={project?.attributes?.name}
+                          />
+                        </div>
+                        <div className="cont vis">
+                          <h5>{project?.attributes?.name}</h5>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+                </Slider>
+                {/* {renderArrows()} */}
+              </div>
             </div>
-          </div>
           }
           <div className="row gallery
             d-none d-sm-block
