@@ -3,7 +3,7 @@ import React from "react";
 import Link from "next/link";
 import initIsotope from "../../common/initIsotope";
 
-const WorkFourColumn = ({ projects }) => {
+const AccessProjects = ({ projects }) => {
   React.useEffect(() => {
     setTimeout(() => {
       if (window.Isotope) initIsotope();
@@ -21,17 +21,18 @@ const WorkFourColumn = ({ projects }) => {
                 <div className="col-lg-4 col-md-6 items theaters" key={index}
                   style={{ cursor: "pointer" }}
                 >
-                  <Link legacyBehavior href={`/project-details?name=${project.attributes?.name?.replace(/\s+/g, '_').toLowerCase()
-                    }`}>
+                  <Link legacyBehavior href={`/access-project-details?name=${project?.slug?.toLowerCase()
+                    }`}
+                  >
                     <div className="item">
                       <div className="img">
-                        <img src={project.attributes?.main_photo?.data?.attributes?.url} alt={project.attributes?.name} />
+                        <img src={project?.main_photo?.data?.attributes?.url} alt={project?.name} />
                       </div>
                       <div className="cont">
                         <h5>
-                          {project.attributes?.name}
+                          {project?.name}
                         </h5>
-                        <span>{project.attributes?.location}</span>
+                        <span>{project?.location}</span>
                         {/* <span>Modern</span> */}
                       </div>
                     </div>
@@ -46,4 +47,4 @@ const WorkFourColumn = ({ projects }) => {
   );
 };
 
-export default WorkFourColumn;
+export default AccessProjects;

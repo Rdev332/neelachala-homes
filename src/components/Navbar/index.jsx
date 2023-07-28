@@ -62,7 +62,11 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
                 <Link legacyBehavior href="/access">
-                  <a className="nav-link">Access</a>
+                  <a className="nav-link" style={{
+                    color: "#fff",
+                    // fontWeight: "bold",
+                    textDecoration: "underline"
+                  }}>Access</a>
                 </Link>
               </li>
               <li className="nav-item">

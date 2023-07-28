@@ -2,17 +2,17 @@
 import React from "react";
 import MainLayout from "../../layouts/main";
 import WorkHeader from "../../components/Work-header";
-import WorkFourColumn from "../../components/Work-Four-Column";
+import AccessProjects from "../../components/Work-Four-Column/accessProjects";
 import getFooterData from "../api/getFooterData";
 import getAccessPageData from "../api/getAccessPageData";
 
-const Access = ({  footerData,data }) => {
+const Access = ({ footerData, data }) => {
   React.useEffect(() => {
     document.querySelector("body").classList.add("index3");
   }, []);
 
-  console.log(data)
-  const { header_image, header_title, header_description,access_projects } = data.data.attributes;
+
+  const { header_image, header_title, header_description, access_projects } = data.data.attributes;
 
   return (
     <MainLayout data={footerData}>
@@ -25,7 +25,7 @@ const Access = ({  footerData,data }) => {
         content={header_description}
         headerImage={header_image}
       />
-      <WorkFourColumn projects={access_projects} />
+      <AccessProjects projects={access_projects} />
     </MainLayout>
   );
 };
@@ -34,7 +34,7 @@ export default Access;
 
 // getServersideProps
 export const getStaticProps = async () => {
-  const [footerData,data] = await Promise.all([
+  const [footerData, data] = await Promise.all([
     getFooterData(),
     getAccessPageData()
   ]);
