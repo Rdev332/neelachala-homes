@@ -21,8 +21,10 @@ const Home1 = ({ projects, data, footerData }) => {
       <AboutUs1 data={data.data?.attributes} />
       <WorkTwoColumn projects={projects?.data} />
       <Testimonials testimonials={data.data?.attributes.testimonials} />
-      <Contact />
-      {/* <PromotionPopup data={data.data?.attributes.promotionPopup} /> */}
+      <Contact
+        footerData={footerData.data?.attributes}
+      />
+      <PromotionPopup data={data.data?.attributes.promotionPopup} />
     </LightLayout>
   );
 };

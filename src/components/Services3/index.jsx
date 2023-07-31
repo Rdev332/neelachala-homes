@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-const Services3 = ({ bigTitle, grid,services }) => {
+const Services3 = ({ bigTitle, grid, services }) => {
   return (
     <section
       className={`${!grid ? "services" : "services-grid"} section-padding ${!grid ? "bg-gray" : "pt-0"
@@ -36,10 +36,10 @@ const Services3 = ({ bigTitle, grid,services }) => {
                 data-wow-delay={index == 0 ? ".3s" : index == 1 ? ".5s" : ".7s"}
               >
                 {/* video */}
-                <video width="100%" autoplay="autoPlay" loop muted>
+                {/* <video width="100%" autoplay="autoPlay" loop muted>
                   <source src={service.creative.data.attributes.url} type="video/mp4" />
                   Your browser does not support the video tag.
-                </video>
+                </video> */}
                 <h6 className="mb-20 mt-20">{service.title}</h6>
                 <p>{service.description}</p>
                 <Link legacyBehavior href="/contact">

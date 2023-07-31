@@ -1,9 +1,8 @@
 import React from "react";
-import appData from '../../data/app.json'
 import { useState, useEffect } from "react";
 import * as pixel from '../../common/fpixel'
 
-const ContactWithMap = () => {
+const ContactWithMap = ({ iframeLink }) => {
 
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
@@ -56,7 +55,11 @@ const ContactWithMap = () => {
     <div className="container-fluid">
       <div className="row">
         <div className="col-lg-6 map-box">
-          <iframe src={appData.mapIframe}></iframe>
+          <iframe
+            style={{
+              filter: "grayscale(100%)",
+            }}
+            src={iframeLink}></iframe>
         </div>
         <div className="col-lg-6 form">
           <form id="contact-form" method="post">
@@ -110,7 +113,11 @@ const ContactWithMap = () => {
               <button type="submit" className="btn-curve btn-color" onClick={handleSubmit}
                 disabled={!name || !phone || !email || !message}
               >
-                <span>
+                <span
+                  style={{
+                    color: "white",
+                  }}
+                >
                   {showMessage ? 'Message Sent' : 'Send Message'}</span>
               </button>
             </div>

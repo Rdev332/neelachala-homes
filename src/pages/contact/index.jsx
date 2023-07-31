@@ -6,12 +6,12 @@ import MainLayout from "../../layouts/main";
 import getFooterData from "../api/getFooterData"
 
 
-const Contact = ({data}) => {
+const Contact = ({ data }) => {
 
-  const {contact_us_page_header_image,google_map_link} = data.data.attributes;
-   React.useEffect(() => {
-     document.querySelector("body").classList.add("index3");
-   }, []);
+  const { contact_us_page_header_image, map_iframe } = data.data.attributes;
+  React.useEffect(() => {
+    document.querySelector("body").classList.add("index3");
+  }, []);
   return (
     <MainLayout data={data.data.attributes}>
       <PageHeader
@@ -19,8 +19,8 @@ const Contact = ({data}) => {
         image={contact_us_page_header_image.data.attributes.url}
       />
       <section className="contact">
-        <ContactInfo data={data.data.attributes}/>
-        <ContactWithMap googleMapLink={google_map_link}/>
+        <ContactInfo data={data.data.attributes} />
+        <ContactWithMap iframeLink={map_iframe} />
       </section>
     </MainLayout>
   );

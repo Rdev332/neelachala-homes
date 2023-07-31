@@ -5616,10 +5616,11 @@ maroon {
 /* ====================== [ Start Modals ] ====================== */
 
 .popup-content {
-  max-width: 800px;
-  margin: 30px auto;
-  border-radius: 12;
-  background: #151515;
+  padding-bottom: 32px;
+  max-width: 30vw;
+  height: max-content;
+  border-radius: 12px;
+  background: #f0eeee;
 }
 
 .popup-content .modal-content {
@@ -5629,17 +5630,21 @@ maroon {
   box-shadow: none;
 }
 
-/* image */
 .popup-content .modal-content .modal-body {
+  margin: auto !important;
   padding: 0;
 }
 
 .popup-content .modal-content .modal-body img {
-  width: 100%;
+  border-radius: 12px;
+  transform: scale(0.9);
+  aspect-ratio: 16/9;
+  object-fit: cover;
 }
 
 /* title */
 .popup-content .modal-content .modal-header {
+  margin: auto !important;
   border: none;
   padding: 0;
 }
@@ -5649,18 +5654,43 @@ maroon {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin-bottom: 20px;
+  color: #AA5656;
+  padding: 0 20px;
 }
 
 .popup-content .modal-content .modal-body p {
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 0;
+  color: #333;
+  padding: 0 20px;
+  text-align: justify;
 }
 
-/* .modal-dialog .modal-content .modal-body .btn {
+.popup-content .modal-content .modal-action {
   border: none;
   padding: 0;
-} */
+  margin: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .popup-content {
+    max-width: 90vw;
+  }
+
+  .popup-content .modal-content .modal-header h5 {
+    font-size: 24px;
+  }
+
+  .popup-content .modal-content .modal-body p {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
 
 /* ====================== [ End Modals ] ====================== */

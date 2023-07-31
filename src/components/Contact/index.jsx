@@ -1,10 +1,8 @@
 import React from "react";
-import appData from "../../data/app.json";
 import { useState, useEffect } from "react";
 import * as pixel from '../../common/fpixel'
 
-const Contact = () => {
-
+const Contact = ({ footerData }) => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
@@ -127,15 +125,15 @@ const Contact = () => {
           </div>
         </div>
         <div className="contact-map">
-          <iframe
+          {footerData.map_iframe && <iframe
             style={{
               filter: "grayscale(100%)",
             }}
-            src={appData.mapIframe}></iframe>
+            src={footerData.map_iframe}></iframe>}
         </div>
         <div
           className="bg-img"
-          style={{ backgroundImage: "url(/assets/img/portfolio/mas/Subadhra_Residency.jpg)" }}
+          style={{ backgroundImage: `url(${footerData.home_page_contact_form_bg_image.data.attributes.url})` }}
         ></div>
       </section>
     </>

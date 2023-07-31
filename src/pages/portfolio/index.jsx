@@ -33,7 +33,6 @@ const Portfolio = ({ projects, data, footerData }) => {
 
 export default Portfolio;
 
-// getServersideProps
 export const getStaticProps = async () => {
   const [projects, data, footerData] = await Promise.all([
     getAllProjects(),

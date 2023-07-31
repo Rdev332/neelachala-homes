@@ -1,27 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Link from "next/link";
-import appData from "../../data/app.json";
-import getSiblings from '../../common/getSiblings'
 
 const Navbar = ({ navbarRef, logoRef, logoClass }) => {
-  const handleDropdown = (e) => {
-    getSiblings(e.target.parentElement)
-      .filter((item) => item.classList.contains("show"))
-      .map((item) => {
-        item.classList.remove("show");
-        if (item.childNodes[0]) {
-          item.childNodes[0].setAttribute("aria-expanded", false);
-        }
-        if (item.childNodes[1]) {
-          item.childNodes[1].classList.remove("show");
-        }
-      });
-    e.target.parentElement.classList.toggle("show");
-    e.target.setAttribute("aria-expanded", true);
-    e.target.parentElement.childNodes[1].classList.toggle("show");
-  };
-
   const handleMobileDropdown = (e) => {
     document
       .getElementById("navbarSupportedContent")
@@ -63,8 +44,6 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
               <li className="nav-item">
                 <Link legacyBehavior href="/access">
                   <a className="nav-link" style={{
-                    color: "#fff",
-                    // fontWeight: "bold",
                     textDecoration: "underline"
                   }}>Access</a>
                 </Link>

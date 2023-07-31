@@ -5,6 +5,15 @@ import Link from "next/link";
 const Footer = ({ classText, data }) => {
   const { office_address, phone_number_1, phone_number_2, info_email, bussiness_enquire_email, google_maps_link } = data
 
+  const shortener = (text, length) => {
+    if (!text) return ("")
+    if (text.length > length) {
+      return text.substring(0, length) + "...";
+    } else {
+      return text;
+    }
+  };
+
   return (
     <footer
       id="home_footer"
@@ -33,10 +42,11 @@ const Footer = ({ classText, data }) => {
                   <div className="cont">
                     <h6>Email Us</h6>
                     <a href={`mailto:${info_email}`}>
-                      <p>{info_email}</p>
+                      <p>{shortener(info_email, 30)}</p>
                     </a>
+                    <br />
                     <a href={`mailto:${bussiness_enquire_email}`}>
-                      <p>{bussiness_enquire_email}</p>
+                      <p>{shortener(bussiness_enquire_email, 30)}</p>
                     </a>
                   </div>
                 </li>
@@ -47,6 +57,7 @@ const Footer = ({ classText, data }) => {
                     <a href={`tel:${phone_number_1}`}>
                       <p>{phone_number_1}</p>
                     </a>
+                    <br />
                     <a href={`tel:${phone_number_2}`}>
                       <p>{phone_number_2}</p>
                     </a>
