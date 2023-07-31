@@ -1,6 +1,7 @@
 import React from 'react';
 import Popup from 'reactjs-popup';
 import * as pixel from '../../common/fpixel'
+import Image from 'next/image';
 
 const PromotionPopup = ({ data }) => {
     const [show, setShow] = React.useState(false);
@@ -42,7 +43,7 @@ const PromotionPopup = ({ data }) => {
         >
             <div className="modal-content">
                 <div className="modal-body">
-                    <img src={data?.image?.data.attributes.url} alt="popup" />
+                    <Image src={data?.image?.data.attributes.url} alt="popup" />
                 </div>
                 <div className="row align-items-center">
                     <div className="modal-header">
