@@ -9,7 +9,11 @@ export default function Home({ projects, data, footerData }) {
 
 
 // getServersideProps
-export const getStaticProps = async () => {
+export const getStaticProps = async (context) => {
+  const { hostname, subdomain } = getHostAndSubdomain(context?.req?.headers?.host);
+  console.log("hostname", hostname);
+  console.log("subdomain", subdomain);
+
   const [projects, data, footerData] = await Promise.all([getAllProjects(), getHomePageData(), getFooterData()])
   return {
     props: {
@@ -18,4 +22,15 @@ export const getStaticProps = async () => {
       footerData
     },
   };
+}
+
+const getHostAndSubdomain = (host) => {
+  try {
+    const hostname = host.split(":")[0];
+    const subdomain = hostname.split(".")[0];
+    return { hostname, subdomain };
+  } catch (e) {
+    console.log("error", e?.message)
+    return { hostname: "", subdomain: "" };
+  }
 }
