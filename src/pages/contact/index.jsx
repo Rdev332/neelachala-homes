@@ -13,7 +13,7 @@ const Contact = ({ data }) => {
     document.querySelector("body").classList.add("index3");
   }, []);
   return (
-    <MainLayout data={data.data.attributes}>
+    <MainLayout data={data}>
       <PageHeader
         title="Contact Us"
         image={contact_us_page_header_image.data.attributes.url}

@@ -14,6 +14,7 @@ const Footer = ({ classText, data }) => {
     }
   };
 
+
   return (
     <footer
       id="home_footer"

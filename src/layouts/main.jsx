@@ -27,6 +27,7 @@ const MainLayout = ({ children, logoClassText, data }) => {
       }
     });
   }, [navbarRef]);
+
   return (
     <>
       <Head>
@@ -39,7 +40,7 @@ const MainLayout = ({ children, logoClassText, data }) => {
       />
       {children}
       <FacebookPixel />
-      <Footer data={data} />
+      <Footer data={data?.data?.attributes ?? {}} />
     </>
   );
 };
