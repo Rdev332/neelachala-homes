@@ -5,6 +5,7 @@ import AboutUs4 from "../../components/About-Us4";
 import Services3 from "../../components/Services3";
 import getAboutUsPageData from "../api/about-us";
 import getFooterData from "../api/getFooterData";
+import Team1 from "../../components/Team1";
 
 const About = ({ data, footerData }) => {
   const { url } = data.data.attributes.header_image.data.attributes
@@ -20,6 +21,7 @@ const About = ({ data, footerData }) => {
       />
       <AboutUs4 data={data.data.attributes} />
       <Services3 bigTitle grid services={data.data.attributes.features} />
+      <Team1 />
     </MainLayout>
   );
 };

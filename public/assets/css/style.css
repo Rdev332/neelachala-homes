@@ -3936,155 +3936,87 @@ span:hover {
   position: relative;
 }
 
-.team .item {
-  padding: 0 35px;
-}
-
-.team .item.cir .img {
+.team .team-container {
+  width: 140%;
   position: relative;
 }
 
-.team .item.cir .img:hover:after {
-  opacity: 1;
-  -webkit-transform: rotate(4deg);
-  -ms-transform: rotate(4deg);
-  transform: rotate(4deg);
-}
-
-.team .item.cir .img:hover #circle,
-.team .item.cir .img:hover .info {
-  opacity: 1;
-}
-
-.team .item.cir .img:hover:before {
-  opacity: .3;
-}
-
-.team .item.cir .img:after {
+.team .team-container:after {
   content: '';
   position: absolute;
-  top: 5px;
-  left: 0;
+  top: -120px;
+  bottom: -120px;
   right: 0;
-  bottom: 5px;
-  background: #c5a47e;
-  opacity: 0;
+  width: 80%;
+  background: #f8f4f3;
   z-index: -1;
-  -webkit-transition: all .7s;
-  -o-transition: all .7s;
-  transition: all .7s;
 }
 
-.team .item.cir .img:before {
-  content: '';
-  position: absolute;
-  top: 0px;
-  left: 0;
-  right: 0;
-  bottom: 0px;
-  background: #000;
-  opacity: 0;
-  -webkit-transition: all .4s;
-  -o-transition: all .4s;
-  transition: all .4s;
-}
-
-.team .item.cir .info {
-  position: absolute;
-  bottom: 15px;
-  left: 15px;
-  opacity: 0;
-  -webkit-transition: all .4s;
-  -o-transition: all .4s;
-  transition: all .4s;
-  z-index: 2;
-}
-
-.team .item.cir .info span {
-  font-size: 13px;
-  color: #c5a47e;
+.team .item {
+  padding: 0 15px;
 }
 
 .team .item .img {
   position: relative;
+  overflow: hidden;
 }
 
 .team .item .img:hover:after {
-  opacity: 1;
-  -webkit-transform: rotate(4deg);
-  -ms-transform: rotate(4deg);
-  transform: rotate(4deg);
+  opacity: 0.5;
 }
 
-.team .item .img:hover #circle,
-.team .item .img:hover .info {
+.team .item .img:hover .social {
   opacity: 1;
-}
-
-.team .item .img:hover:before {
-  opacity: .3;
+  left: 0;
 }
 
 .team .item .img:after {
   content: '';
   position: absolute;
-  top: 5px;
-  left: 0;
-  right: 0;
-  bottom: 5px;
-  background: #c5a47e;
-  opacity: 0;
-  z-index: -1;
-  -webkit-transition: all .7s;
-  -o-transition: all .7s;
-  transition: all .7s;
-}
-
-.team.bord .item:hover .img:after {
-  border-color: #c5a47e;
-  opacity: 1;
-  -webkit-transform: rotate(0deg) !important;
-  -ms-transform: rotate(0deg) !important;
-  transform: rotate(0deg) !important;
-}
-
-.team.bord .item .img {
-  padding: 30px;
-}
-
-.team.bord .item .img:after {
-  content: '';
-  position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 5px;
-  background: transparent;
-  border: 1px solid #fff;
-  opacity: .1;
-  -webkit-transform: rotate(-5deg);
-  -ms-transform: rotate(-5deg);
-  transform: rotate(-5deg);
-  z-index: -1;
-  -webkit-transition: all .7s;
-  -o-transition: all .7s;
-  transition: all .7s;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  opacity: 0;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
-.team.bord .item .img.left:after {
-  -webkit-transform: rotate(5deg);
-  -ms-transform: rotate(5deg);
-  transform: rotate(5deg);
+.team .item .img .social {
+  position: absolute;
+  top: 0;
+  left: -40px;
+  background-color: #fff;
+  padding: 20px 10px;
+  z-index: 2;
+  opacity: 0;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
-.team.bord .item .info {
-  margin-top: 15px;
+.team .item .img .social a {
+  display: block;
+  font-size: 13px;
+  margin-top: 10px;
+  color: #b19777;
+}
+
+.team .item .info {
+  margin-top: 20px;
   text-align: center;
 }
 
-.team.bord .item .info span {
-  font-size: 13px;
-  color: #c5a47e;
+.team .item .info h5 {
+  font-size: 18px;
+  margin-bottom: 2px;
+}
+
+.team .item .info span {
+  color: #777;
+  font-size: 14px;
 }
 
 .team .slick-dots {
@@ -4092,14 +4024,14 @@ span:hover {
 }
 
 .team .slick-dots li.slick-active button {
-  background: #c5a47e;
+  background: #b19777;
 }
 
 .team .slick-dots li button {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .team .slick-dots li button:before {
@@ -4111,7 +4043,7 @@ span:hover {
   top: 4px;
   left: 4px;
   line-height: 1;
-  background: #c5a47e;
+  background: #b19777;
   opacity: 1;
 }
 
@@ -4122,105 +4054,6 @@ span:hover {
   width: 100%;
   height: 70%;
   z-index: -2;
-}
-
-#circle {
-  position: absolute;
-  top: -30%;
-  right: -50%;
-  width: 100%;
-  padding-bottom: 100%;
-  overflow: hidden;
-  pointer-events: none;
-  opacity: 0;
-  -webkit-transition: opacity .4s;
-  -o-transition: opacity .4s;
-  transition: opacity .4s;
-}
-
-#circle text {
-  font-size: 13px;
-  letter-spacing: 4px;
-}
-
-#circle svg {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 300px;
-  -webkit-animation-name: rotate;
-  -moz-animation-name: rotate;
-  -ms-animation-name: rotate;
-  -o-animation-name: rotate;
-  animation-name: rotate;
-  -webkit-animation-duration: 8s;
-  -moz-animation-duration: 8s;
-  -ms-animation-duration: 8s;
-  -o-animation-duration: 8s;
-  animation-duration: 8s;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  -ms-animation-iteration-count: infinite;
-  -o-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
-  -ms-animation-timing-function: linear;
-  -o-animation-timing-function: linear;
-  animation-timing-function: linear;
-}
-
-@-webkit-keyframes rotate {
-  from {
-    -webkit-transform: rotate(360deg);
-  }
-
-  to {
-    -webkit-transform: rotate(0);
-  }
-}
-
-@-moz-keyframes rotate {
-  from {
-    -moz-transform: rotate(360deg);
-  }
-
-  to {
-    -moz-transform: rotate(0);
-  }
-}
-
-@-ms-keyframes rotate {
-  from {
-    -ms-transform: rotate(360deg);
-  }
-
-  to {
-    -ms-transform: rotate(0);
-  }
-}
-
-@-o-keyframes rotate {
-  from {
-    -o-transform: rotate(360deg);
-  }
-
-  to {
-    -o-transform: rotate(0);
-  }
-}
-
-@keyframes rotate {
-  from {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-
-  to {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-  }
 }
 
 /* ====================== [ End Team ] ====================== */

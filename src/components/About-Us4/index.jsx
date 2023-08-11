@@ -1,6 +1,6 @@
 import React from "react";
 
-const AboutUs4 = ({data}) => {
+const AboutUs4 = ({ data }) => {
 
   return (
     <section className="about section-padding">
@@ -54,7 +54,7 @@ const AboutUs4 = ({data}) => {
               </p>
             </div>
           </div>
-          <div className="col-lg-12">
+          {/* <div className="col-lg-12">
             <div className="txt-cont">
               <p className="mb-20 mt-40">
                 {
@@ -62,7 +62,7 @@ const AboutUs4 = ({data}) => {
                 }
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

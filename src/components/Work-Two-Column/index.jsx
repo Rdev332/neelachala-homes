@@ -37,7 +37,7 @@ const WorkTwoColumn = ({ projects }) => {
 
   return (
     <>
-      <section className="works section-padding pb-0 pt-0">
+      <section className="works section-padding">
         <div className="container">
           <div className="section-head text-center mb-0">
             <div className="row justify-content-center">
