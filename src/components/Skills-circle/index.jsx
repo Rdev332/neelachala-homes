@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const features = [
   {
@@ -57,11 +58,12 @@ const SkillsCircle = ({ banner, showLearnMore }) => {
           ))}
         </div>
         {showLearnMore ? <div className="row justify-content-center">
-          <a
-            href="/access"
-            className="btn-curve btn-bord btn-lit mt-40">
-            <span>Learn more</span>
-          </a>
+          <Link href="/access">
+            <a
+              className="btn-curve btn-bord btn-lit mt-40">
+              <span>Learn more</span>
+            </a>
+          </Link>
         </div> : <div
           className="mt-40"
         />}
