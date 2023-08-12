@@ -1,32 +1,29 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import MainLayout from "../../layouts/main";
 import WorkHeader from "../../components/Work-header";
 import AccessProjects from "../../components/Work-Four-Column/accessProjects";
 import getFooterData from "../api/getFooterData";
 import getAccessPageData from "../api/getAccessPageData";
+import LightLayout from "../../layouts/light";
+import SkillsCircle from "../../components/Skills-Circle";
+import Portfolio1 from "../../components/Portfolio1";
 
 const Access = ({ footerData, data }) => {
   React.useEffect(() => {
     document.querySelector("body").classList.add("index3");
   }, []);
-
-
   const { header_image, header_title, header_description, access_projects } = data.data.attributes;
-
+  const banner = {
+    title: header_title,
+    description: header_description,
+    background_image: header_image,
+  }
   return (
-    <MainLayout data={footerData}>
-      <WorkHeader
-        center
-        title={{
-          first: header_title.split(" ")[0].concat(" ").concat(header_title.split(" ")[1]),
-          second: header_title.split(" ")[2],
-        }}
-        content={header_description}
-        headerImage={header_image}
-      />
-      <AccessProjects projects={access_projects} />
-    </MainLayout>
+    <LightLayout
+      footerClass={"mt-30"} footerData={footerData}>
+      <SkillsCircle banner={banner} />
+      <Portfolio1 projects={access_projects} />
+    </LightLayout>
   );
 };
 
@@ -36,7 +33,7 @@ export default Access;
 export const getStaticProps = async () => {
   const [footerData, data] = await Promise.all([
     getFooterData(),
-    getAccessPageData()
+    getAccessPageData(),
   ]);
   return {
     props: {

@@ -58,9 +58,7 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
               </li>
               <li className="nav-item">
                 <Link legacyBehavior href="/access">
-                  <a className="nav-link" style={{
-                    textDecoration: "underline"
-                  }}>Access</a>
+                  <a className="nav-link">Access</a>
                 </Link>
               </li>
             </ul>

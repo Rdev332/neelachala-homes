@@ -13,18 +13,18 @@ const Services3 = ({ bigTitle, grid, services }) => {
             <div className="row justify-content-center">
               <div className="col-lg-6 col-md-8 col-sm-10">
                 <h6 className="custom-font wow fadeInDown" data-wow-delay=".3s">
-                  Best Features
+                  Our Services
                 </h6>
                 <h4 className="playfont wow flipInX" data-wow-delay=".5s">
-                  Our Services
+                  Best Features
                 </h4>
               </div>
             </div>
           </div>
         ) : (
           <div className="main-header text-center">
-            <h3>Best Features.</h3>
-            <div className="tex-bg">Services</div>
+            <h3>Services</h3>
+            <div className="tex-bg">Best Features</div>
           </div>
         )}
 
@@ -35,11 +35,7 @@ const Services3 = ({ bigTitle, grid, services }) => {
                 className="item-bx bg-img wow fadeInUp"
                 data-wow-delay={index == 0 ? ".3s" : index == 1 ? ".5s" : ".7s"}
               >
-                {/* video */}
-                {/* <video width="100%" autoplay="autoPlay" loop muted>
-                  <source src={service.creative.data.attributes.url} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video> */}
+                <img src={service.creative.data.attributes.url} alt="" />
                 <h6 className="mb-20 mt-20">{service.title}</h6>
                 <p>{service.description}</p>
                 <Link legacyBehavior href="/contact">

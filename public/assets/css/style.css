@@ -2797,6 +2797,12 @@ span:hover {
   z-index: -1;
 }
 
+.services-grid .item-bx img {
+  width: 72px;
+  height: 72px;
+
+}
+
 .services-col {
   background: #212121;
 }

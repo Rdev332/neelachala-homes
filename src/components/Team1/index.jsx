@@ -1,120 +1,43 @@
-/* eslint-disable @next/next/no-img-element */
 import React from "react";
-// import Team1Data from "./team1.json";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import Link from "next/link";
 
-class Team1 extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-  renderArrows = () => {
-    return (
-      <div className="navs mt-30 wow fadeInUp" data-wow-delay=".3s">
-        <span className="prev" onClick={() => this.slider.slickPrev()}>
-          <i className="fas fa-long-arrow-alt-left"></i>
-        </span>
-        <span className="next" onClick={() => this.slider.slickNext()}>
-          <i className="fas fa-long-arrow-alt-right"></i>
-        </span>
-      </div>
-    );
-  };
-  render() {
-    return (
-      <section className="team section-padding">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-5">
-              <div className="tit">
-                <h6
-                  className="mb-10 wow fadeInDown"
-                  data-wow-delay=".3s"
-                >
-                  Some thoughts from Us
-                </h6>
-                <h3 className="playfont wow flipInX" data-wow-delay=".5s">
-                  Our Team
-                </h3>
-                <p className="wow fadeInUp" data-wow-delay=".3s">
-                  We feel proud what our team has achieved
-                </p>
-                {this.renderArrows()}
+const Team = (props) => {
+  return (
+    <section
+      className="services-gridsection-padding mb-50"
+    >
+      <div className="container">
+        <div className="main-header text-center mb-20">
+          <h3>Team</h3>
+          <div className="tex-bg">Leaders</div>
+        </div>
+        <div className="row">
+          {props.team.map((item, index) => (
+            <div className="col-lg-4" key={index}>
+              <div
+                className="item-bx bg-img wow fadeInUp"
+                data-wow-delay={index == 0 ? ".3s" : index == 1 ? ".5s" : ".7s"}
+              >
+                <img className="mt-30" src={item.profile_photo?.data?.attributes?.url} alt="profile photo" />
+                <div className="row mt-20 align-items-center">
+                  <h6
+                    style={{
+                      marginRight: "10px",
+                      paddingLeft: "15px",
+                    }}
+                  >{item.name}</h6>
+                  <Link legacyBehavior href={item.linkedin}>
+                    <a className="fab fa-linkedin-in"></a>
+                  </Link>
+                </div>
+                <p>{item.designation}</p>
               </div>
             </div>
-            <div className="col-lg-7">
-              <Slider
-                className="team-container"
-                {...{
-                  ref: (c) => (this.slider = c),
-                  slidesToShow: 3,
-                  slidesToScroll: 1,
-                  arrows: true,
-                  dots: false,
-                  autoplay: true,
-                  responsive: [
-                    {
-                      breakpoint: 1024,
-                      settings: {
-                        slidesToShow: 3,
-                      },
-                    },
-                    {
-                      breakpoint: 767,
-                      settings: {
-                        slidesToShow: 2,
-                      },
-                    },
-                    {
-                      breakpoint: 480,
-                      settings: {
-                        slidesToShow: 1,
-                      },
-                    },
-                  ],
-                }}
-              >
-                {this.props.team.map((item,index) => (
-                  <div
-                    className="item wow fadeInUp"
-                    data-wow-delay=".3s"
-                    key={index}
-                  >
-                    <div className="img wow imago">
-                      <img src={item.profile_photo?.data?.attributes?.url} alt="profile photo" />
-                      <div className="social">
-                        {/* <a href={item.facebook}>
-                          <i className="fab fa-facebook-f"></i>
-                        </a>
-                        <a href={item.twitter}>
-                          <i className="fab fa-twitter"></i>
-                        </a>
-                        <a href={item.behance}>
-                          <i className="fab fa-behance"></i>
-                        </a> */}
-                        <a href={item.linkedin}>
-                          <i className="fab fa-linkedin-in"></i>
-                        </a>
-                      </div>
-                    </div>
-                    <div className="info">
-                      <h5>{item.name}</h5>
-                      <span>{item.designation}</span>
-                    </div>
-                  </div>
-                ))}
-              </Slider>
-            </div>
-          </div>
+          ))}
         </div>
-        <div
-          className="dots-half bg-img bg-repeat"
-          style={{ backgroundImage: "url(/assets/img/dots.png" }}
-        ></div>
-      </section>
-    );
-  }
-}
+      </div>
+    </section>
+  );
+};
 
-export default Team1;
+export default Team;

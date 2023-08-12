@@ -3141,6 +3141,15 @@ span:hover {
   text-align: center;
 }
 
+.skills-circle p {
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 10px;
+  text-align: center;
+}
+
 
 /* ====================== [ End progress bar ] ====================== */
 /* ====================== [ Start tabs before & after section ] ====================== */
