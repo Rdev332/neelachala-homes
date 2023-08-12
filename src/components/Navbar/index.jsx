@@ -42,13 +42,6 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
-                <Link legacyBehavior href="/access">
-                  <a className="nav-link" style={{
-                    textDecoration: "underline"
-                  }}>Access</a>
-                </Link>
-              </li>
-              <li className="nav-item">
                 <Link legacyBehavior href="/about">
                   <a className="nav-link">About Us</a>
                 </Link>
@@ -61,6 +54,13 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
               <li className="nav-item">
                 <Link legacyBehavior href="/contact">
                   <a className="nav-link">Contact</a>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link legacyBehavior href="/access">
+                  <a className="nav-link" style={{
+                    textDecoration: "underline"
+                  }}>Access</a>
                 </Link>
               </li>
             </ul>

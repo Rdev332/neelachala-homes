@@ -23,7 +23,8 @@ const features = [
   },
 ];
 
-const SkillsCircle = () => {
+const SkillsCircle = ({banner}) => {
+
   const cpStyle = {
     path: {
       stroke: "#b19777",
@@ -39,7 +40,7 @@ const SkillsCircle = () => {
   return (
     <section
       className="skills-circle section-padding bg-img parallaxie"
-      style={{ backgroundImage: "url(/assets/img/access/access-bg.jpg)" }}
+      style={{ backgroundImage: `url(${banner?.background_image?.data?.attributes?.url})` }}
       data-overlay-dark="7"
     >
       <div className="container">
@@ -50,9 +51,9 @@ const SkillsCircle = () => {
                 Coming Soon!
               </h6>
               <h4 className="playfont wow flipInX" data-wow-delay=".5s">
-                Neelachala Access
+               {banner?.title}
               </h4>
-              <p>Every family deserves a home. 'Access' makes it possible.</p>
+              <p>{banner?.description}</p>
             </div>
           </div>
         </div>

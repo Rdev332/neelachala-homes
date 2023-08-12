@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import Team1Data from "./team1.json";
+// import Team1Data from "./team1.json";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -75,16 +75,16 @@ class Team1 extends React.Component {
                   ],
                 }}
               >
-                {Team1Data.map((item) => (
+                {this.props.team.map((item,index) => (
                   <div
                     className="item wow fadeInUp"
                     data-wow-delay=".3s"
-                    key={item.id}
+                    key={index}
                   >
                     <div className="img wow imago">
-                      <img src={item.image} alt="" />
+                      <img src={item.profile_photo?.data?.attributes?.url} alt="profile photo" />
                       <div className="social">
-                        <a href={item.facebook}>
+                        {/* <a href={item.facebook}>
                           <i className="fab fa-facebook-f"></i>
                         </a>
                         <a href={item.twitter}>
@@ -92,15 +92,15 @@ class Team1 extends React.Component {
                         </a>
                         <a href={item.behance}>
                           <i className="fab fa-behance"></i>
-                        </a>
+                        </a> */}
                         <a href={item.linkedin}>
                           <i className="fab fa-linkedin-in"></i>
                         </a>
                       </div>
                     </div>
                     <div className="info">
-                      <h5>{item.username}</h5>
-                      <span>{item.usertitle}</span>
+                      <h5>{item.name}</h5>
+                      <span>{item.designation}</span>
                     </div>
                   </div>
                 ))}

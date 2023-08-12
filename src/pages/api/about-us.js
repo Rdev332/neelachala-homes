@@ -2,7 +2,7 @@
 export default async function getAboutUsPageData() {
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_CMS_URL}/about-us?populate[header_image][populate]=*&populate[features][populate]=*`,
+      `${process.env.NEXT_PUBLIC_CMS_URL}/about-us?populate[header_image][populate]=*&populate[features][populate]=*&populate[neelachala_team_members][populate]=*`,
       {
         headers: {
           "Content-Type": "application/json",

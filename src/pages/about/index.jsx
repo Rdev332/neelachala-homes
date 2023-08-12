@@ -12,7 +12,7 @@ const About = ({ data, footerData }) => {
   React.useEffect(() => {
     document.querySelector("body").classList.add("index3");
   }, []);
-
+  console.log(data)
   return (
     <MainLayout data={footerData}>
       <PageHeader
@@ -21,7 +21,7 @@ const About = ({ data, footerData }) => {
       />
       <AboutUs4 data={data.data.attributes} />
       <Services3 bigTitle grid services={data.data.attributes.features} />
-      <Team1 />
+      <Team1 team={data.data.attributes.neelachala_team_members}/>
     </MainLayout>
   );
 };
