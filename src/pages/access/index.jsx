@@ -1,7 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import WorkHeader from "../../components/Work-header";
-import AccessProjects from "../../components/Work-Four-Column/accessProjects";
 import getFooterData from "../api/getFooterData";
 import getAccessPageData from "../api/getAccessPageData";
 import LightLayout from "../../layouts/light";
