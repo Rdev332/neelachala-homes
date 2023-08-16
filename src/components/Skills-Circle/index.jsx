@@ -58,7 +58,7 @@ const SkillsCircle = ({ banner, showLearnMore }) => {
           ))}
         </div>
         {showLearnMore ? <div className="row justify-content-center">
-          <Link href="/access">
+          <Link legacyBehavior href="/access">
             <a
               className="btn-curve btn-bord btn-lit mt-40">
               <span>Learn more</span>

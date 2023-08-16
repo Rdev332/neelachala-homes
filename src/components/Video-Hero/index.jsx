@@ -1,15 +1,24 @@
 // video hero image
 //
 import { TypeAnimation } from 'react-type-animation';
-const VideoHero = ({header_text,header_video,header}) => {
+import { useRef, useEffect } from 'react';
 
-    const {header_title,header_content,typing_text} = header
+const VideoHero = ({ header_text, header_video, header }) => {
+
+    const { header_title, header_content, typing_text } = header
 
     // scroll to section
     function scrollBottom() {
         // scroll to section with id as #contactForm 
-        document.getElementById("contactForm").scrollIntoView({ behavior: "smooth" }) 
+        document.getElementById("contactForm").scrollIntoView({ behavior: "smooth" })
     }
+
+    const videoRef = useRef(null);
+    useEffect(() => {
+        if (videoRef) {
+            videoRef.current.play();
+        }
+    }, []);
 
     return (
         <div
@@ -20,7 +29,7 @@ const VideoHero = ({header_text,header_video,header}) => {
             }
         >
             <video
-                autoPlay
+                ref={videoRef}
                 muted
                 loop
                 playsInline
