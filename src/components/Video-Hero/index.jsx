@@ -3,7 +3,8 @@
 import { LazyLoadComponent } from 'react-lazy-load-image-component';
 import { TypeAnimation } from 'react-type-animation';
 
-const VideoHero = ({ header_text, header_video, header }) => {
+const VideoHero = ({ header_text, header_video, header, header_thumbnail }) => {
+    console.log(header_thumbnail)
 
     const { header_title, header_content, typing_text } = header
 
@@ -30,8 +31,8 @@ const VideoHero = ({ header_text, header_video, header }) => {
                     muted
                     loop
                     playsInline
-                    poster={header_video.data.attributes.previewUrl}
-                    src={header_video.data.attributes.url}
+                    poster={header_thumbnail.data.attributes.url}
+                    preload="none"
                     style={{
                         position: "absolute",
                         zIndex: "-1",
@@ -40,7 +41,9 @@ const VideoHero = ({ header_text, header_video, header }) => {
                         width: "100vw",
                         objectFit: "cover",
                     }}
-                />
+                >
+                    <source src={header_video.data.attributes.url} type="video/mp4" />
+                </video>
             </LazyLoadComponent>
             <div className="container"
                 style={{

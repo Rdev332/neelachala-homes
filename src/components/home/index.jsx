@@ -13,12 +13,13 @@ const Home1 = ({ projects, data, footerData }) => {
   React.useEffect(() => {
     document.querySelector("body").classList.add("homepage");
   }, []);
-  const { header_video, header, banner } = data.data?.attributes ?? {}
+  const { header_video, header, banner, header_thumbnail } = data.data?.attributes ?? {}
+  console.log(data.data?.attributes)
 
   return (
     <LightLayout
       footerClass={"mt-30"} footerData={footerData}>
-      <VideoHero header_video={header_video} header={header} />
+      <VideoHero header_video={header_video} header={header} header_thumbnail={header_thumbnail} />
       <AboutUs1 data={data.data?.attributes} />
       <SkillsCircle banner={banner} showLearnMore />
       <WorkTwoColumn projects={projects?.data} />

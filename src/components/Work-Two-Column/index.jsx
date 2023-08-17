@@ -15,27 +15,6 @@ const WorkTwoColumn = ({ projects }) => {
     }, 1000);
   }, []);
 
-  const renderArrows = () => {
-    return (
-
-      <div className="navs mt-30">
-        <span className="prev" onClick={
-          () => this.slider.slickPrev()
-        }
-        >
-          <i className="fas fa-long-arrow-alt-left"></i>
-        </span>
-        <span className="next" onClick={
-          () => this.slider.slickNext()
-        }
-        >
-          <i className="fas fa-long-arrow-alt-right"></i>
-        </span>
-      </div>
-
-    );
-  };
-
   return (
     <>
       <section className="works section-padding">
