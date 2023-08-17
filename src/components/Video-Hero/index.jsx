@@ -4,7 +4,6 @@ import { LazyLoadComponent } from 'react-lazy-load-image-component';
 import { TypeAnimation } from 'react-type-animation';
 
 const VideoHero = ({ header_text, header_video, header, header_thumbnail }) => {
-    console.log(header_thumbnail)
 
     const { header_title, header_content, typing_text } = header
 

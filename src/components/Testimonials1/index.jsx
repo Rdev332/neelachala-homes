@@ -3,7 +3,6 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import testimonials1Data from "../../data/testimonials1.json";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 class Testimonials1 extends React.Component {

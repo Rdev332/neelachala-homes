@@ -39,10 +39,10 @@ const Services3 = ({ bigTitle, grid, services }) => {
                 <LazyLoadImage src={service.creative.data.attributes.url} alt="" />
                 <h6 className="mb-20 mt-20">{service.title}</h6>
                 <p>{service.description}</p>
-                <Link legacyBehavior href="/contact">
-                  <a className={`more ${!grid ? "custom-font" : ""} mt-30`}>
+                <Link href="/contact">
+                  <div className={`more ${!grid ? "custom-font" : ""} mt-30`}>
                     Request Quotation
-                  </a>
+                  </div>
                 </Link>
               </div>
             </div>

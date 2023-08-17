@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Navbar = ({ navbarRef, logoRef, logoClass }) => {
   const handleMobileDropdown = (e) => {
@@ -9,20 +9,30 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
       .classList.toggle("show-with-trans");
   };
 
+  const router = useRouter();
+
+  const LinkButton = ({ href, children }) => {
+    return (
+      <div style={{ cursor: "pointer" }} onClick={() => router.push(href)}>
+        {children}
+      </div>
+    )
+  }
+
   return (
     <>
       <nav className="navbar change navbar-expand-lg" ref={navbarRef}>
         <div className="container">
-          <Link legacyBehavior href="/">
-            <a className={`logo ${logoClass && logoClass}`}>
+          <LinkButton href="/">
+            <div className={`logo ${logoClass && logoClass}`}>
               <img src="https://res.cloudinary.com/dagjy96pi/image/upload/v1689964975/logo_white_write_4597a9bd15.png" alt="logo" ref={logoRef}
                 style={{
                   width:
                     "160px"
                 }}
               />
-            </a>
-          </Link>
+            </div>
+          </LinkButton>
 
           <button
             className="navbar-toggler"
@@ -42,24 +52,24 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
-                <Link legacyBehavior href="/about">
-                  <a className="nav-link">About Us</a>
-                </Link>
+                <LinkButton href="/about">
+                  <div className="nav-link">About Us</div>
+                </LinkButton>
               </li>
               <li className="nav-item">
-                <Link legacyBehavior href="/portfolio">
-                  <a className="nav-link">Portfolio</a>
-                </Link>
+                <LinkButton href="/portfolio">
+                  <div className="nav-link">Portfolio</div>
+                </LinkButton>
               </li>
               <li className="nav-item">
-                <Link legacyBehavior href="/contact">
-                  <a className="nav-link">Contact</a>
-                </Link>
+                <LinkButton href="/contact">
+                  <div className="nav-link">Contact</div>
+                </LinkButton>
               </li>
               <li className="nav-item">
-                <Link legacyBehavior href="/access">
-                  <a className="nav-link">Access</a>
-                </Link>
+                <LinkButton href="/access">
+                  <div className="nav-link">Access</div>
+                </LinkButton>
               </li>
             </ul>
           </div>

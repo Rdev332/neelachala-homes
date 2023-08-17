@@ -2,7 +2,7 @@
 // This function is used to get all projects from the CMS
 export default async function getHomePageData() {
     try {
-        const response = await fetch(`${process.env.NEXT_PUBLIC_CMS_URL}/home-page?populate[promotionPopup][populate]=*&populate[header_video][populate]=*&populate[header][populate]=*&populate[testimonials][populate]=*&populate[banner][populate]=*&populate[header_thumbnail][populate]=*`, {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_CMS_URL}/home-page?populate[promotionPopup][populate]=*&populate[header_video][populate]=*&populate[header][populate]=*&populate[testimonials][populate]=*&populate[banner][populate]=*&populate[header_thumbnail][populate]=*&populate[about_us_image][populate]=*`, {
             headers: {
                 'Content-Type': 'application/json',
                 "Authorization": `bearer ${process.env.NEXT_PUBLIC_CMS_API_TOKEN}`,

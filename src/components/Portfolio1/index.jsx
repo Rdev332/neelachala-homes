@@ -40,10 +40,10 @@ const Portfolio1 = ({ projects }) => {
                       backgroundImage: `url(${project?.main_photo?.data?.attributes?.url})`,
                     }}
                   >
-                    <Link legacyBehavior href="/project-details">
-                      <a>
+                    <Link href="/project-details">
+                      <div>
                         <div className="item-img-overlay valign"></div>
-                      </a>
+                      </div>
                     </Link>
                   </div>
                   <div className="info mt-10">

@@ -14,7 +14,6 @@ const Home1 = ({ projects, data, footerData }) => {
     document.querySelector("body").classList.add("homepage");
   }, []);
   const { header_video, header, banner, header_thumbnail } = data.data?.attributes ?? {}
-  console.log(data.data?.attributes)
 
   return (
     <LightLayout

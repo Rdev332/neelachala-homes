@@ -3,7 +3,6 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Head from "next/head";
-import appData from '../data/app.json'
 import FacebookPixel from "../components/FacebookPixel";
 
 const LightSkin = ({ children }) => {
