@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import testimonials1Data from "../../data/testimonials1.json";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 class Testimonials1 extends React.Component {
   constructor(props) {
@@ -89,21 +90,21 @@ class Testimonials1 extends React.Component {
                     ],
                   }}
                 >
-                  {this.props.testimonials.map((testimonial,index) => (
+                  {this.props.testimonials.map((testimonial, index) => (
                     <div
                       className="item wow fadeInUp"
                       data-wow-delay=".3s"
                       key={index}
                     >
                       <span className="quote-icon">
-                        <img src="/assets/img/clients/quote.svg" alt="" />
+                        <LazyLoadImage src="/assets/img/clients/quote.svg" alt="" />
                       </span>
                       <div className="cont">
                         <p className="">&quot;{testimonial.testimonial}&quot;</p>
                       </div>
                       <div className="info">
                         <h6 >
-                          {testimonial.name} 
+                          {testimonial.name}
                         </h6>
                       </div>
                     </div>

@@ -5,6 +5,7 @@ import initIsotope from "../../common/initIsotope";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 
 const WorkTwoColumn = ({ projects }) => {
@@ -51,69 +52,67 @@ const WorkTwoColumn = ({ projects }) => {
               </div>
             </div>
           </div>
-          {
-            <div className="row mt-10 d-block d-sm-none">
-              <div className="col-lg-12">
-                <Slider
-                  className="our-works"
-                  {...{
-                    // ref: (c) => (this.slider = c),
-                    dots: false,
-                    arrows: true,
-                    autoplay: true,
-                    rows: 1,
-                    slidesToScroll: 1,
-                    slidesToShow: 2,
-                    responsive: [
-                      {
-                        breakpoint: 1024,
-                        settings: {
-                          slidesToShow: 2,
-                        },
+          <div className="row mt-10 d-block d-sm-none">
+            <div className="col-lg-12">
+              <Slider
+                className="our-works"
+                {...{
+                  // ref: (c) => (this.slider = c),
+                  dots: false,
+                  arrows: true,
+                  autoplay: true,
+                  rows: 1,
+                  slidesToScroll: 1,
+                  slidesToShow: 2,
+                  responsive: [
+                    {
+                      breakpoint: 1024,
+                      settings: {
+                        slidesToShow: 2,
                       },
-                      {
-                        breakpoint: 767,
-                        settings: {
-                          slidesToShow: 1,
-                        },
+                    },
+                    {
+                      breakpoint: 767,
+                      settings: {
+                        slidesToShow: 1,
                       },
-                      {
-                        breakpoint: 480,
-                        settings: {
-                          slidesToShow: 1,
-                        },
+                    },
+                    {
+                      breakpoint: 480,
+                      settings: {
+                        slidesToShow: 1,
                       },
-                    ],
-                  }}
-                >
-                  {projects.map((project, index) => (
-                    <Link
-                      key={index}
-                      legacyBehavior
-                      href={`/project-details?name=${project.attributes?.name
-                        ?.replace(/\s+/g, "_")
-                        .toLowerCase()}`}
-                    >
-                      <div className="item">
-                        <div className="img">
-                          <img
-                            src={
-                              project?.attributes?.main_photo?.data?.attributes?.url
-                            }
-                            alt={project?.attributes?.name}
-                          />
-                        </div>
-                        <div className="cont vis">
-                          <h5>{project?.attributes?.name}</h5>
-                        </div>
+                    },
+                  ],
+                }}
+              >
+                {projects.map((project, index) => (
+                  <Link
+                    key={index}
+                    legacyBehavior
+                    href={`/project-details?name=${project.attributes?.name
+                      ?.replace(/\s+/g, "_")
+                      .toLowerCase()}`}
+                  >
+                    <div className="item">
+                      <div className="img">
+                        <LazyLoadImage
+                          src={
+                            project?.attributes?.main_photo?.data?.attributes?.url
+                          }
+                          alt={project?.attributes?.name}
+                        />
                       </div>
-                    </Link>
-                  ))}
-                </Slider>
-                {/* {renderArrows()} */}
-              </div>
+                      <div className="cont vis">
+                        <h5>{project?.attributes?.name}</h5>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </Slider>
+              {/* {renderArrows()} */}
             </div>
-          }
+          </div>
           <div className="row gallery
             d-none d-sm-block
           ">
@@ -127,7 +126,8 @@ const WorkTwoColumn = ({ projects }) => {
                 >
                   <div className="item">
                     <div className="img">
-                      <img
+                      <LazyLoadImage
+                        visibleByDefault={true}
                         src={
                           project?.attributes?.main_photo?.data?.attributes?.url
                         }

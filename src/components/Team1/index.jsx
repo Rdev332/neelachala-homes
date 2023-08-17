@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Team = (props) => {
   return (
@@ -18,7 +19,7 @@ const Team = (props) => {
                 className="item-bx bg-img wow fadeInUp"
                 data-wow-delay={index == 0 ? ".3s" : index == 1 ? ".5s" : ".7s"}
               >
-                <img className="mt-30" src={item.profile_photo?.data?.attributes?.url} alt="profile photo" />
+                <LazyLoadImage className="mt-30" src={item.profile_photo?.data?.attributes?.url} alt="profile photo" />
                 <div className="row mt-20 align-items-center">
                   <h6
                     style={{

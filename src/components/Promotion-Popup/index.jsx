@@ -2,6 +2,7 @@ import React from 'react';
 import Popup from 'reactjs-popup';
 import * as pixel from '../../common/fpixel'
 import Image from 'next/image';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const PromotionPopup = ({ data }) => {
     const [show, setShow] = React.useState(false);
@@ -43,7 +44,7 @@ const PromotionPopup = ({ data }) => {
         >
             <div className="modal-content">
                 <div className="modal-body">
-                    <Image src={data?.image?.data.attributes.url} alt="popup" />
+                    <LazyLoadImage src={data?.image?.data.attributes.url} alt="popup" />
                 </div>
                 <div className="row align-items-center">
                     <div className="modal-header">

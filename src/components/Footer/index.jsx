@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Link from "next/link";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const Footer = ({ classText, data }) => {
   const { office_address, phone_number_1, phone_number_2, info_email, bussiness_enquire_email, google_maps_link } = data

@@ -6,6 +6,7 @@ import ProjectIntro from "../../components/Project-Intro";
 import getAllProjects from "../api/getAllProjects";
 import { useRouter } from 'next/router'
 import getFooterData from "../api/getFooterData";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const ProjectDetails = ({ projects, footerData }) => {
   const router = useRouter()
@@ -36,7 +37,7 @@ const ProjectDetails = ({ projects, footerData }) => {
                           photos?.data?.length === 5 ? "col-lg-3 col-xl-3 col-md-6"
                             : "col-lg-2 col-xl-2 col-md-6"
                 } key={index}>
-                  <img alt="" src={photo?.attributes?.url} />
+                  <LazyLoadImage alt="" src={photo?.attributes?.url} />
                 </div>
               ))
 

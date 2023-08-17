@@ -2,6 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import thumparallaxUp from "../../common/thumparallaxUp";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const PostDetails = () => {
   React.useEffect(() => {
@@ -27,7 +28,7 @@ const PostDetails = () => {
                   </div>
                 </div>
                 <div className="img main-img">
-                  <img
+                  <LazyLoadImage
                     src="/assets/img/blog/single.jpg"
                     alt=""
                     className="thumparallax"
@@ -101,12 +102,12 @@ const PostDetails = () => {
                         <div className="row">
                           <div className="col-md-6">
                             <div className="mb-10">
-                              <img src="/assets/img/blog/single.jpg" alt="" />
+                              <LazyLoadImage src="/assets/img/blog/single.jpg" alt="" />
                             </div>
                           </div>
                           <div className="col-md-6">
                             <div className="mb-10">
-                              <img src="/assets/img/blog/single.jpg" alt="" />
+                              <LazyLoadImage src="/assets/img/blog/single.jpg" alt="" />
                             </div>
                           </div>
                         </div>
@@ -146,7 +147,7 @@ const PostDetails = () => {
                       </div>
                       <div className="author">
                         <div className="author-img">
-                          <img src="/assets/img/blog/01.jpg" alt="" />
+                          <LazyLoadImage src="/assets/img/blog/01.jpg" alt="" />
                         </div>
                         <div className="info">
                           <h6>
@@ -194,7 +195,7 @@ const PostDetails = () => {
                   <h5>Comments :</h5>
                   <div className="item">
                     <div className="comment-img">
-                      <img src="/assets/img/blog/01.jpg" alt="" />
+                      <LazyLoadImage src="/assets/img/blog/01.jpg" alt="" />
                     </div>
                     <div className="info">
                       <h6>
@@ -216,7 +217,7 @@ const PostDetails = () => {
                   </div>
                   <div className="item relped">
                     <div className="comment-img">
-                      <img src="/assets/img/blog/01.jpg" alt="" />
+                      <LazyLoadImage src="/assets/img/blog/01.jpg" alt="" />
                     </div>
                     <div className="info">
                       <h6>
@@ -238,7 +239,7 @@ const PostDetails = () => {
                   </div>
                   <div className="item">
                     <div className="comment-img">
-                      <img src="/assets/img/blog/01.jpg" alt="" />
+                      <LazyLoadImage src="/assets/img/blog/01.jpg" alt="" />
                     </div>
                     <div className="info">
                       <h6>

@@ -2,6 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import initIsotope from "../../common/initIsotope";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const WorkFourColumn = ({ projects }) => {
   React.useEffect(() => {
@@ -25,7 +26,7 @@ const WorkFourColumn = ({ projects }) => {
                     }`}>
                     <div className="item">
                       <div className="img">
-                        <img src={project.attributes?.main_photo?.data?.attributes?.url} alt={project.attributes?.name} />
+                        <LazyLoadImage src={project.attributes?.main_photo?.data?.attributes?.url} alt={project.attributes?.name} />
                       </div>
                       <div className="cont">
                         <h5>

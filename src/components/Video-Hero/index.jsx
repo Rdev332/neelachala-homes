@@ -1,8 +1,7 @@
 // video hero image
 //
+import { LazyLoadComponent } from 'react-lazy-load-image-component';
 import { TypeAnimation } from 'react-type-animation';
-import { useRef, useEffect } from 'react';
-import { useRouter } from 'next/router';
 
 const VideoHero = ({ header_text, header_video, header }) => {
 
@@ -13,22 +12,6 @@ const VideoHero = ({ header_text, header_video, header }) => {
         // scroll to section with id as #contactForm 
         document.getElementById("contactForm").scrollIntoView({ behavior: "smooth" })
     }
-    const router = useRouter();
-
-    // check if router is ready
-
-
-    const videoRef = useRef(null);
-
-    const handleRouteChange = () => {
-        // lazy load video
-        videoRef.current.src = header_video.data.attributes.url;
-        videoRef.current.play();
-    }
-
-    useEffect(() => {
-        if (router.isReady) handleRouteChange()
-    }, [router.isReady]);
 
     return (
         <div
@@ -38,20 +21,27 @@ const VideoHero = ({ header_text, header_video, header }) => {
             }
             }
         >
-            <video
-                ref={videoRef}
-                muted
-                loop
-                playsInline
-                style={{
-                    position: "absolute",
-                    zIndex: "-1",
-                    filter: "brightness(0.4)",
-                    height: "100vh",
-                    width: "100vw",
-                    objectFit: "cover",
-                }}
-            />
+            <LazyLoadComponent
+                delayTime={300}
+                visibleByDefault={false}
+            >
+                <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    poster={header_video.data.attributes.previewUrl}
+                    src={header_video.data.attributes.url}
+                    style={{
+                        position: "absolute",
+                        zIndex: "-1",
+                        filter: "brightness(0.4)",
+                        height: "100vh",
+                        width: "100vw",
+                        objectFit: "cover",
+                    }}
+                />
+            </LazyLoadComponent>
             <div className="container"
                 style={{
                     position: "relative",

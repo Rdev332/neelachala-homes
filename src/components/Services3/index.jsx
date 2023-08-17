@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Services3 = ({ bigTitle, grid, services }) => {
   return (
@@ -35,7 +36,7 @@ const Services3 = ({ bigTitle, grid, services }) => {
                 className="item-bx bg-img wow fadeInUp"
                 data-wow-delay={index == 0 ? ".3s" : index == 1 ? ".5s" : ".7s"}
               >
-                <img src={service.creative.data.attributes.url} alt="" />
+                <LazyLoadImage src={service.creative.data.attributes.url} alt="" />
                 <h6 className="mb-20 mt-20">{service.title}</h6>
                 <p>{service.description}</p>
                 <Link legacyBehavior href="/contact">
