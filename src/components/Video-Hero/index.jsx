@@ -21,29 +21,24 @@ const VideoHero = ({ header_text, header_video, header, header_thumbnail }) => {
             }
             }
         >
-            <LazyLoadComponent
-                delayTime={300}
-                visibleByDefault={false}
+            <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                poster={header_thumbnail.data.attributes.url}
+                preload="none"
+                style={{
+                    position: "absolute",
+                    zIndex: "-1",
+                    filter: "brightness(0.4)",
+                    height: "100vh",
+                    width: "100vw",
+                    objectFit: "cover",
+                }}
             >
-                <video
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    poster={header_thumbnail.data.attributes.url}
-                    preload="none"
-                    style={{
-                        position: "absolute",
-                        zIndex: "-1",
-                        filter: "brightness(0.4)",
-                        height: "100vh",
-                        width: "100vw",
-                        objectFit: "cover",
-                    }}
-                >
-                    <source src={header_video.data.attributes.url} type="video/mp4" />
-                </video>
-            </LazyLoadComponent>
+                <source src={header_video.data.attributes.url} type="video/mp4" />
+            </video>
             <div className="container"
                 style={{
                     position: "relative",
