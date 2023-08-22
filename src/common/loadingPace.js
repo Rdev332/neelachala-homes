@@ -17,7 +17,7 @@ const loadingPace = () => {
   });
 
   // check safari mac
-  if (Pace.bar.progress > 30 && navigator.userAgent.indexOf("Safari") != -1 && navigator.userAgent.indexOf("Mac") != -1 && navigator.userAgent.indexOf("Chrome") == -1) {
+  if (navigator.userAgent.indexOf("Safari") != -1 && navigator.userAgent.indexOf("Mac") != -1) {
     addDoneClass();
   }
   if (document.querySelector("body").classList.contains("pace-done")) {
