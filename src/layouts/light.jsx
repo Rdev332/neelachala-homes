@@ -11,13 +11,13 @@ const LightLayout = ({ children, footerClass, footerData }) => {
   React.useEffect(() => {
     var navbar = navbarRef.current,
       logo = logoRef.current;
-    if (window.pageYOffset > 300) {
+    if (window.scrollY > 300) {
       navbar.classList.add("nav-scroll");
     } else {
       navbar.classList.remove("nav-scroll");
     }
     window.addEventListener("scroll", () => {
-      if (window.pageYOffset > 300) {
+      if (window.scrollY > 300) {
         navbar.classList.add("nav-scroll");
         logo.setAttribute("src", "https://res.cloudinary.com/dagjy96pi/image/upload/v1689964974/logo_437a2bd646.png");
       } else {

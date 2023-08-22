@@ -12,13 +12,13 @@ const MainLayout = ({ children, logoClassText, data }) => {
   React.useEffect(() => {
     var navbar = navbarRef.current,
       logo = logoRef.current;
-    if (window.pageYOffset > 300) {
+    if (window.scrollY > 300) {
       navbar.classList.add("nav-scroll");
     } else {
       navbar.classList.remove("nav-scroll");
     }
     window.addEventListener("scroll", () => {
-      if (window.pageYOffset > 300) {
+      if (window.scrollY > 300) {
         navbar.classList.add("nav-scroll");
         logo.setAttribute("src", "/assets/img/logo.png");
       } else {

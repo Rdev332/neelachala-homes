@@ -4,7 +4,7 @@ const scrollToTop = () => {
   let progressPath = document.querySelector(".progress-wrap path");
   let pathLength = progressPath.getTotalLength();
   const updateProgress = () => {
-    let scroll = window.pageYOffset;
+    let scroll = window.scrollY;
     let height = document.documentElement.scrollHeight - window.innerHeight;
     let progress = pathLength - (scroll * pathLength) / height;
     progressPath.style.strokeDashoffset = progress;
@@ -21,7 +21,7 @@ const scrollToTop = () => {
     updateProgress();
     window.addEventListener("scroll", updateProgress);
     window.addEventListener("scroll", function () {
-      if (window.pageYOffset > offset) {
+      if (window.scrollY > offset) {
         progressWrap.classList.add("active-progress");
       } else {
         document
