@@ -5203,6 +5203,7 @@ footer .item .copy-right p a {
 
 .works .item {
   position: relative;
+  cursor: pointer;
 }
 
 .works .item:hover:after,
