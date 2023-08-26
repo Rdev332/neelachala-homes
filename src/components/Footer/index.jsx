@@ -4,7 +4,7 @@ import Link from "next/link";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const Footer = ({ classText, data }) => {
-  const { office_address, phone_number_1, phone_number_2, info_email, bussiness_enquire_email, google_maps_link } = data
+  const { office_address, phone_number_1, phone_number_2, info_email, bussiness_enquire_email, google_maps_link ,facebook,instagram} = data
 
   const shortener = (text, length) => {
     if (!text) return ("")
@@ -78,7 +78,7 @@ const Footer = ({ classText, data }) => {
                 />
               </div>
               <div className="social">
-                <Link legacyBehavior href="https://www.facebook.com/neelachalahomes?mibextid=ZbWKwL">
+                <Link legacyBehavior href={facebook}>
                   <a>
                     <i className="fab fa-facebook-f"></i>
                   </a>
@@ -88,7 +88,7 @@ const Footer = ({ classText, data }) => {
                     <i className="fab fa-twitter"></i>
                   </a>
                 </Link> */}
-                <Link legacyBehavior href="https://www.instagram.com/_neelachalahomes_/?igshid=YmMyMTA2M2Y%3D">
+                <Link legacyBehavior href={instagram}>
                   <a>
                     <i className="fab fa-instagram"></i>
                   </a>
