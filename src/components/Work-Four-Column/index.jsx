@@ -11,13 +11,11 @@ const WorkFourColumn = ({ projects }) => {
     }, 1000);
   }, []);
 
-  console.log(projects)
-
   return (
     <>
       <section className="works filter-img four-col section-padding">
         <div className="container-fluid">
-        <div className="filtering text-center mb-30">
+          <div className="filtering text-center mb-30">
             <div className="filter">
               <span data-filter="*" className="active">
                 All

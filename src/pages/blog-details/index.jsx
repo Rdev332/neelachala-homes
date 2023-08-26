@@ -2,11 +2,11 @@ import React from "react";
 import MainLayout from "../../layouts/main";
 import PostDetails from "../../components/Post-details";
 import getAllBlogs from '../api/blogs'
+import getFooterData from "../api/getFooterData"
 import { useRouter } from "next/router";
 
-const BlogDetails = ({ allBlogs }) => {
+const BlogDetails = ({ allBlogs, footerData }) => {
   const { data: blogs } = allBlogs;
-  console.log(blogs)
   const router = useRouter()
 
   const blog = blogs.find(blog => blog.attributes.slug === router.query.slug)
@@ -15,7 +15,9 @@ const BlogDetails = ({ allBlogs }) => {
     document.querySelector('body').classList.add('index3')
   }, [])
   return (
-    <MainLayout>
+    <MainLayout
+      data={footerData}
+    >
       <PostDetails blog={blog} />
     </MainLayout>
   );
@@ -23,11 +25,14 @@ const BlogDetails = ({ allBlogs }) => {
 
 export default BlogDetails;
 
+
 export const getStaticProps = async () => {
-  const allBlogs = await getAllBlogs();
+  const [allBlogs, footerData] = await Promise.all([getAllBlogs(), getFooterData()])
+
   return {
     props: {
       allBlogs,
+      footerData
     },
   };
 };
