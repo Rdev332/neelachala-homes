@@ -11,15 +11,25 @@ const WorkFourColumn = ({ projects }) => {
     }, 1000);
   }, []);
 
+  console.log(projects)
 
   return (
     <>
       <section className="works filter-img four-col section-padding">
         <div className="container-fluid">
+        <div className="filtering text-center mb-30">
+            <div className="filter">
+              <span data-filter="*" className="active">
+                All
+              </span>
+              <span data-filter=".completed">Completed</span>
+              <span data-filter=".ongoing">Ongoing</span>
+            </div>
+          </div>
           <div className="row gallery">
             {projects.map((project, index) => {
               return (
-                <div className="col-lg-4 col-md-6 items theaters" key={index}
+                <div className={`col-lg-4 col-md-6 items ${project?.attributes?.project_status}`} key={index}
                   style={{ cursor: "pointer" }}
                 >
                   <Link legacyBehavior href={`/project-details?name=${project.attributes?.name?.replace(/\s+/g, '_').toLowerCase()
