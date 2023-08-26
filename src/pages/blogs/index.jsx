@@ -3,13 +3,15 @@ import React from "react";
 import Blog1Data from "../../data/blogs.json";
 import Link from "next/link";
 import thumparallaxUp from "../../common/thumparallaxUp";
+import getAllBlogs  from "../api/blogs";
 
-const BlogsList = () => {
+const BlogsList = ({allBlogs}) => {
   React.useEffect(() => {
     setTimeout(() => {
       if (window.simpleParallax) thumparallaxUp();
     }, 1000);
   }, []);
+  console.log(allBlogs)
   return (
     <>
       <section className="blog-pg section-padding">
@@ -77,5 +79,15 @@ const BlogsList = () => {
     </>
   );
 };
+
+export const getStaticProps = async () => {
+  const allBlogs = await getAllBlogs();
+  return {
+    props: {
+      allBlogs,
+    },
+  };
+};
+
 
 export default BlogsList;
