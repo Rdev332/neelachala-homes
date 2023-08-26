@@ -1,93 +1,44 @@
-/* eslint-disable @next/next/no-img-element */
-import React from "react";
-import Blog1Data from "../../data/blogs.json";
-import Link from "next/link";
-import thumparallaxUp from "../../common/thumparallaxUp";
-import getAllBlogs  from "../api/blogs";
+import React from 'react'
+import MainLayout from '../../layouts/main'
+import PageHeader from '../../components/Page-header'
+import BlogsList from '../../components/Blogs-List'
+import getAllBlogs from '../api/blogs'
+import getFooterData from "../api/getFooterData"
 
-const BlogsList = ({allBlogs}) => {
+const Blogs = ({ allBlogs, footerData }) => {
+
+  const { data: blogs } = allBlogs
+
   React.useEffect(() => {
-    setTimeout(() => {
-      if (window.simpleParallax) thumparallaxUp();
-    }, 1000);
-  }, []);
-  console.log(allBlogs)
+    document.querySelector('body').classList.add('index3')
+  }, [])
   return (
-    <>
-      <section className="blog-pg section-padding">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-10 offset-lg-1">
-              <div className="posts">
-                {Blog1Data.map((item) => (
-                  <div className="item mb-80" key={item.id}>
-                    <div className="img">
-                      <Link href="/blog-details">
-                        <img src={item.image} alt="" className="thumparallax" />
-                      </Link>
-                    </div>
-                    <div className="content">
-                      <div className="date">
-                        <h5>
-                          <Link href="/blog-details">
-                            <span className="num">{item.date2[1]}</span>
-                            <span>{item.date2[0]}</span>
-                          </Link>
-                        </h5>
-                      </div>
-                      <div className="cont">
-                        <div className="tags">
-                          <Link href="#">WordPress</Link>
-                          <Link href="#">Themeforest</Link>
-                          <Link href="#">Archo</Link>
-                        </div>
-                        <h4 className="title">
-                          <Link href="/blog-details">
-                            Build a Beautiful Blog With Ease
-                          </Link>
-                        </h4>
-                        <p>
-                          Success is no accident. It is hard work, perseverance,
-                          learning, studying, sacrifice and most of all, love of
-                          what you are doing.
-                        </p>
-                        <Link href="/blog-details" className="more">
-                          Read More
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-                <div className="pagination">
-                  <span className="active">
-                    <Link href="#">1</Link>
-                  </span>
-                  <span>
-                    <Link href="#">2</Link>
-                  </span>
-                  <span>
-                    <Link href="#">
-                      <i className="fas fa-angle-right"></i>
-                    </Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
+    <MainLayout
+      data={footerData}
+    >
+      {/* <PageHeader
+        title="Our Blogs"
+        fullPath={[
+          { id: 1, name: "home", url: "/" },
+          { id: 2, name: "blogs", url: "/blogs" },
+        ]}
+        image={"/assets/img/patern.png"}
+      /> */}
+      <BlogsList blogs={blogs} />
+    </MainLayout>
   );
-};
+}
+
+export default Blogs;
 
 export const getStaticProps = async () => {
-  const allBlogs = await getAllBlogs();
+  const [allBlogs, footerData] = await Promise.all([getAllBlogs(), getFooterData()])
+
   return {
     props: {
       allBlogs,
+      footerData
     },
   };
 };
 
-
-export default BlogsList;

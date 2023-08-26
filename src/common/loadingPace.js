@@ -6,7 +6,7 @@ const loadingPace = () => {
     preloader.classList.add("isdone");
     loadingText.classList.add("isdone");
     // opacity: 0;
-    paceActive.style.opacity = 0;
+    if (paceActive) paceActive.style.opacity = 0;
   };
   Pace.on("start", function () {
     preloader.classList.remove("isdone");
@@ -17,7 +17,10 @@ const loadingPace = () => {
   });
 
   // check safari mac
-  if (navigator.userAgent.indexOf("Safari") != -1 && navigator.userAgent.indexOf("Mac") != -1) {
+  if (
+    navigator.userAgent.indexOf("Safari") != -1 &&
+    navigator.userAgent.indexOf("Mac") != -1
+  ) {
     addDoneClass();
   }
   if (document.querySelector("body").classList.contains("pace-done")) {
@@ -28,6 +31,6 @@ const loadingPace = () => {
   });
 
   return Pace.bar.progress;
-}
+};
 
-export default loadingPace
+export default loadingPace;

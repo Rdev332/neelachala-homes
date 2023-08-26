@@ -5,7 +5,6 @@ import ContactWithMap from "../../components/Contact-with-map";
 import MainLayout from "../../layouts/main";
 import getFooterData from "../api/getFooterData"
 
-
 const Contact = ({ data }) => {
 
   const { contact_us_page_header_image, map_iframe } = data.data.attributes;

@@ -67,6 +67,11 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
                 </LinkButton>
               </li>
               <li className="nav-item">
+                <LinkButton href="/blogs">
+                  <div className="nav-link">Blogs</div>
+                </LinkButton>
+              </li>
+              <li className="nav-item">
                 <LinkButton href="/access">
                   <div className="nav-link">Access</div>
                 </LinkButton>
