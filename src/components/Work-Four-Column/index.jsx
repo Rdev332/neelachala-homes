@@ -36,7 +36,14 @@ const WorkFourColumn = ({ projects }) => {
                     }`}>
                     <div className="item">
                       <div className="img">
-                        <LazyLoadImage src={project.attributes?.main_photo?.data?.attributes?.url} alt={project.attributes?.name} />
+                        <LazyLoadImage src={project.attributes?.main_photo?.data?.attributes?.url} alt={project.attributes?.name}
+                          style={{
+                            width: "100%",
+                            objectFit: "cover",
+                            // objectPosition: "center",
+                            aspectRatio: "1/1",
+                          }}
+                        />
                       </div>
                       <div className="cont">
                         <h5>

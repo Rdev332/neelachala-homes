@@ -9,6 +9,12 @@ const PageHeader = ({ title, fullPath, image }) => {
       className="pages-header bg-img valign parallaxie"
       style={{
         backgroundImage: `url(${!image ? "/assets/img/pg1.jpg" : image})`,
+
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        aspectRatio: "1/1",
+        
       }}
       data-overlay-dark="5"
     >
