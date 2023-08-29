@@ -33,7 +33,6 @@ export default Blogs;
 
 export const getStaticProps = async () => {
   const [allBlogs, footerData] = await Promise.all([getAllBlogs(), getFooterData()])
-
   return {
     props: {
       allBlogs,

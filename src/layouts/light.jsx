@@ -34,7 +34,7 @@ const LightLayout = ({ children, footerClass, footerData }) => {
       </Head>
       <Navbar navbarRef={navbarRef} logoRef={logoRef} />
       {children}
-      <Footer classText={footerClass} data={footerData.data.attributes} />
+      <Footer classText={footerClass} data={footerData.data?.attributes??{}} />
     </>
   );
 };

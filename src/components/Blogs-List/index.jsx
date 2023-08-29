@@ -4,8 +4,6 @@ import Link from "next/link";
 import thumparallaxUp from "../../common/thumparallaxUp";
 
 const BlogsList = ({ blogs }) => {
-
-
   React.useEffect(() => {
     setTimeout(() => {
       if (window.simpleParallax) thumparallaxUp();
@@ -28,11 +26,8 @@ const BlogsList = ({ blogs }) => {
                 {filteredBlogs.map((item, index) => {
                   const {
                     content,
-                    published,
                     title, slug
                   } = item.attributes
-                  const date = published.split("-")[2]
-                  const month_year = new Date(published).toLocaleString('default', { month: 'short', year: 'numeric' })
                   const image = item.attributes.post_image.data.attributes.url
                   const first = content.split(' ').slice(0, 20).join(' ')
                   return (
@@ -42,7 +37,8 @@ const BlogsList = ({ blogs }) => {
                           height: "320px",
                           overflow: "hidden",
                           position: "relative",
-                          width: "100%"
+                          width: "100%",
+                          objectFit: "contain"
                         }}
                       >
                         <Link href={`${"/blog-details?slug=" + slug}`}>
@@ -60,18 +56,6 @@ const BlogsList = ({ blogs }) => {
                         </Link>
                       </div>
                       <div className="content">
-                        <div className="date">
-                          <h5>
-                            <Link href={`${"/blog-details?slug=" + slug}`}>
-                              <span className="num">{
-                                date
-                              }</span>
-                              <span>{
-                                month_year
-                              }</span>
-                            </Link>
-                          </h5>
-                        </div>
                         <div className="cont">
                           <h4 className="title">
                             <Link href={`${"/blog-details?slug=" + slug}`}>

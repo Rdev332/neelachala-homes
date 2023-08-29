@@ -5,7 +5,7 @@ import { TypeAnimation } from 'react-type-animation';
 
 const VideoHero = ({ header_text, header_video, header, header_thumbnail }) => {
 
-    const { header_title, header_content, typing_text } = header
+    const { header_title, header_content, typing_text } = header ??{}
 
     // scroll to section
     function scrollBottom() {
