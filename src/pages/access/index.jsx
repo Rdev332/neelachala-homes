@@ -38,5 +38,6 @@ export const getStaticProps = async () => {
       footerData,
       data
     },
+    revalidate: 60 * 60,
   };
 };

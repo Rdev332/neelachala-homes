@@ -34,6 +34,7 @@ export const getStaticProps = async () => {
       allBlogs,
       footerData
     },
+    revalidate: 60 * 60,
   };
 };
 

@@ -37,13 +37,13 @@ const ProjectDetails = ({ projects, footerData }) => {
                           photos?.data?.length === 5 ? "col-lg-3 col-xl-3 col-md-6"
                             : "col-lg-2 col-xl-2 col-md-6"
                 } key={index}>
-                  <LazyLoadImage alt="" src={photo?.attributes?.url} 
-                   style={{
-                    width: "100%",
-                    objectFit: "cover",
-                    // objectPosition: "center",
-                    aspectRatio: "1/1",
-                  }}
+                  <LazyLoadImage alt="" src={photo?.attributes?.url}
+                    style={{
+                      width: "100%",
+                      objectFit: "cover",
+                      // objectPosition: "center",
+                      aspectRatio: "1/1",
+                    }}
                   />
                 </div>
               ))
@@ -66,5 +66,6 @@ export const getStaticProps = async () => {
       projects,
       footerData
     },
+    revalidate: 60 * 60,
   }
 }
