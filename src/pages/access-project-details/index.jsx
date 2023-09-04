@@ -60,6 +60,6 @@ export const getStaticProps = async () => {
       accessData,
       footerData
     },
-    revalidate: 60 * 60,
+    revalidate: 60 * 15,
   }
 }

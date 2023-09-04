@@ -66,6 +66,6 @@ export const getStaticProps = async () => {
       projects,
       footerData
     },
-    revalidate: 60 * 60,
+    revalidate: 60 * 15,
   }
 }
