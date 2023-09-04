@@ -48,9 +48,7 @@ const AboutUs4 = ({ data }) => {
           <div className="col-lg-6">
             <div className="txt-cont">
               <p className="mb-20 mt-40">
-                {
-                  data.content.split('\n')[0]
-                }
+                {data.content}
               </p>
             </div>
           </div>
