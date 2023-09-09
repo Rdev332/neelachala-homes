@@ -57,14 +57,14 @@ const AboutUs1 = ({ data }) => {
                     </div>
                   </div>
 
-                  <div className="col-md-4">
+                  {/* <div className="col-md-4">
                     <div className="item">
                       <h3>
                         <span className="nbr playfont">{awards}</span>
                       </h3>
                       <h6>AWARDS WON</h6>
                     </div>
-                  </div>
+                  </div> */}
 
                 </div>
               </div>

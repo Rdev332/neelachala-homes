@@ -14,7 +14,6 @@ const PageHeader = ({ title, fullPath, image }) => {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         aspectRatio: "1/1",
-        
       }}
       data-overlay-dark="5"
     >
@@ -24,18 +23,21 @@ const PageHeader = ({ title, fullPath, image }) => {
             <div className="cont text-center playfont">
               <h1>{title}</h1>
               <div className="path">
-                {fullPath?.length && fullPath?.map((item, index) => (
-                  <React.Fragment key={item.id}>
-                    <Link legacyBehavior href={item.url}>
-                      <a
-                        className={router.pathname == item.url ? "active" : ""}
-                      >
-                        {item.name}
-                      </a>
-                    </Link>
-                    {index != fullPath.length - 1 ? <span>/</span> : ""}
-                  </React.Fragment>
-                ))}
+                {fullPath?.length &&
+                  fullPath?.map((item, index) => (
+                    <React.Fragment key={item.id}>
+                      <Link legacyBehavior href={item.url}>
+                        <a
+                          className={
+                            router.pathname == item.url ? "active" : ""
+                          }
+                        >
+                          {item.name}
+                        </a>
+                      </Link>
+                      {index != fullPath.length - 1 ? <span>/</span> : ""}
+                    </React.Fragment>
+                  ))}
               </div>
             </div>
           </div>

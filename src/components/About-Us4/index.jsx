@@ -34,14 +34,14 @@ const AboutUs4 = ({ data }) => {
                     <h6>Monthly Revenue</h6>
                   </div>
                 </div> */}
-                <div className="col-sm-6">
+                {/* <div className="col-sm-6">
                   <div className="item">
                     <h3>
                       <span className="nbr playfont">{data.awards}</span>
                     </h3>
                     <h6>Awards Won</h6>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

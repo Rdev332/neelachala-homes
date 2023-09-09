@@ -12,15 +12,18 @@ const Portfolio = ({ projects, data, footerData }) => {
     document.querySelector("body").classList.add("index3");
   }, []);
 
-
-  const { header_image, header_title, header_content } = data.data.attributes;
+  const { header_image, header_title, header_content } =
+    data.data?.attributes ?? {};
 
   return (
     <MainLayout data={footerData}>
       <WorkHeader
         center
         title={{
-          first: header_title.split(" ")[0].concat(" ").concat(header_title.split(" ")[1]),
+          first: header_title
+            .split(" ")[0]
+            .concat(" ")
+            .concat(header_title.split(" ")[1]),
           second: header_title.split(" ")[2],
         }}
         content={header_content}
@@ -37,13 +40,13 @@ export const getStaticProps = async () => {
   const [projects, data, footerData] = await Promise.all([
     getAllProjects(),
     getPortfolioPageData(),
-    getFooterData()
+    getFooterData(),
   ]);
   return {
     props: {
       projects,
       data,
-      footerData
+      footerData,
     },
     revalidate: 60 * 15,
   };

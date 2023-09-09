@@ -1,56 +1,59 @@
 import React from "react";
 import Link from "next/link";
 
-const ProjectIntro = ({ description }) => {
+const ProjectIntro = ({ description, details }) => {
+  const { flatType, constructionArea, numberOfFlats } = details ?? {};
+
   return (
-    <section className="intro-section section-padding">
+    <section className="intro-section section-padding pb-80">
       <div className="container">
         <div className="row">
-          <div className="col-lg-3 col-md-4">
+          <div className="col-lg-3 col-md-3">
             <div className="htit">
               <h4>Introduction</h4>
             </div>
           </div>
-          <div className="col-lg-8 offset-lg-1 col-md-8 mb-30">
+          <div className="col-lg-8 offset-lg-1 col-md-9 mb-30">
             <div className="text">
-              <p>
-                {description}
-              </p>
+              <p>{description}</p>
             </div>
           </div>
-
-          {/* <div className="col-lg-3">
-            <div className="item mt-30">
-              <h6>Client</h6>
-              <p>
-                <Link legacyBehavior href="#">Envato.com</Link>
-              </p>
+        </div>
+        <div className="numbers">
+          <div className="row">
+            <div className="col-sm-4">
+              <div className="item mb-10">
+                <h3>
+                  <span className="nbr playfont">
+                    {flatType?.split("BHK")[0]}
+                  </span>
+                  <span className="nbr playfont" style={{ fontSize: "1.5rem" }}>
+                    BHK
+                  </span>
+                </h3>
+                <h6>Flat Type</h6>
+              </div>
+            </div>
+            <div className="col-sm-4">
+              <div className="item mb-10">
+                <h3>
+                  <span className="nbr playfont">{constructionArea}</span>
+                  <span className="nbr playfont" style={{ fontSize: "1.5rem" }}>
+                    sq.ft
+                  </span>
+                </h3>
+                <h6>Construction Area</h6>
+              </div>
+            </div>
+            <div className="col-sm-4">
+              <div className="item mb-10">
+                <h3>
+                  <span className="nbr playfont">{numberOfFlats}</span>
+                </h3>
+                <h6>Number of Flats</h6>
+              </div>
             </div>
           </div>
-          <div className="col-lg-3">
-            <div className="item mt-30">
-              <h6>Date</h6>
-              <p>6 August 2022</p>
-            </div>
-          </div>
-          <div className="col-lg-3">
-            <div className="item mt-30">
-              <h6>Categories</h6>
-              <p>
-                <Link legacyBehavior href="#">Web Design </Link>,
-                <Link legacyBehavior href="#">WordPress</Link>
-              </p>
-            </div>
-          </div>
-          <div className="col-lg-3">
-            <div className="item mt-30">
-              <h6>Tags</h6>
-              <p>
-                <Link legacyBehavior href="#">Minimal</Link> , <Link legacyBehavior href="#">Modern</Link> ,
-                <Link legacyBehavior href="#">Design</Link>
-              </p>
-            </div>
-          </div> */}
         </div>
       </div>
     </section>
