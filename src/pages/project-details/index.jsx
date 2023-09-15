@@ -30,7 +30,11 @@ const ProjectDetails = ({ projects, footerData }) => {
     play_area,
     rcc_structure,
     security,
+    map,
+    location,
   } = project?.attributes ?? {};
+
+  console.log(map);
 
   const amenities = [];
   if (cctv) amenities.push({ id: "cctv", title: "CCTV" });
@@ -54,6 +58,8 @@ const ProjectDetails = ({ projects, footerData }) => {
           flatType: flat_type,
           constructionArea: construction_area,
           numberOfFlats: number_of_flats,
+          map: map,
+          location: location,
         }}
       />
       <Amenities amenities={amenities} />
