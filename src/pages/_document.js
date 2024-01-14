@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import { FB_PIXEL_ID } from '../common/fpixel'
+import { FB_PIXEL_ID } from "../common/fpixel";
 import Script from "next/script";
 
 class MyDocument extends Document {
@@ -16,18 +16,38 @@ class MyDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-          <meta
-            name="keywords"
-            content="real estate"
-          />
-          <meta
-            name="description"
-            content="Neelachala Homes"
-          />
+          <meta name="keywords" content="real estate" />
+          <meta name="description" content="Neelachala Homes" />
           <meta name="author" content="" />
+          {/* <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id=%27+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','GTM-W9GRCT7T');
+            `,
+            }}
+          /> */}
+          <Script
+            id="gtm-script"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+                  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                  })(window,document,'script','dataLayer', "GTM-W9GRCT7T");
+                `,
+            }}
+          />
 
-          <link rel="shortcut icon" href="https://res.cloudinary.com/dagjy96pi/image/upload/v1689964974/favicon_589e3a78b2.png" />
-
+          <link
+            rel="shortcut icon"
+            href="https://res.cloudinary.com/dagjy96pi/image/upload/v1689964974/favicon_589e3a78b2.png"
+          />
           <link
             href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
             rel="stylesheet"
@@ -70,13 +90,21 @@ class MyDocument extends Document {
             <img
               height="1"
               width="1"
-              style={{ display: 'none' }}
+              style={{ display: "none" }}
               src={`https://www.facebook.com/tr?id=${FB_PIXEL_ID}&ev=PageView&noscript=1`}
             />
           </noscript>
         </Head>
 
         <body>
+          <noscript>
+            <iframe
+              src="https://www.googletagmanager.com/ns.html?id=GTM-W9GRCT7T"
+              height="0"
+              width="0"
+              style="display:none;visibility:hidden"
+            ></iframe>
+          </noscript>
           <Main />
           <NextScript />
         </body>
