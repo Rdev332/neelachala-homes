@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
 import { TypeAnimation } from "react-type-animation";
 
-const VideoHero = ({ header_text, header_video, header, header_thumbnail, header_images }) => {
+const VideoHeroMobile = ({ header_text, header_video, header, header_thumbnail, header_images }) => {
   const { header_title, header_content, typing_text } = header ?? {};
 
   const [index, setIndex] = useState(0);
@@ -116,4 +116,4 @@ const VideoHero = ({ header_text, header_video, header, header_thumbnail, header
   );
 };
 
-export default VideoHero;
+export default  VideoHeroMobile;

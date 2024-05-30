@@ -47,10 +47,10 @@ const Footer = ({ classText, data }) => {
                   <span className="icon pe-7s-mail"></span>
                   <div className="cont">
                     <h6>Email Us</h6>
-                    <a href={`mailto:${info_email}`}>
+                    {/* <a href={`mailto:${info_email}`}>
                       <p>{shortener(info_email, 30)}</p>
-                    </a>
-                    <br />
+                    </a> */}
+                    {/* <br /> */}
                     <a href={`mailto:${bussiness_enquire_email}`}>
                       <p>{shortener(bussiness_enquire_email, 30)}</p>
                     </a>
@@ -77,15 +77,17 @@ const Footer = ({ classText, data }) => {
             <div className="item">
               <div className="logo">
                 <img
-                  src="https://res.cloudinary.com/dagjy96pi/image/upload/v1702183497/favicon_589e3a78b2.png"
+                  src="https://res.cloudinary.com/dagjy96pi/image/upload/v1716736177/996x318_neelachala_logo_1_e0d142bb0b.png"
                   alt="logo"
                   style={{
-                  width: "80px",
+                    width: "fit-content",
+                    color: "white",
                     height: "102px",
-                  maxHeight: "102px",
-                  paddingTop: "8px",
-                  paddingBottom: "8px"
-                }}
+                    maxHeight: "102px",
+                    paddingTop: "8px",
+                    paddingBottom: "8px",
+                    backgroundColor: ""
+                  }}
                 />
               </div>
               <div className="social">

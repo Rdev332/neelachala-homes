@@ -1,15 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+import React, { useEffect, useState } from "react";
 import MainLayout from "../../layouts/main";
 import PageHeader from "../../components/Page-header";
 import ProjectIntro from "../../components/Project-Intro";
 import Amenities from "../../components/Amenities";
+import CompletedAmenities from "../../components/CompletedProjAmenity";
 import getAllProjects from "../api/getAllProjects";
 import { useRouter } from "next/router";
 import getFooterData from "../api/getFooterData";
 import ModalImage from "react-modal-image";
 import ContactInfo from "../../components/Contact-info";
 import ContactWithMap from "../../components/Contact-with-map";
+import Image from "next/image";
+import Link from "next/link";
 
 const ProjectDetails = ({ projects, footerData }) => {
   const router = useRouter();
@@ -34,30 +37,43 @@ const ProjectDetails = ({ projects, footerData }) => {
     security,
     map,
     location,
-    map_iframe
+    map_iframe,
+    custom_amenity,
+    amenity_number,
+    qr,
+    oreraLink,
+    project_status
   } = project?.attributes ?? {};
 
-  console.log(map);
-  console.log(footerData)
-  console.log(name)
-  // const { map_iframe } = footerData.data.attributes;
+  const [amenities, setAmenities] = useState([]);
 
-  const amenities = [];
-  if (cctv) amenities.push({ id: "cctv", title: "CCTV" });
-  if (elevator) amenities.push({ id: "elevator", title: "Elevator" });
-  if (parking) amenities.push({ id: "parking", title: "Parking" });
-  if (play_area) amenities.push({ id: "play_area", title: "Play Area" });
-  if (rcc_structure)
-    amenities.push({ id: "rcc_structure", title: "RCC Structure" });
-  if (security) amenities.push({ id: "security", title: "Security" });
+  useEffect(() => {
+    if (project_status === 'ongoing' || custom_amenity?.length !== 0) {
+      if (!custom_amenity) return;
+      const priority = custom_amenity.slice(0, (amenity_number || 6))
+      setAmenities(priority)
+    } else {
+      const prevAmenities = []
+      if (cctv) prevAmenities.push({ id: "cctv", title: "CCTV" });
+      if (elevator) prevAmenities.push({ id: "elevator", title: "Elevator" });
+      if (parking) prevAmenities.push({ id: "parking", title: "Parking" });
+      if (play_area) prevAmenities.push({ id: "play_area", title: "Play Area" });
+      if (rcc_structure)
+        prevAmenities.push({ id: "rcc_structure", title: "RCC Structure" });
+      if (security) prevAmenities.push({ id: "security", title: "Security" });
+      setAmenities(prevAmenities)
+    }
+  }, [amenity_number, cctv, custom_amenity, elevator, parking, play_area, project_status, rcc_structure, security])
 
   React.useEffect(() => {
     document.querySelector("body").classList.add("index3");
   }, []);
 
+  console.log(project?.attributes)
+
   return (
     <MainLayout data={footerData}>
-      <PageHeader title={name} image={main_photo?.data?.attributes?.url} />
+      <PageHeader title={name} image={main_photo?.data?.attributes?.url} location={location} />
       <ProjectIntro
         description={description}
         details={{
@@ -68,29 +84,29 @@ const ProjectDetails = ({ projects, footerData }) => {
           location: location,
         }}
       />
-      <Amenities amenities={amenities} />
-      <section className="contact">
-        <ContactInfo data={footerData.data.attributes} />
-        <ContactWithMap iframeLink={map_iframe} apartment={name} />
-      </section>
+      {project_status === 'ongoing' ? (
+        <Amenities amenities={amenities} />
+      ) : (
+        <CompletedAmenities amenities={amenities} />
+      )}
       {photos?.data?.length && (
-        <section className="projdtal">
+        <section className="projdtal mb-10" style={{ paddingBottom: "80px" }}>
           <div className="justified-gallery">
             <div className="row">
               {photos?.data.map((photo, index) => (
                 <div
                   className={
                     photos?.data?.length === 1
-                      ? "col-lg-12 col-xl-12 col-md-12"
+                      ? "col-lg-3 col-xl-3 col-md-6 mb-10"
                       : photos?.data?.length === 2
-                        ? "col-lg-6 col-xl-6 col-md-6"
+                        ? "col-lg-3 col-xl-3 col-md-6 mb-10"
                         : photos?.data?.length === 3
-                          ? "col-lg-4 col-xl-4 col-md-6"
+                          ? "col-lg-3 col-xl-3 col-md-6 mb-10"
                           : photos?.data?.length === 4
-                            ? "col-lg-3 col-xl-3 col-md-6"
+                            ? "col-lg-3 col-xl-3 col-md-6 mb-10"
                             : photos?.data?.length === 5
-                              ? "col-lg-3 col-xl-3 col-md-6"
-                              : "col-lg-2 col-xl-2 col-md-6"
+                              ? "col-lg-3 col-xl-3 col-md-6 mb-10"
+                              : "col-lg-3 col-xl-3 col-md-6 mb-10"
                   }
                   key={index}
                 >
@@ -111,6 +127,34 @@ const ProjectDetails = ({ projects, footerData }) => {
           </div>
         </section>
       )}
+      <section className="pb-75 skills-circle" style={{ display: `${project?.attributes.project_status !== 'ongoing' ? 'none' : 'block'}` }}>
+        <div className="container-fluid">
+          <div className="row" style={{ display: "flex", justifyContent: "space-evenly" }}>
+            <div className="col-lg-6 qr-box">
+              <div>
+                <h5 style={{ padding: "10px" }}>To know additional information, scan the QR below</h5>
+                <div style={{ width: "100%", display: "flex", justifyContent: "center", alignItems: "center" }}>
+                  <img src={qr?.data?.attributes?.url} alt={qr?.data?.attributes?.name} style={{ width: "200px", backgroundColor: "white" }} />
+                </div>
+                {/* <h5 style={{ padding: "10px" }}>OR TO DOWNLOAD THE BROCHURE, <u style={{ cursor: "pointer" }}>CLICK HERE</u></h5> */}
+              </div>
+            </div>
+            <div className="col-lg-6 orera-box" style={{ wordWrap: "break-word", textAlign: "justify", padding: "10px" }}>
+              <h5 style={{ textAlign: "justify", lineHeight: "20px" }}>Explore our curated links to the Odisha Real Estate Regulatory Authority (ORERA) resources. Stay informed about the latest regulations, project registrations, and updates in the real estate sector. These links provide access to essential information, ensuring transparency and protecting your interests as a homebuyer or real estate professional in Odisha.
+              </h5>
+              <h5 style={{ textAlign: "left" }}>ORERA resource for {" "}
+                <Link href={oreraLink || '/'} target="_blank" rel="noopener noreferrer">
+                  <u>{name}</u>
+                </Link>
+              </h5>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="contact">
+        {/* <ContactInfo data={footerData.data.attributes} /> */}
+        <ContactWithMap iframeLink={map_iframe} apartment={name} />
+      </section>
     </MainLayout>
   );
 };

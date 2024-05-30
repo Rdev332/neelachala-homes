@@ -6,20 +6,36 @@ import LightLayout from "../../layouts/light";
 import Testimonials from "../Testimonials1";
 import Contact from "../Contact";
 import WorkTwoColumn from "../Work-Two-Column";
+import WorkFourColumn from "../Work-Four-Column";
 import PromotionPopup from "../Promotion-Popup";
 import SkillsCircle from "../Skills-Circle";
+import VideoHeroMobile from "../Video-Hero-Mobile";
+import { useMediaQuery } from "@mui/material";
 
 const Home1 = ({ projects, data, footerData }) => {
   React.useEffect(() => {
     document.querySelector("body").classList.add("homepage");
   }, []);
-  console.log(data)
-  const { header_video, header, banner, header_thumbnail, header_images } = data.data?.attributes ?? {}
+  const { header_video, header, banner, header_thumbnail, header_images, mobile_header_images } = data.data?.attributes ?? {}
+  const isMobile = useMediaQuery('(max-width:600px)');
 
   return (
     <LightLayout
       footerClass={"mt-30"} footerData={footerData}>
-      <VideoHero header_video={header_video} header={header} header_thumbnail={header_thumbnail} header_images={header_images}/>
+      {isMobile ? (
+        <VideoHeroMobile
+          header={header}
+          header_thumbnail={header_thumbnail}
+          header_images={mobile_header_images}
+        />
+      ) : (
+        <VideoHero
+          header_video={header_video}
+          header={header}
+          header_thumbnail={header_thumbnail}
+          header_images={header_images}
+        />
+      )}
       <AboutUs1 data={data?.data?.attributes} />
       <SkillsCircle banner={banner} showLearnMore />
       <WorkTwoColumn projects={projects?.data} />

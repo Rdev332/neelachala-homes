@@ -29,11 +29,8 @@ const ContactWithMap = ({ iframeLink, apartment }) => {
         body: JSON.stringify({ name, phone, email, message, apartment, flat }),
       });
 
-      console.log(response)
-
       if (response.ok) {
         const data = await response.json();
-        console.log(data)
         setShowMessage(true);
         setName('');
         setPhone('');
@@ -61,13 +58,13 @@ const ContactWithMap = ({ iframeLink, apartment }) => {
         <div className="col-lg-6 map-box">
           <iframe
             style={{
-              filter: "grayscale(100%)",
+              // filter: "grayscale(100%)",
             }}
             src={iframeLink}></iframe>
         </div>
-        <div className="col-lg-6 form">
+        <div className="col-lg-6 form" style={{ padding: "30px" }}>
+          <h3 className="messages playfont pb-35">Are you interested? Contact us for more details</h3>
           <form id="contact-form" method="post">
-            <div className="messages"></div>
 
             <div className="controls">
               <div className="form-group">
@@ -106,9 +103,9 @@ const ContactWithMap = ({ iframeLink, apartment }) => {
 
               <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "15px" }} className="form-group">
                 {
-                  [1, 2, 3, 3.5, 4, 5].map((item, idx) => {
+                  [1, 2, 3, 3.5, 4, 4.5].map((item, idx) => {
                     return <div key={idx}>
-                      <button className={`btn-curve ${flat === item ? 'btn-color': ''}`} type="button" onClick={() => setFlat(item)} id={`bhk${item}`}
+                      <button className={`btn-curve ${flat === item ? 'btn-color' : ''}`} type="button" onClick={() => setFlat(item)} id={`bhk${item}`}
                       >
                         <span
                           style={{
