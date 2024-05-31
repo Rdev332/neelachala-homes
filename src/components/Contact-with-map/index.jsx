@@ -1,8 +1,10 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import * as pixel from '../../common/fpixel'
+import { useMediaQuery } from "@mui/material";
 
 const ContactWithMap = ({ iframeLink, apartment }) => {
+  const isMobile = useMediaQuery('(max-width:600px)');
 
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
@@ -125,23 +127,43 @@ const ContactWithMap = ({ iframeLink, apartment }) => {
                 {emailError && <p style={{ color: 'red' }}>{emailError}</p>}
               </div>
 
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "15px" }} className="form-group">
-                {
-                  [1, 2, 3, 3.5, 4, 4.5].map((item, idx) => {
-                    return <div key={idx}>
-                      <button className={`btn-curve ${flat === item ? 'btn-color' : ''}`} type="button" onClick={() => setFlat(item)} id={`bhk${item}`}
-                      >
-                        <span
-                          style={{
-                            color: "white",
-                          }}
+              {isMobile ? (
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "15px" }} className="form-group">
+                  {
+                    [1, 2, 3, 3.5, 4, 4.5].map((item, idx) => {
+                      return <div key={idx}>
+                        <button className={`btn-curve ${flat === item ? 'btn-color' : ''}`} type="button" onClick={() => setFlat(item)} id={`bhk${item}`}
                         >
-                          {item} BHK</span>
-                      </button>
-                    </div>
-                  })
-                }
-              </div>
+                          <span
+                            style={{
+                              color: "white",
+                            }}
+                          >
+                            {item} BHK</span>
+                        </button>
+                      </div>
+                    })
+                  }
+                </div>
+              ) : (
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "15px" }} className="form-group">
+                  {
+                    [1, 2, 3, 3.5, 4, 4.5].map((item, idx) => {
+                      return <div key={idx}>
+                        <button className={`btn-curve ${flat === item ? 'btn-color' : ''}`} type="button" onClick={() => setFlat(item)} id={`bhk${item}`}
+                        >
+                          <span
+                            style={{
+                              color: "white",
+                            }}
+                          >
+                            {item} BHK</span>
+                        </button>
+                      </div>
+                    })
+                  }
+                </div>
+              )}
 
 
               <div className="form-group">
