@@ -39,7 +39,7 @@ const WorkFourColumn = ({ projects }) => {
                             width: "100%",
                             objectFit: "cover",
                             // objectPosition: "center",
-                            aspectRatio: "1/1",
+                            aspectRatio: "7/5",
                           }}
                         />
                       </div>
