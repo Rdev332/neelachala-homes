@@ -28,7 +28,7 @@ const ContactWithMap = ({ iframeLink, apartment }) => {
         message
       })
 
-      const phoneRegex = /^(?:\+91)?\d{10}$/;
+      const phoneRegex = /^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$/;
       if (!phoneRegex.test(phone)) {
         setPhoneError('Please enter a valid 10-digit phone number.');
         return;

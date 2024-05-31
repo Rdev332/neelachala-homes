@@ -91,7 +91,7 @@ const Footer = ({ classText, data }) => {
                 />
               </div>
               <div className="social">
-                <Link legacyBehavior href={facebook ?? "#"}>
+                <Link legacyBehavior href={facebook ?? "https://www.facebook.com/neelachalahomes/"}>
                   <a>
                     <i className="fab fa-facebook-f"></i>
                   </a>
@@ -101,7 +101,7 @@ const Footer = ({ classText, data }) => {
                     <i className="fab fa-twitter"></i>
                   </a>
                 </Link> */}
-                <Link legacyBehavior href={instagram ?? "#"}>
+                <Link legacyBehavior href={instagram ?? "https://www.instagram.com/neelachalahomes/"}>
                   <a>
                     <i className="fab fa-instagram"></i>
                   </a>

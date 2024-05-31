@@ -8,6 +8,9 @@ const Contact = ({ footerData }) => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [showMessage, setShowMessage] = useState(false);
+  const [emailError, setEmailError] = useState('');
+  const [phoneError, setPhoneError] = useState('');
+  const [sendingError, setSendingError] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -21,6 +24,21 @@ const Contact = ({ footerData }) => {
         email,
         message
       })
+      const phoneRegex = /^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$/;
+      if (!phoneRegex.test(phone)) {
+        setPhoneError('Please enter a valid 10-digit phone number.');
+        return;
+      } else {
+        setPhoneError('')
+      }
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        setEmailError('Please enter a valid email address.');
+        return;
+      } else {
+        setEmailError('')
+      }
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -34,6 +52,7 @@ const Contact = ({ footerData }) => {
         setPhone('');
         setEmail('');
         setMessage('');
+        setSendingError('')
       } else {
         console.error('Form submission failed');
       }
@@ -88,6 +107,7 @@ const Contact = ({ footerData }) => {
                       required="required"
                       value={phone} onChange={(e) => setPhone(e.target.value)}
                     />
+                    {phoneError && <p style={{ color: 'red' }}>{phoneError}</p>}
                   </div>
 
                   <div className="form-group">
@@ -99,6 +119,7 @@ const Contact = ({ footerData }) => {
                       required="required"
                       value={email} onChange={(e) => setEmail(e.target.value)}
                     />
+                    {emailError && <p style={{ color: 'red' }}>{emailError}</p>}
                   </div>
 
                   <div className="form-group">
@@ -111,7 +132,7 @@ const Contact = ({ footerData }) => {
                       value={message} onChange={(e) => setMessage(e.target.value)}
                     ></textarea>
                   </div>
-
+                  {sendingError && <p style={{ color: 'red' }}>{sendingError}</p>}
                   <button type="submit" className="btn-curve btn-color"
                     disabled={!name || !phone || !email || !message}
                   >

@@ -6,9 +6,9 @@ const AboutUs4 = ({ data }) => {
     <section className="about section-padding">
       <div className="container">
         <div className="row">
-          <div className="col-lg-6">
+          <div className="col-lg-6" style={{alignContent: "center", width: "fit"}}>
             <div className="numbers">
-              <div className="row">
+              <div className="col">
                 <div className="col-sm-6">
                   <div className="item mb-50">
                     <h3>
