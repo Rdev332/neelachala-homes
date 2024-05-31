@@ -1,7 +1,7 @@
 import nodemailer from 'nodemailer'
 
-const email = process.env.EMAIL;
-const pass = process.env.EMAIL_PASS
+const email = 'neelachalahomes51@gmail.com';
+const pass = 'dole tqyi pdrd mnbf'
 
 export const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -13,5 +13,5 @@ export const transporter = nodemailer.createTransport({
 
 export const mailOptions = {
     from: email,
-    to: email
+    to: 'enquiries@neelachalahomes.com'
 }

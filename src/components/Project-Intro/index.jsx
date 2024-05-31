@@ -13,7 +13,7 @@ const ProjectIntro = ({ description, details }) => {
             <div className="htit">
               <h4>Introduction</h4>
             </div>
-            <div className="text" style={{textAlign: "justify"}}>
+            <div className="text" style={{ textAlign: "justify" }}>
               <p>{description}</p>
             </div>
           </div>
@@ -24,14 +24,14 @@ const ProjectIntro = ({ description, details }) => {
               <div className="col-sm-4">
                 <div className="item mb-10">
                   <h3>
-                    <span className="nbr playfont">
-                      {flatType?.split("BHK")[0]}
+                    <span className="nbr playfont" style={{ fontSize: "3rem", width: "fit" }}>
+                      {flatType?.split("BHK")[0]}{" "}
                     </span>
                     <span
                       className="nbr playfont"
                       style={{ fontSize: "1.5rem" }}
                     >
-                      BHK
+                      &nbsp;BHK
                     </span>
                   </h3>
                   <h6>Flat Type</h6>
@@ -42,12 +42,12 @@ const ProjectIntro = ({ description, details }) => {
               <div className="col-sm-4">
                 <div className="item mb-10">
                   <h3>
-                    <span className="nbr playfont">{constructionArea}</span>
+                    <span className="nbr playfont" style={{ fontSize: "3rem" }}>{Intl.NumberFormat('en-IN').format(constructionArea)}</span>
                     <span
                       className="nbr playfont"
                       style={{ fontSize: "1.5rem" }}
                     >
-                      sq.ft
+                      &nbsp;sq.ft
                     </span>
                   </h3>
                   <h6>Construction Area</h6>
@@ -58,7 +58,7 @@ const ProjectIntro = ({ description, details }) => {
               <div className="col-sm-4">
                 <div className="item mb-10">
                   <h3>
-                    <span className="nbr playfont">{numberOfFlats}</span>
+                    <span className="nbr playfont" style={{ fontSize: "3rem" }}>{numberOfFlats}</span>
                   </h3>
                   <h6>Number of Flats</h6>
                 </div>
