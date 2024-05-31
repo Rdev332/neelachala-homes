@@ -21,8 +21,8 @@ const ContactInfo = ({data}) => {
               <span className="icon pe-7s-mail-open"></span>
               <div className="cont">
                 <h6 className="playfont">Email Us</h6>
-                <p>{info_email}</p>
                 <p>{bussiness_enquire_email}</p>
+                <p>{" "} &nbsp;</p>
               </div>
             </div>
           </div>

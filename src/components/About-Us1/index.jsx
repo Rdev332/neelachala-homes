@@ -54,7 +54,7 @@ const AboutUs1 = ({ data }) => {
                   <div className="col-md-6">
                     <div className="item">
                       <h3>
-                        <span className="nbr playfont">&nbsp;{flats_completed}</span>
+                        <span className="nbr playfont">&nbsp;{Intl.NumberFormat('en-IN').format(flats_completed)}</span>
                       </h3>
                       <h6>&nbsp; &nbsp;SQUARE FEET CONSTRUCTED </h6>
                     </div>
