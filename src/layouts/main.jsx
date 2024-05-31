@@ -30,7 +30,7 @@ const MainLayout = ({ children, logoClassText, data }) => {
   }, [navbarRef]);
 
   return (
-    <>
+    <div style={{overflowX: 'hidden'}}>
       <Head>
         <link rel="stylesheet" href="/assets/css/style.css" />
       </Head>
@@ -42,7 +42,7 @@ const MainLayout = ({ children, logoClassText, data }) => {
       {children}
       <FacebookPixel />
       <Footer data={data?.data?.attributes ?? {}} />
-    </>
+    </div>
   );
 };
 

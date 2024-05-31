@@ -86,7 +86,8 @@ const Footer = ({ classText, data }) => {
                     maxHeight: "102px",
                     paddingTop: "8px",
                     paddingBottom: "8px",
-                    backgroundColor: ""
+                    backgroundColor: "",
+                    // maxWidth: "12rem"
                   }}
                 />
               </div>
