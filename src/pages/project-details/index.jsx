@@ -48,7 +48,7 @@ const ProjectDetails = ({ projects, footerData }) => {
   const [amenities, setAmenities] = useState([]);
 
   useEffect(() => {
-    if (project_status === 'ongoing' || custom_amenity?.length !== 0) {
+    if (project_status === 'ongoing' && custom_amenity?.length !== 0) {
       if (!custom_amenity) return;
       const priority = custom_amenity.slice(0, (amenity_number || 6))
       setAmenities(priority)
@@ -139,15 +139,17 @@ const ProjectDetails = ({ projects, footerData }) => {
                 {/* <h5 style={{ padding: "10px" }}>OR TO DOWNLOAD THE BROCHURE, <u style={{ cursor: "pointer" }}>CLICK HERE</u></h5> */}
               </div>
             </div>
-            <div className="col-lg-6 orera-box" style={{ wordWrap: "break-word", textAlign: "justify", padding: "10px" }}>
-              <h5 style={{ textAlign: "justify", lineHeight: "20px" }}>Explore our curated links to the Odisha Real Estate Regulatory Authority (ORERA) resources. Stay informed about the latest regulations, project registrations, and updates in the real estate sector. These links provide access to essential information, ensuring transparency and protecting your interests as a homebuyer or real estate professional in Odisha.
-              </h5>
-              <h5 style={{ textAlign: "left" }}>ORERA resource for {" "}
-                <Link href={oreraLink || '/'} target="_blank" rel="noopener noreferrer">
-                  <u>{name}</u>
-                </Link>
-              </h5>
-            </div>
+            {number_of_flats !== null && number_of_flats > 8 && (
+              <div className="col-lg-6 orera-box" style={{ wordWrap: "break-word", textAlign: "justify", padding: "10px" }}>
+                <h5 style={{ textAlign: "justify", lineHeight: "20px" }}>Explore our curated links to the Odisha Real Estate Regulatory Authority (ORERA) resources. Stay informed about the latest regulations, project registrations, and updates in the real estate sector. These links provide access to essential information, ensuring transparency and protecting your interests as a homebuyer or real estate professional in Odisha.
+                </h5>
+                <h5 style={{ textAlign: "left" }}>ORERA resource for {" "}
+                  <Link href={oreraLink || '/'} target="_blank" rel="noopener noreferrer">
+                    <u>{name}</u>
+                  </Link>
+                </h5>
+              </div>
+            )}
           </div>
         </div>
       </section>
