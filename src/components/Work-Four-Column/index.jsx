@@ -38,8 +38,8 @@ const WorkFourColumn = ({ projects }) => {
                           style={{
                             width: "100%",
                             objectFit: "cover",
-                            // objectPosition: "center",
-                            aspectRatio: "7/5",
+                            // objectPosition: "right",
+                            aspectRatio: "1/1",
                           }}
                         />
                       </div>
