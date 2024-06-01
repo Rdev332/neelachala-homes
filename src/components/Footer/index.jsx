@@ -102,7 +102,7 @@ const Footer = ({ classText, data }) => {
                     <i className="fab fa-twitter"></i>
                   </a>
                 </Link> */}
-                <Link legacyBehavior href={instagram ?? "https://www.instagram.com/neelachalahomes/"}>
+                <Link legacyBehavior href={instagram ?? "https://www.instagram.com/_neelachalahomes_/"}>
                   <a>
                     <i className="fab fa-instagram"></i>
                   </a>
