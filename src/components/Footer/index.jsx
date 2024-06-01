@@ -75,7 +75,7 @@ const Footer = ({ classText, data }) => {
 
           <div className="col-lg-6">
             <div className="item">
-              <div className="logo">
+              <div className="logo" style={{ maxWidth: "20rem"}}>
                 <img
                   src="https://res.cloudinary.com/dagjy96pi/image/upload/v1716736177/996x318_neelachala_logo_1_e0d142bb0b.png"
                   alt="logo"
