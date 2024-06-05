@@ -42,7 +42,8 @@ const ProjectDetails = ({ projects, footerData }) => {
     amenity_number,
     qr,
     oreraLink,
-    project_status
+    project_status,
+    qr_link
   } = project?.attributes ?? {};
 
   const [amenities, setAmenities] = useState([]);
@@ -136,7 +137,22 @@ const ProjectDetails = ({ projects, footerData }) => {
                 <div style={{ width: "100%", display: "flex", justifyContent: "center", alignItems: "center" }}>
                   <img src={qr?.data?.attributes?.url} alt={qr?.data?.attributes?.name} style={{ width: "200px", backgroundColor: "white" }} />
                 </div>
-                {/* <h5 style={{ padding: "10px" }}>OR TO DOWNLOAD THE BROCHURE, <u style={{ cursor: "pointer" }}>CLICK HERE</u></h5> */}
+                <h5 style={{ padding: "10px" }}>
+                  OR TO DOWNLOAD THE BROCHURE, &nbsp;
+                  <button className='btn-curve text-white' style={{ cursor: "pointer" }}>
+                    <Link
+                      style={{
+                        color: "white",
+                      }}
+                      href={qr_link || '#'}
+                      target="_blank"
+                    >
+                      <span>
+                        CLICK HERE
+                      </span>
+                    </Link>
+                  </button>
+                </h5>
               </div>
             </div>
             {number_of_flats !== null && number_of_flats > 8 && (
