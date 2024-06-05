@@ -82,8 +82,8 @@ const Footer = ({ classText, data }) => {
                   style={{
                     width: "fit-content",
                     color: "white",
-                    height: "102px",
-                    maxHeight: "102px",
+                    // height: "102px",
+                    // maxHeight: "102px",
                     paddingTop: "8px",
                     paddingBottom: "8px",
                     backgroundColor: "",
