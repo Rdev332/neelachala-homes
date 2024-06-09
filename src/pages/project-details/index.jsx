@@ -62,6 +62,9 @@ const ProjectDetails = ({ projects, footerData }) => {
       if (rcc_structure)
         prevAmenities.push({ id: "rcc_structure", title: "RCC Structure" });
       if (security) prevAmenities.push({ id: "security", title: "Security" });
+      if(prevAmenities.length === 0 && custom_amenity?.length !== 0) {
+        prevAmenities = custom_amenity.slice(0, (amenity_number || 6))
+      }
       setAmenities(prevAmenities)
     }
   }, [amenity_number, cctv, custom_amenity, elevator, parking, play_area, project_status, rcc_structure, security])
