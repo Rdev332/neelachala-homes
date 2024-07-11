@@ -31,10 +31,18 @@ const LightLayout = ({ children, footerClass, footerData }) => {
     <div>
       <Head>
         <link rel="stylesheet" href="/assets/css/style-light.css" />
+        <script
+          type="text/javascript"
+          src="https://d3mkw6s8thqya7.cloudfront.net/integration-plugin.js"
+          id="aisensy-wa-widget"
+          widget-id="nS2hLM"
+          defer
+        >
+        </script>
       </Head>
       <Navbar navbarRef={navbarRef} logoRef={logoRef} />
       {children}
-      <Footer classText={footerClass} data={footerData.data?.attributes??{}} />
+      <Footer classText={footerClass} data={footerData.data?.attributes ?? {}} />
     </div>
   );
 };
