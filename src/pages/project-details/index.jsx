@@ -54,7 +54,7 @@ const ProjectDetails = ({ projects, footerData }) => {
       const priority = custom_amenity.slice(0, (amenity_number || 6))
       setAmenities(priority)
     } else {
-      const prevAmenities = []
+      let prevAmenities = []
       if (cctv) prevAmenities.push({ id: "cctv", title: "CCTV" });
       if (elevator) prevAmenities.push({ id: "elevator", title: "Elevator" });
       if (parking) prevAmenities.push({ id: "parking", title: "Parking" });
