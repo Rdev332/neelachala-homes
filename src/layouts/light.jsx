@@ -31,11 +31,19 @@ const LightLayout = ({ children, footerClass, footerData }) => {
     <div>
       <Head>
         <link rel="stylesheet" href="/assets/css/style-light.css" />
-        <script
+        {/* <script
           type="text/javascript"
           src="https://d3mkw6s8thqya7.cloudfront.net/integration-plugin.js"
           id="aisensy-wa-widget"
           widget-id="u7Rbx1"
+          defer
+        >
+        </script> */}
+        <script
+          type="text/javascript"
+          src="https://d3mkw6s8thqya7.cloudfront.net/integration-plugin.js"
+          id="aisensy-wa-widget"
+          widget-id="JjqAk6"
           defer
         >
         </script>
